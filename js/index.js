@@ -13,7 +13,7 @@ input.on('keyup', function (e) {
 $('.four-oh-four-form').on('submit', function (e) {
     e.preventDefault();
     // var val = $(this).children($('.404-input')).val().toLowerCase();
-    var val=$('.404-input').val();
+    var val=$('.404-input').val().toLowerCase();
     var href;
     if (val === 'back') {
         showKittens();
@@ -77,7 +77,6 @@ function showKittens() {
     //     "<p class="prompt">                                                                             </p>" +
     //     "<p class="prompt">                                                                             </p>" +
     //     "<p class="prompt">                                                              </p></div>");
-
 
     // var lines = $('.kittens p');
     // $.each(lines, function (index, line) {
