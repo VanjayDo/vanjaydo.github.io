@@ -93,21 +93,21 @@
 
 
 
-<meta name="description" content="前述最近在学习维护学校iptv服务器时获得了电视墙缓存图片的json数据，chrome打开页面后jsonViewer无法格式化代码，如图（jsonViewer此时并没有启动，它并不格式化本地文件）：  google上找了一下，发现了  网友自己拓展的json-viewer ，与 http://www.jsonohyeah.com/上的效果相近，不过可以本地格式化，省去联网了，觉得很好用。觉得样式丑">
+<meta name="description" content="前述最近在学习维护学校iptv服务器时获得了电视墙缓存图片的json数据，chrome打开页面后jsonViewer无法格式化代码，">
 <meta name="keywords" content="chrome,json">
 <meta property="og:type" content="article">
 <meta property="og:title" content="拓展chrome插件json-viewer">
 <meta property="og:url" content="http://safeandsound.cn/2017/06/04/拓展chrome插件json-viewer/index.html">
 <meta property="og:site_name" content="jay&#39;s blog">
-<meta property="og:description" content="前述最近在学习维护学校iptv服务器时获得了电视墙缓存图片的json数据，chrome打开页面后jsonViewer无法格式化代码，如图（jsonViewer此时并没有启动，它并不格式化本地文件）：  google上找了一下，发现了  网友自己拓展的json-viewer ，与 http://www.jsonohyeah.com/上的效果相近，不过可以本地格式化，省去联网了，觉得很好用。觉得样式丑">
+<meta property="og:description" content="前述最近在学习维护学校iptv服务器时获得了电视墙缓存图片的json数据，chrome打开页面后jsonViewer无法格式化代码，">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://safeandsound.cn/images/拓展chrome插件json-viewer/json.png">
 <meta property="og:image" content="http://safeandsound.cn/images/拓展chrome插件json-viewer/finish.png">
 <meta property="og:image" content="http://safeandsound.cn/images/拓展chrome插件json-viewer/源码安装.png">
-<meta property="og:updated_time" content="2017-07-31T07:55:58.207Z">
+<meta property="og:updated_time" content="2017-08-26T16:12:58.477Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="拓展chrome插件json-viewer">
-<meta name="twitter:description" content="前述最近在学习维护学校iptv服务器时获得了电视墙缓存图片的json数据，chrome打开页面后jsonViewer无法格式化代码，如图（jsonViewer此时并没有启动，它并不格式化本地文件）：  google上找了一下，发现了  网友自己拓展的json-viewer ，与 http://www.jsonohyeah.com/上的效果相近，不过可以本地格式化，省去联网了，觉得很好用。觉得样式丑">
+<meta name="twitter:description" content="前述最近在学习维护学校iptv服务器时获得了电视墙缓存图片的json数据，chrome打开页面后jsonViewer无法格式化代码，">
 <meta name="twitter:image" content="http://safeandsound.cn/images/拓展chrome插件json-viewer/json.png">
 
 
@@ -345,11 +345,11 @@
       
 
       
-        <h3 id="前述"><a href="#前述" class="headerlink" title="前述"></a>前述</h3><p>最近在学习维护学校iptv服务器时获得了电视墙缓存图片的json数据，chrome打开页面后jsonViewer无法格式化代码，<br>如图（jsonViewer此时并没有启动，它并不格式化本地文件）：</p>
+        <h3 id="前述"><a href="#前述" class="headerlink" title="前述"></a>前述</h3><p>最近在学习维护学校iptv服务器时获得了电视墙缓存图片的json数据，chrome打开页面后jsonViewer无法格式化代码，<br><a id="more"></a><br>如图（jsonViewer此时并没有启动，它并不格式化本地文件）：</p>
 <p><img src="/images/拓展chrome插件json-viewer/json.png" alt="json.png"></p>
 <p>google上找了一下，发现了 <a href="http://www.aneasystone.com/archives/2015/07/second-chrome-extension-jsonview-enhencement.html" target="_blank" rel="external"> 网友自己拓展的json-viewer </a>，与 <a href="http://www.jsonohyeah.com/" target="_blank" rel="external">http://www.jsonohyeah.com/</a>上的效果相近，不过可以本地格式化，省去联网了，觉得很好用。<br>觉得样式丑的可以去github拉取代码自己改下样式（样式表在WebContent\viewer\index.html文件中），然后chrome打包拓展程序安装。</p>
 <h3 id="提醒"><a href="#提醒" class="headerlink" title="提醒"></a>提醒</h3><p><strong>注1：</strong>打包目录选择WebContent，否则会报错“清单文件缺失或不可读”<br><strong>注2：</strong>报错“指定扩展程序的私有密钥已存在。请重复使用该密钥，或者先删除它” 则删除 从github拉取得到的master分支下pem密钥文件即可。最终效果如图：<br><img src="/images/拓展chrome插件json-viewer/finish.png" alt="效果图"></p>
-<p><a href="https://github.com/VanjayDo/JSONView-for-Chrome" target="_blank" rel="external">本人已修改样式且打包了的拓展程序在此</a><br><br><br><strong>注3：</strong>直接安装crx包可能会在之后因为安全问题被chrome永久禁用，解决办法有二,1.可以开启开发者模式，选择“加载已解压的拓展程序”，从JSONView-for-Chrome-master\WebContent文件夹直接安装源码，<br> <img src="/images/拓展chrome插件json-viewer/源码安装.png" alt="源码安装"><br>这样安装后就不会有这种问题,但是每次打开chrome都会提醒你禁用开发者模式下安装的拓展。2.按照 <a href="http://www.9sep.org/chrome-install-third-party-extensions" target="_blank" rel="external">该网址的方法二</a> 进行操作，方法一我测试过，在我电脑上（win10）是无效的，我不知道问题在哪，可能是注册表键值的有效位置在win10上改动了，你自己可以再试试。但是法二有个局限就是自win8开始组策略只在专业版及以上版本才有。<br>以上。</p>
+<p><a href="https://github.com/VanjayDo/JSONView-for-Chrome" target="_blank" rel="external">本人已修改样式且打包了的拓展程序在此</a><br><br><br><strong>注3：</strong>直接安装crx包可能会在之后因为安全问题被chrome永久禁用，解决办法有二,1.可以开启开发者模式，选择“加载已解压的拓展程序”，从JSONView-for-Chrome-master\WebContent文件夹直接安装源码，<br> <img src="/images/拓展chrome插件json-viewer/源码安装.png" alt="源码安装"><br>这样安装后就不会有这种问题,但是每次打开chrome都会提醒你禁用开发者模式下安装的拓展。2.按照 <a href="http://www.9sep.org/chrome-install-third-party-extensions" target="_blank" rel="external">该网址的方法二</a> 进行操作，方法一我测试过，在我电脑上（win10）是无效的，我不知道问题在哪，可能是注册表键值的有效位置在win10上改动了。但是法二有个局限就是自win8开始组策略只在专业版及以上版本才有。<br>以上。</p>
 
       
     </div>
@@ -467,7 +467,7 @@
                alt="jay" />
           <p class="site-author-name" itemprop="name">jay</p>
            
-              <p class="site-description motion-element" itemprop="description">"默默受苦，暗暗享乐."</p>
+              <p class="site-description motion-element" itemprop="description">"暗暗受苦，默默享乐."</p>
           
         </div>
         <nav class="site-state motion-element">
