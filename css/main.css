@@ -287,6 +287,20 @@ a:hover {
   color: #00ff97;
   border-bottom-color: #222;
 }
+ul.search-result-list li a {
+  color: #555;
+}
+ul.search-result-list li a:hover {
+  font-size: 14px;
+  color: #000;
+}
+ul.search-result-list li a.search-result-title {
+  color: #555;
+}
+ul.search-result-list li a.search-result-title:hover {
+  font-size: 16px;
+  color: #000;
+}
 nav ul li a {
   color: #555;
 }
@@ -1708,7 +1722,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #52547f;
+  background: #3c4e40;
 }
 .links-of-blogroll {
   font-size: 13px;
