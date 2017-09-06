@@ -41,15 +41,52 @@ for headline in (1..6) {
 
 p { margin: 0 0 20px 0; }
 
-a {
-  color: $link-color;
-  text-decoration: none;
-  border-bottom: 1px solid $grey-dark;
-  word-wrap: break-word;
 
+
+//博文中链接效果和右侧边栏文章目录效果
+a {
+  color: #009357;
+  text-decoration: none;
+  border-bottom: 1px solid #00B068;
+  word-wrap: break-word;
   &:hover {
-    color: $link-hover-color;
+    font-size:18px;
+    color: #00FF97;
     border-bottom-color: $link-decoration-hover-color;
+  }
+}
+
+//搜索中的链接效果
+ul.search-result-list li a {
+  color: $link-color;
+  &:hover { 
+    font-size:14px;
+    color: #000;
+  }
+}
+ul.search-result-list li a.search-result-title {
+  color: $link-color;
+  &:hover { 
+    font-size:16px;
+    color: #000;
+  }
+}
+
+//停留导航栏效果
+nav ul li a {
+  color: $link-color;
+  &:hover { 
+    color: #F5F5F5;
+  }
+}
+
+//首页post标题效果(因为继承上面的a效果导致停留字体变化,所以在此添加)
+article header h1 a {
+  &:hover {
+    font-size: 27px;//before为26px
+    +mobile() {
+      font-size: 22px;
+    }
   }
 }
 

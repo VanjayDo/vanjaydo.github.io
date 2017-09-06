@@ -5,7 +5,7 @@
 # Site
 title: jay's blog
 subtitle: Codes save you, rather than gods.
-description: "\"默默受苦，暗暗享乐.\""
+description: "\"暗暗受苦，默默享乐.\""
 author: jay
 language: zh-Hans
 timezone: Asia/Shanghai
@@ -43,6 +43,14 @@ highlight:
   auto_detect: false
   tab_replace:
   
+
+#search
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000
+
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
 # per_page: Posts displayed per page. (0 = disable pagination)
