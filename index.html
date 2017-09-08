@@ -511,6 +511,124 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://safeandsound.cn/2017/09/08/php部分版本使用oci8拓展问题/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="jay">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/j.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="jay's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/09/08/php部分版本使用oci8拓展问题/" itemprop="url">php部分版本使用oci8拓展问题</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-08T13:07:53+08:00">
+                2017-09-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>最近在使用php实现从服务器Oracle数据库拉取数据表到本地mysql功能时遇到了这个问题：我使用的是xampp集成的php5.6.3版本，在它的php.ini配置文件中关于oci8拓展的配置是这样的：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">extension=php_oci8_12c.dll  ; Use with Oracle Database 12c Instant Client</div></pre></td></tr></table></figure></p>
+<p>从Oracle官网下载instantclient-basic-nt-12.2.0.1.0.zip拓展，解压后我把得到的instantclient_12_2目录移动到C:\Program Files下并加入环境变量，但是idea运行项目时一直在报:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">PHP Warning:  PHP Startup: Unable to load dynamic library &apos;C:\xampp\php\ext\php_oci8_12c.dll&apos;</div></pre></td></tr></table></figure></p>
+<p>导致oci8接口函数，如oci_connect等无法使用。<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/09/08/php部分版本使用oci8拓展问题/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://safeandsound.cn/2017/08/30/百度云下载高速通道延时/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1012,7 +1130,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -1025,7 +1143,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
