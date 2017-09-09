@@ -101,7 +101,7 @@
 <meta property="og:site_name" content="jay&#39;s blog">
 <meta property="og:description" content="前言最近在使用php实现从服务器Oracle数据库拉取数据表到本地mysql功能时遇到了这个问题：我使用的是xampp集成的php5.6.3版本，在它的php.ini配置文件中关于oci8拓展的配置是这样的：1extension=php_oci8_12c.dll  ; Use with Oracle Database 12c Instant Client 从Oracle官网下载instantcli">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-09-08T08:53:14.874Z">
+<meta property="og:updated_time" content="2017-09-08T08:57:28.897Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="php部分版本使用oci8拓展问题">
 <meta name="twitter:description" content="前言最近在使用php实现从服务器Oracle数据库拉取数据表到本地mysql功能时遇到了这个问题：我使用的是xampp集成的php5.6.3版本，在它的php.ini配置文件中关于oci8拓展的配置是这样的：1extension=php_oci8_12c.dll  ; Use with Oracle Database 12c Instant Client 从Oracle官网下载instantcli">
@@ -586,7 +586,7 @@
 <p>cmd输入”php -r “var_dump(function_exists(‘oci_connect’));””</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">C:\WINDOWS\system32&gt;php -r &quot;var_dump(function_exists(&apos;oci_connect&apos;));&quot;</div><div class="line"></div><div class="line">结果显示：</div><div class="line">bool(true)</div></pre></td></tr></table></figure>
 <p>则已成功。</p>
-<h4 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h4><p>idea需要重启电脑后方可使用oci8拓展的相关接口函数（我尝试过”synchronize”和”Invalidate Caches / Restart”功能，都无效），否则仍然会提示找不到动态链接库文件。</p>
+<h4 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h4><p>idea需要重启电脑后方可使用oci8拓展的相关接口函数（我尝试过”synchronize”和”Invalidate Caches / Restart”功能，都无效），否则仍然会提示找不到动态链接库文件。也可能是因为我使用的是php内置的服务器问题，在此提一下。</p>
 <h3 id="赘述"><a href="#赘述" class="headerlink" title="赘述"></a>赘述</h3><p>这个问题的存在不知道是xampp的锅还是这个php版本的锅，总而言之问题现在是解决了，算是有所收获吧，所以总结一下。<br>其他版本若出现相似问题也可以参考。</p>
 
       
