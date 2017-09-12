@@ -103,7 +103,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://safeandsound.cn/images/web应用从网页插入中文到mysql变成乱码的解决办法/修改.png">
 <meta property="og:image" content="http://safeandsound.cn/images/web应用从网页插入中文到mysql变成乱码的解决办法/utf8.png">
-<meta property="og:updated_time" content="2017-09-12T14:34:37.372Z">
+<meta property="og:updated_time" content="2017-09-12T14:37:36.787Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="web应用从网页插入中文到mysql变成乱码的解决办法">
 <meta name="twitter:description" content="前言相信既然这么进来了，那么问题肯定是差不多的，下面直接讲述解决办法：">
@@ -579,9 +579,9 @@
 
       
         <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>相信既然这么进来了，那么问题肯定是差不多的，下面直接讲述解决办法：<br><a id="more"></a></p>
-<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><h4 id="首先在mysql配置文件my-ini中进行配置修改"><a href="#首先在mysql配置文件my-ini中进行配置修改" class="headerlink" title="首先在mysql配置文件my.ini中进行配置修改"></a>首先在mysql配置文件my.ini中进行配置修改</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">#搜索找到[mysqld]，在它下面添加配置，如下</div><div class="line">[mysqld]</div><div class="line">character-set-server=utf8</div><div class="line"></div><div class="line">#搜索找到[mysql]，在它下面添加配置，如下</div><div class="line">[mysql]</div><div class="line">default-character-set=utf8</div></pre></td></tr></table></figure>
+<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><h4 id="首先在mysql配置文件my-ini中进行配置修改"><a href="#首先在mysql配置文件my-ini中进行配置修改" class="headerlink" title="首先在mysql配置文件my.ini中进行配置修改"></a>首先在mysql配置文件my.ini中进行配置修改</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">#搜索找到[mysqld]，在它下面添加配置，如下</div><div class="line">[mysqld]</div><div class="line">character-set-server = utf8</div><div class="line"></div><div class="line">#搜索找到[mysql]，在它下面添加配置，如下</div><div class="line">[mysql]</div><div class="line">default-character-set = utf8</div></pre></td></tr></table></figure>
 <h4 id="修改连接编码和中文字段编码"><a href="#修改连接编码和中文字段编码" class="headerlink" title="修改连接编码和中文字段编码"></a>修改连接编码和中文字段编码</h4><p>接下来我是从phpmyadmin上操作的，如果你没有可视化操作界面，那就转换成sql语句来操作吧。</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">set</span> <span class="keyword">names</span> uft8;</div></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">set</span> <span class="keyword">names</span> <span class="string">"uft8"</span>;</div></pre></td></tr></table></figure>
 <p>再将所有需要插入中文的字段进行结构修改：<br>例如下面的message字段<br><img src="/images/web应用从网页插入中文到mysql变成乱码的解决办法/修改.png" alt="修改结构"></p>
 <p>将排序规则修改为utf8_general_ci</p>
 <p><img src="/images/web应用从网页插入中文到mysql变成乱码的解决办法/utf8.png" alt="排序规则"></p>
