@@ -50,4 +50,12 @@
         <tag>json</tag>
       </tags>
   </entry>
+  <entry>
+    <title><![CDATA[web应用从网页插入中文到mysql变成乱码的解决办法]]></title>
+    <url>%2F2017%2F03%2F12%2Fweb%E5%BA%94%E7%94%A8%E4%BB%8E%E7%BD%91%E9%A1%B5%E6%8F%92%E5%85%A5%E4%B8%AD%E6%96%87%E5%88%B0mysql%E5%8F%98%E6%88%90%E4%B9%B1%E7%A0%81%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95%2F</url>
+    <content type="text"><![CDATA[前言相信既然这么进来了，那么问题肯定是差不多的，下面直接讲述解决办法： 解决办法首先在mysql配置文件my.ini中进行配置修改1234567#搜索找到[mysqld]，在它下面添加配置，如下[mysqld]character-set-server=utf8#搜索找到[mysql]，在它下面添加配置，如下[mysql]default-character-set=utf8 修改连接编码和中文字段编码接下来我是从phpmyadmin上操作的，如果你没有可视化操作界面，那就转换成sql语句来操作吧。 1set names uft8; 再将所有需要插入中文的字段进行结构修改：例如下面的message字段 将排序规则修改为utf8_general_ci 赘述我曾多次遇到这种问题都是这么解决的，也曾利用修改排序规则的方法帮同学结果过类似问题，在此仅供参考。]]></content>
+      <tags>
+        <tag>mysql</tag>
+      </tags>
+  </entry>
 </search>
