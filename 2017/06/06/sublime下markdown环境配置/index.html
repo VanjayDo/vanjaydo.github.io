@@ -77,7 +77,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="chrome,json," />
+  <meta name="keywords" content="sublime," />
 
 
 
@@ -93,22 +93,20 @@
 
 
 
-<meta name="description" content="前述最近在学习维护学校iptv服务器时获得了电视墙缓存图片的json数据，chrome打开页面后jsonViewer无法格式化代码，">
-<meta name="keywords" content="chrome,json">
+<meta name="description" content="我在sublime上编写markdown文档的环境配置是:1Markdown Editing + OmniMarkupPreviewer + Markdown Extended + Monokai Extended MarkdownEditing作为sublime上编写Markdown必备的插件，不仅可以高亮显示Markdown语法还支持很多编程语言的语法高亮显示（需要主题支持）。 OmniMar">
+<meta name="keywords" content="sublime">
 <meta property="og:type" content="article">
-<meta property="og:title" content="拓展chrome插件json-viewer">
-<meta property="og:url" content="http://safeandsound.cn/2017/06/04/拓展chrome插件json-viewer/index.html">
+<meta property="og:title" content="sublime下markdown环境配置">
+<meta property="og:url" content="http://safeandsound.cn/2017/06/06/sublime下markdown环境配置/index.html">
 <meta property="og:site_name" content="jay&#39;s blog">
-<meta property="og:description" content="前述最近在学习维护学校iptv服务器时获得了电视墙缓存图片的json数据，chrome打开页面后jsonViewer无法格式化代码，">
+<meta property="og:description" content="我在sublime上编写markdown文档的环境配置是:1Markdown Editing + OmniMarkupPreviewer + Markdown Extended + Monokai Extended MarkdownEditing作为sublime上编写Markdown必备的插件，不仅可以高亮显示Markdown语法还支持很多编程语言的语法高亮显示（需要主题支持）。 OmniMar">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://safeandsound.cn/images/拓展chrome插件json-viewer/json.png">
-<meta property="og:image" content="http://safeandsound.cn/images/拓展chrome插件json-viewer/finish.png">
-<meta property="og:image" content="http://safeandsound.cn/images/拓展chrome插件json-viewer/源码安装.png">
-<meta property="og:updated_time" content="2017-08-26T16:12:58.477Z">
+<meta property="og:image" content="http://safeandsound.cn/2017/06/06/sublime下markdown环境配置/markdownExtended.png">
+<meta property="og:updated_time" content="2017-09-18T12:13:17.516Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="拓展chrome插件json-viewer">
-<meta name="twitter:description" content="前述最近在学习维护学校iptv服务器时获得了电视墙缓存图片的json数据，chrome打开页面后jsonViewer无法格式化代码，">
-<meta name="twitter:image" content="http://safeandsound.cn/images/拓展chrome插件json-viewer/json.png">
+<meta name="twitter:title" content="sublime下markdown环境配置">
+<meta name="twitter:description" content="我在sublime上编写markdown文档的环境配置是:1Markdown Editing + OmniMarkupPreviewer + Markdown Extended + Monokai Extended MarkdownEditing作为sublime上编写Markdown必备的插件，不仅可以高亮显示Markdown语法还支持很多编程语言的语法高亮显示（需要主题支持）。 OmniMar">
+<meta name="twitter:image" content="http://safeandsound.cn/2017/06/06/sublime下markdown环境配置/markdownExtended.png">
 
 
 
@@ -136,13 +134,13 @@
 
 
 
-  <link rel="canonical" href="http://safeandsound.cn/2017/06/04/拓展chrome插件json-viewer/"/>
+  <link rel="canonical" href="http://safeandsound.cn/2017/06/06/sublime下markdown环境配置/"/>
 
 
 
 
 
-  <title>拓展chrome插件json-viewer | jay's blog</title>
+  <title>sublime下markdown环境配置 | jay's blog</title>
   
 
 
@@ -515,7 +513,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://safeandsound.cn/2017/06/04/拓展chrome插件json-viewer/">
+    <link itemprop="mainEntityOfPage" href="http://safeandsound.cn/2017/06/06/sublime下markdown环境配置/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="jay">
@@ -532,7 +530,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">拓展chrome插件json-viewer</h1>
+          <h1 class="post-title" itemprop="name headline">sublime下markdown环境配置</h1>
         
 
         <div class="post-meta">
@@ -544,8 +542,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-04T00:00:00+08:00">
-                2017-06-04
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-06T20:04:46+08:00">
+                2017-06-06
               </time>
             
 
@@ -579,11 +577,14 @@
       
 
       
-        <h3 id="前述"><a href="#前述" class="headerlink" title="前述"></a>前述</h3><p>最近在学习维护学校iptv服务器时获得了电视墙缓存图片的json数据，chrome打开页面后jsonViewer无法格式化代码，<br><a id="more"></a><br>如图（jsonViewer此时并没有启动，它并不格式化本地文件）：</p>
-<p><img src="/images/拓展chrome插件json-viewer/json.png" alt="json.png"></p>
-<p>google上找了一下，发现了 <a href="http://www.aneasystone.com/archives/2015/07/second-chrome-extension-jsonview-enhencement.html" target="_blank" rel="external"> 网友自己拓展的json-viewer </a>，与 <a href="http://www.jsonohyeah.com/" target="_blank" rel="external">http://www.jsonohyeah.com/</a>上的效果相近，不过可以本地格式化，省去联网了，觉得很好用。<br>觉得样式丑的可以去github拉取代码自己改下样式（样式表在WebContent\viewer\index.html文件中），然后chrome打包拓展程序安装。</p>
-<h3 id="提醒"><a href="#提醒" class="headerlink" title="提醒"></a>提醒</h3><p><strong>注1：</strong>打包目录选择WebContent，否则会报错“清单文件缺失或不可读”<br><strong>注2：</strong>报错“指定扩展程序的私有密钥已存在。请重复使用该密钥，或者先删除它” 则删除 从github拉取得到的master分支下pem密钥文件即可。最终效果如图：<br><img src="/images/拓展chrome插件json-viewer/finish.png" alt="效果图"></p>
-<p><a href="https://github.com/VanjayDo/JSONView-for-Chrome" target="_blank" rel="external">本人已修改样式且打包了的拓展程序在此</a><br><br><br><strong>注3：</strong>直接安装crx包可能会在之后因为安全问题被chrome永久禁用，解决办法有二,1.可以开启开发者模式，选择“加载已解压的拓展程序”，从JSONView-for-Chrome-master\WebContent文件夹直接安装源码，<br> <img src="/images/拓展chrome插件json-viewer/源码安装.png" alt="源码安装"><br>这样安装后就不会有这种问题,但是每次打开chrome都会提醒你禁用开发者模式下安装的拓展。2.按照 <a href="http://www.9sep.org/chrome-install-third-party-extensions" target="_blank" rel="external">该网址的方法二</a> 进行操作，方法一我测试过，在我电脑上（win10）是无效的，我不知道问题在哪，可能是注册表键值的有效位置在win10上改动了。但是法二有个局限就是自win8开始组策略只在专业版及以上版本才有。<br>以上。</p>
+        <p>我在sublime上编写markdown文档的环境配置是:<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Markdown Editing + OmniMarkupPreviewer + Markdown Extended + Monokai Extended</div></pre></td></tr></table></figure></p>
+<p><a href="https://github.com/SublimeText-Markdown/MarkdownEditing" target="_blank" rel="external">MarkdownEditing</a>作为sublime上编写Markdown必备的插件，不仅可以高亮显示Markdown语法还支持很多编程语言的语法高亮显示（需要主题支持）。</p>
+<p><a href="https://github.com/timonwong/OmniMarkupPreviewer" target="_blank" rel="external">OmniMarkupPreviewer</a>用来渲染和预览markdown文档的效果。</p>
+<p>这两个插件安装完了以后我们在编写markdown时会发现Markdown文档在Sublime中是默认无高亮的，而且很多主题也不支持Markdown的高亮，而<br><a href="https://github.com/jonschlinkert/sublime-monokai-extended" target="_blank" rel="external">Monokai Extended</a>和<a href="https://github.com/jonschlinkert/sublime-markdown-extended" target="_blank" rel="external">Markdown Extended </a>的组合很好的解决了这个问题。</p>
+<p>以上插件都安装完成后，重启sublime，然后在preferences-&gt;color scheme-&gt;Monokai Extended 选择一项你顺眼的作为配色模式，再将Markdown Extended选为markdown文档的语法规则即可（view-&gt;systax-&gt;open all with current extension as 如图）：</p>
+<p><img src="./markdownExtended.png" alt="选择markdown extended"></p>
+<p>Tips：<br><br><em>1.具体的markdown语法可以参照wowubuntu上的 <a href="http://wowubuntu.com/markdown/" target="_blank" rel="external">这一篇文章</a></em><br><br><em>2.Markdown Editing的几个小技巧：</em><br><br><strong>输入 “mdi” 后按tab键 会自动插入下面的图片标记:</strong><br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">![<span class="string">Alt text</span>](<span class="link">/path/to/img.jpg "Optional title"</span>)</div></pre></td></tr></table></figure></p>
+<p><strong>输入 “mdl” 后按tab键 会自动生成下面的链接标记:</strong><br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[](link)</div></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -613,9 +614,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/chrome/" rel="tag"># chrome</a>
-          
-            <a href="/tags/json/" rel="tag"># json</a>
+            <a href="/tags/sublime/" rel="tag"># sublime</a>
           
         </div>
       
@@ -628,8 +627,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/03/12/web应用从网页插入中文到mysql变成乱码的解决办法/" rel="next" title="web应用从网页插入中文到mysql变成乱码的解决办法">
-                <i class="fa fa-chevron-left"></i> web应用从网页插入中文到mysql变成乱码的解决办法
+              <a href="/2017/06/04/拓展chrome插件json-viewer/" rel="next" title="拓展chrome插件json-viewer">
+                <i class="fa fa-chevron-left"></i> 拓展chrome插件json-viewer
               </a>
             
           </div>
@@ -638,8 +637,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/06/06/sublime下markdown环境配置/" rel="prev" title="sublime下markdown环境配置">
-                sublime下markdown环境配置 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/06/15/xrdp-vnc/" rel="prev" title="(xrdp+vnc)远程桌面linux">
+                (xrdp+vnc)远程桌面linux <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -688,17 +687,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/j.jpg"
@@ -1000,22 +990,6 @@ a#download:hover {
 
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前述"><span class="nav-number">1.</span> <span class="nav-text">前述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#提醒"><span class="nav-number">2.</span> <span class="nav-text">提醒</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       

@@ -70,9 +70,9 @@
 </li>
 </ul>
 <h3 id="赘述"><a href="#赘述" class="headerlink" title="赘述"></a>赘述</h3><p>CE这种内存扫描器其实有很多，我自己接触的第一款就是初中时候在Symbian系统上使用的“八门神器”，用来修改手机中小游戏的各种参数，弹药量、生命值之类。</p>
-<p>以上方法只适用于有试用高速通道的时候，像有的时候没有试用高速通道的机会便没法进行加速。建议修改成较大的值，就算下载完毕之后不要马上关闭客户端（因为下次打开可能就没有试用高速通道的机会），高速通道的剩余时间仍会继续跑。</p>
-<p>虽然有时间限制，但是可以持续修改且时间值可以设置较大。<br>唯一的限制在于试用高速通道的机会。</p>
-<p>我在学校内使用ipv6走高速通道可以达到将近2M，虽然没有跑满带宽，但是也好过三五百K的速度。</p>
+<p>以上方法只适用于有试用高速通道的时候，像有的时候没有试用高速通道的机会便没法进行加速。建议修改成较大的值（注：发现如果在修改过一次的基础上修改第二次会将剩余时间卡死。实际并没有所谓，因为时间值足够大），就算下载完毕之后不要马上关闭客户端（因为下次打开可能就没有试用高速通道的机会），高速通道的剩余时间仍会继续跑。</p>
+<p>虽然有时间限制，但是修改的值较大的话基本可以忽略这个限制。<br>可以说唯一的限制在于试用高速通道的机会。</p>
+<p>我在学校内使用ipv6走高速通道网络状态好的时候速度还是挺让人满意的。<br><img src="/images/百度网盘下载高速通道延时/7.png"></p>
 <p>以上。</p>
 ]]></content>
       
@@ -141,6 +141,28 @@
         <tags>
             
             <tag> linux </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[sublime下markdown环境配置]]></title>
+      <url>/2017/06/06/sublime%E4%B8%8Bmarkdown%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</url>
+      <content type="html"><![CDATA[<p>我在sublime上编写markdown文档的环境配置是:<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Markdown Editing + OmniMarkupPreviewer + Markdown Extended + Monokai Extended</div></pre></td></tr></table></figure></p>
+<p><a href="https://github.com/SublimeText-Markdown/MarkdownEditing" target="_blank" rel="external">MarkdownEditing</a>作为sublime上编写Markdown必备的插件，不仅可以高亮显示Markdown语法还支持很多编程语言的语法高亮显示（需要主题支持）。</p>
+<p><a href="https://github.com/timonwong/OmniMarkupPreviewer" target="_blank" rel="external">OmniMarkupPreviewer</a>用来渲染和预览markdown文档的效果。</p>
+<p>这两个插件安装完了以后我们在编写markdown时会发现Markdown文档在Sublime中是默认无高亮的，而且很多主题也不支持Markdown的高亮，而<br><a href="https://github.com/jonschlinkert/sublime-monokai-extended" target="_blank" rel="external">Monokai Extended</a>和<a href="https://github.com/jonschlinkert/sublime-markdown-extended" target="_blank" rel="external">Markdown Extended </a>的组合很好的解决了这个问题。</p>
+<p>以上插件都安装完成后，重启sublime，然后在preferences-&gt;color scheme-&gt;Monokai Extended 选择一项你顺眼的作为配色模式，再将Markdown Extended选为markdown文档的语法规则即可（view-&gt;systax-&gt;open all with current extension as 如图）：</p>
+<p><img src="./markdownExtended.png" alt="选择markdown extended"></p>
+<p>Tips：<br><br><em>1.具体的markdown语法可以参照wowubuntu上的 <a href="http://wowubuntu.com/markdown/" target="_blank" rel="external">这一篇文章</a></em><br><br><em>2.Markdown Editing的几个小技巧：</em><br><br><strong>输入 “mdi” 后按tab键 会自动插入下面的图片标记:</strong><br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">![<span class="string">Alt text</span>](<span class="link">/path/to/img.jpg "Optional title"</span>)</div></pre></td></tr></table></figure></p>
+<p><strong>输入 “mdl” 后按tab键 会自动生成下面的链接标记:</strong><br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[](link)</div></pre></td></tr></table></figure></p>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> sublime </tag>
             
         </tags>
         
