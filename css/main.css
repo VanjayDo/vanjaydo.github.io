@@ -306,6 +306,8 @@ nav ul li a {
 }
 nav ul li a:hover {
   color: #f5f5f5;
+  background-color: #555;
+  border-bottom-color: #555;
 }
 article header h1 a:hover {
   font-size: 27px;
@@ -1722,7 +1724,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #241ddd;
+  background: #22ffd5;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2632,7 +2634,7 @@ hr {
   }
 }
 .menu .menu-item a:hover {
-  background: #e1e1e1;
+  background: #555;
 }
 .menu a::before {
   display: none;
