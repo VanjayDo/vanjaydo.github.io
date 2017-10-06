@@ -8,11 +8,12 @@ ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)"; /* IE8 */
 -webkit-transform: rotate(-180deg);  /* Safari 3.1+, Chrome */
 position: absolute; 
 }
-
+/*在颠倒字符右侧的字符*/
 .upside-down-right{
 	font-style:normal;
 	margin-left:25px;
 }
+/*词条页面的标题效果*/
 .entries-title{
 	font-size:80%;
 	font-weight:100%;
