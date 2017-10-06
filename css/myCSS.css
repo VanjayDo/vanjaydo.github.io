@@ -1,0 +1,20 @@
+/*字符上下颠倒*/
+.upside-down
+{
+filter:  progid:DXImageTransform.Microsoft.BasicImage(rotation=2);  /* IE6,IE7 */
+ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)"; /* IE8 */
+-moz-transform: rotate(-180deg);  /* 火狐3.5+ */
+-o-transform: rotate(-180deg);  /* Opera 10.5 */
+-webkit-transform: rotate(-180deg);  /* Safari 3.1+, Chrome */
+position: absolute; 
+}
+
+.upside-down-right{
+	font-style:normal;
+	margin-left:25px;
+}
+.entries-title{
+	font-size:80%;
+	font-weight:100%;
+	color:black;
+}
