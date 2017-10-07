@@ -485,7 +485,6 @@ body {
   }
 }
 .footer {
-  position: absolute;
   left: 0;
   bottom: 0;
   width: 100%;
@@ -1725,7 +1724,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #c25226;
+  background: #8788ff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2805,9 +2804,43 @@ hr {
     text-align: center;
   }
 }
+body {
+  background: url("https://oxebeaim4.bkt.clouddn.com/image/wave-ocean.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
 #sidebar {
   background: url("https://oxebeaim4.bkt.clouddn.com/image/sidebar-bg-stars.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+#sidebar p,
+#sidebar span {
+  color: #fff;
+}
+.content {
+  border-radius: 10px;
+  margin-top: 60px;
+  background: rgba(248,248,248,0.7) none repeat scroll !important;
+  padding: 20px;
+}
+.main-inner {
+  width: 800px;
+}
+.site-title {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+  ms-filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+  -moz-transform: rotate(-180deg);
+  -o-transform: rotate(-180deg);
+  -webkit-transform: rotate(-180deg);
+  position: absolute;
+}
+.header {
+  background: rgba(255,255,255,0.3) none repeat scroll !important;
+}
+.footer {
+  background: rgba(255,255,255,0.7) none repeat scroll !important;
 }
