@@ -189,7 +189,7 @@ body {
   font-size: 14px;
   line-height: 2;
   color: #555;
-  background: #fff;
+  background: #f8f8f8;
 }
 @media (max-width: 767px) {
   body {
@@ -283,7 +283,7 @@ a {
   word-wrap: break-word;
 }
 a:hover {
-  font-size: 18px;
+  font-size: 17px;
   color: #00ff97;
   border-bottom-color: #222;
 }
@@ -1724,7 +1724,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #fecded;
+  background: #0aff34;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2803,4 +2803,16 @@ hr {
     width: auto;
     text-align: center;
   }
+}
+#sidebar {
+  background: url("https://oxebeaim4.bkt.clouddn.com/image/sidebar-bg-stars.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#sidebar .links-of-author-item a {
+  color: #fc6423;
+}
+#sidebar .links-of-author-item a i {
+  font-size: 150%;
 }

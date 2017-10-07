@@ -761,28 +761,8 @@
         </div> -->
 
 
-<style type="text/css">
-a#download {
-    display: inline-block;
-    padding: 0 10px;
-    color: #000;
-    background:#fff;
-    border: 2px solid #000;
-    border-radius: 2px;
-    transition: all .5s ease;
-    font-weight: 700
-}
-
-a#download:hover {
-    background: #000;
-    color: #fff
-}
-
-</style>
-
-<!--j's自定义修改 添加High一下-->
-<div>
-  <a id="download" href='javascript:(
+<!--j's自定义修改-->
+<script>
   /*
    * Copyright (C) 2016 Never_yu (Neveryu.github.io) <React.dong.yu@gmail.com>
    * Sina Weibo (http://weibo.com/Neveryu)
@@ -799,8 +779,9 @@ a#download:hover {
    * See the License for the specific language governing permissions and
    * limitations under the License.
    */
-    function go() {
 
+   /*high一下js脚本*/
+    function go() {
     /*歌曲数组
     *crazy bird
     *shape of my heart
@@ -989,22 +970,68 @@ a#download:hover {
             O.push(A)
         }
     }
-    })()'>
+    };
+</script>
+
+<style type="text/css">
+a.change {
+    display: inline-block;
+    padding: 0 10px;
+    border: 2px solid #000;
+    border-radius: 2px;
+    transition: all .5s ease;
+    font-weight: 700
+}
+
+#high{
+    color: #000;
+    background:#fff;
+    border: 2px solid #000;
+}
+#high:hover{
+    color: #fff;
+    background: #000;
+    border: 2px solid #fff;
+}
+
+#github{
+  color:#FC6423;
+  background:#fff;
+  border: 2px solid #FC6423;
+}
+#github:hover{
+  color:#fff;
+  background:#FC6423;
+  border: 2px solid #fff;
+}
+
+</style>
+
+
+<!--High一下-->
+<div id="high-once">
+  <a class="change" id="high" onclick="go()" href="#">
     <i class="menu-item-icon fa fa-music fa-fw"></i>
     High一下
-    </a>
-    
-    <!-- end High一下 -->
+  </a>
+</div>
 
-    <!--j's自定义修改 添加仓鼠-->
+<div id="social-links">
+<!--github-->
+  <a class="change" id="github" href="https://github.com/VanjayDo">
+    <i class="fa fa-github-alt" aria-hidden="true"></i>
+    GitHub
+  </a>
+</div>
+    <!--添加仓鼠-->
     <div id="cangshu" style="margin-top:100px;">
     <embed src="/images/cangshu.swf" style="width:300px;height:220px;opacity:0.7" allowNetworking="all">
     </embed>
     </div>
 
-    </div>
 
-    
+
+<!--修改结束-->
        
 
         
