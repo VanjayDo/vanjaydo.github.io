@@ -1128,6 +1128,7 @@
         $("#2-show-or-not-2-show").velocity('stop').velocity({opacity: 0});
     });
 
+
 </script>
 
 <style type="text/css">
@@ -1177,9 +1178,7 @@ a.change {
   height:220px;
   opacity:0.5;
 }
-#cangshu embed:hover{
-  opacity:1;
-}
+
 </style>
 
     <div id="2-show-or-not-2-show">
@@ -1230,9 +1229,10 @@ a.change {
 
   <!--添加仓鼠-->
   <div id="cangshu">
-    <embed src="/images/cangshu.swf" allowNetworking="all">
+    <embed class="cangshu" src="/images/cangshu.swf" allowNetworking="all" onmouseover="$(this).velocity('stop').velocity({opacity: 1})" onmouseout="$(this).velocity('stop').velocity({opacity:0.5})"">
     </embed>
   </div>
+
 
 
         

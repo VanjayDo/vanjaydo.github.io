@@ -1724,7 +1724,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #62ff0a;
+  background: #ff0e1c;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2823,11 +2823,15 @@ body {
 }
 .content {
   border-radius: 10px;
+  margin-top: -25px;
   background: rgba(248,248,248,0.7) none repeat scroll !important;
   padding: 20px;
 }
 .main-inner {
   width: 800px;
+}
+.main {
+  padding-bottom: 0px;
 }
 .site-title {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
