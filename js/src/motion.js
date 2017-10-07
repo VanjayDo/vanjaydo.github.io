@@ -1,5 +1,10 @@
 /* global NexT: true */
-
+/*j's自定义修改*/
+/*点击sidebar头像实现跳转*/
+$('.site-author-image').click(function(){
+      window.location.href="/about";
+});
+/*修改结束*/
 $(document).ready(function () {
   NexT.motion = {};
 

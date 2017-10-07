@@ -1632,6 +1632,7 @@ pre .javascript .function {
   moz-transition: 1.4s all;
   ms-transition: 1.4s all;
   transition: 1.4s all;
+  cursor: pointer;
 }
 .site-author-name {
   margin: 5px 0 0;
@@ -1724,7 +1725,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #0aff34;
+  background: #c25226;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2809,10 +2810,4 @@ hr {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-}
-#sidebar .links-of-author-item a {
-  color: #fc6423;
-}
-#sidebar .links-of-author-item a i {
-  font-size: 150%;
 }

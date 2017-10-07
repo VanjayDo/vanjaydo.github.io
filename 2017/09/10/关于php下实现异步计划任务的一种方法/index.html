@@ -757,6 +757,8 @@
 
 
 <!--j's自定义修改-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.min.js"></script>
 <script>
   /*
    * Copyright (C) 2016 Never_yu (Neveryu.github.io) <React.dong.yu@gmail.com>
@@ -966,6 +968,14 @@
         }
     }
     };
+
+    /*鼠标移动到sidebar后才渐渐显示出站点信息*/
+    $("#sidebar").hover(function(){
+      $("#2-show-or-not-2-show").velocity('stop').velocity({opacity: 1});
+      },function(){
+        $("#2-show-or-not-2-show").velocity('stop').velocity({opacity: 0});
+    });
+
 </script>
 
 <style type="text/css">
@@ -982,49 +992,72 @@ a.change {
     color: #000;
     background:#fff;
     border: 2px solid #000;
+    opacity:0.5;
 }
 #high:hover{
     color: #fff;
     background: #000;
     border: 2px solid #fff;
+    opacity:1;
 }
 
-#github{
-  color:#FC6423;
-  background:#fff;
-  border: 2px solid #FC6423;
+.social{
+   margin-top:5px;
 }
-#github:hover{
+#social-links{
+    color:#FC6423;
+    background:#fff;
+    border: 2px solid #FC6423;
+    opacity:0.5;
+}
+
+#social-links:hover{
   color:#fff;
   background:#FC6423;
   border: 2px solid #fff;
+  opacity:1;
 }
-
+#cangshu{
+  margin-top:55px;
+}
+#cangshu embed{
+  width:300px;
+  height:220px;
+  opacity:0.5;
+}
+#cangshu embed:hover{
+  opacity:1;
+}
 </style>
 
+<div id="2-show-or-not-2-show">
+  <!--High一下-->
+  <div class="high-once">
+    <a class="change" id="high" onclick="go()" href="#">
+      <i class="menu-item-icon fa fa-music fa-fw"></i>
+      High一下
+    </a>
+  </div>
 
-<!--High一下-->
-<div id="high-once">
-  <a class="change" id="high" onclick="go()" href="#">
-    <i class="menu-item-icon fa fa-music fa-fw"></i>
-    High一下
-  </a>
-</div>
+  <div class="social">
+    <!--github-->
+    <a class="change" id="social-links" href="https://github.com/VanjayDo">
+      <i class="fa fa-github-alt" aria-hidden="true"></i>
+      GitHub
+    </a>
+    <!--mailto-->
+    <a class="change" id="social-links" href="mailto:vanjaydo@gmail.com">
+      <i class="fa fa-envelope-o" aria-hidden="true"></i>
+      Gmail
+    </a>
+  </div>
 
-<div id="social-links">
-<!--github-->
-  <a class="change" id="github" href="https://github.com/VanjayDo">
-    <i class="fa fa-github-alt" aria-hidden="true"></i>
-    GitHub
-  </a>
-</div>
-    <!--添加仓鼠-->
-    <div id="cangshu" style="margin-top:100px;">
-    <embed src="/images/cangshu.swf" style="width:300px;height:220px;opacity:0.7" allowNetworking="all">
+  <!--添加仓鼠-->
+  <div id="cangshu">
+    <embed src="/images/cangshu.swf" allowNetworking="all">
     </embed>
-    </div>
-
-
+  </div>
+</div>
 
 <!--修改结束-->
        
