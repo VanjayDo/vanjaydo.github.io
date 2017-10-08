@@ -41,7 +41,13 @@ function showKittens() {
     parent.removeChild(part1);
     document.styleSheets[0].insertRule('body:before{content:""}',21);
     document.styleSheets[0].insertRule('body:after{content:""}',22);
-    history.back();
+    if(history.length>1)
+    {
+        history.back();
+    }else{
+        window.location.href="http://blog.safeandsound.cn";
+    }
+    
 
     // 打印
     // $('.terminal').append("<div class="kittens">" +

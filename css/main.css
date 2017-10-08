@@ -1724,7 +1724,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff0e1c;
+  background: #4af4eb;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2805,7 +2805,7 @@ hr {
   }
 }
 body {
-  background: url("https://oxebeaim4.bkt.clouddn.com/image/wave-ocean.jpg");
+  background: url("https://oxebeaim4.bkt.clouddn.com/image/wave-ocean.jpg") 0 0;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
