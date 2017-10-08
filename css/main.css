@@ -1724,7 +1724,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #4af4eb;
+  background: #d01c00;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2805,21 +2805,27 @@ hr {
   }
 }
 body {
-  background: url("https://oxebeaim4.bkt.clouddn.com/image/wave-ocean.jpg") 0 0;
+  background: url("https://oxebeaim4.bkt.clouddn.com/image/wave-ocean.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position: center;
 }
 #sidebar {
-  background: url("https://oxebeaim4.bkt.clouddn.com/image/sidebar-bg-stars.jpg");
+  background: url("https://oxebeaim4.bkt.clouddn.com/image/sidebar-bg-forest.jpg");
+  background-color: #fff;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 #sidebar p,
 #sidebar span {
-  color: #fff;
+  color: #000;
+}
+#sidebar .sidebar-inner li {
+  color: #808080;
+}
+#sidebar .sidebar-inner li:hover {
+  color: #000;
 }
 .content {
   border-radius: 10px;
