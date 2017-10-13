@@ -77,14 +77,19 @@
     <content type="text"><![CDATA[404 &lt;!DOCTYPE html&gt;&lt;html&gt; &lt;style&gt; * { everything:awesome;} &lt;/style&gt; &lt;body&gt; ERROR 404! FILE NOT FOUND! &nbsp;&lt;/body&gt;&lt;/html&gt; The page you requested cannot be found right now. Try typing ‘back’.]]></content>
   </entry>
   <entry>
-    <title><![CDATA[有些关于]]></title>
-    <url>%2Fabout%2Findex.html</url>
-    <content type="text"><![CDATA[2017年2017-10-09当觉得生活无趣又无望时就应该读汪曾祺。虽说小波的文字也是颇有趣的，但哪个百无聊赖的人喜欢听那么理性的话。可这么说肯定是有人不同意的第二句的。 2017-10-08今天是在行政楼实验室的最后一天。从我的位置看出去的风景还是挺让人放松的。因为领导换届和单位转型为管理单位，所以废除掉SDN实验室，再加上“新增了领导办公室不够用”、“一个领导一个作风，这个实验室是老领导设办的”、“这是和华三一起做的SDN实验室，但你们在这里的学生有几个是做SDN的”等理由，看上去总是很合理的。但还是感觉似乎不该这样。可能是因为喜欢在这边学习的氛围和深夜写代码的自由。我们都知道归属感来之不易。不过这么说起来就很像是心情不好想埋怨些什么的借口了。 2017-10-05推荐一款cli下的mysql客户端，mycli，支持语法高亮和命令补全，linux下直接install就有，效果相当棒。 2017-08-15又在开源论坛上看到有人在黑php。php因为其一开始的自身定位问题导致现在的特性有很多地方好像不是那么讨（有些）人喜欢，但是这么些年来的不断改进已经让其无愧于其自身定位了，在小规模的站点开发中，缺点基本可以忽略，况且易上手又适合快速开发让它的门槛变得很低。当然了，有人也因为以上的优点而称PHP为屌丝语言，我个人觉得没必要这样，每一门语言都有其自身的特性，优点和缺点都算是，语言只是一个工具，实在不喜欢换一门就行，没必要一边用一边黑。开发本来应该是一件很愉快的事，这样可就搞糟了。 2017-07-29感觉自己的大学生活好像今天坐公交遇到的小男孩，正经时很可爱，冲我笑时却很丑。但我到底还是喜欢的。这么说好像不负责任的旁观者。 一些想说的话放在这里以上]]></content>
-  </entry>
-  <entry>
     <title></title>
     <url>%2Fcss%2FmyCSS.css</url>
     <content type="text"><![CDATA[/*字符上下颠倒*/ .upside-down { filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2); /* IE6,IE7 */ ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)"; /* IE8 */ -moz-transform: rotate(-180deg); /* 火狐3.5+ */ -o-transform: rotate(-180deg); /* Opera 10.5 */ -webkit-transform: rotate(-180deg); /* Safari 3.1+, Chrome */ position: absolute; } /*在颠倒字符右侧的字符*/ .upside-down-right{ font-style:normal; margin-left:25px; } /*词条页面的标题效果*/ .entries-title{ font-size:80%; font-weight:100%; color:black; }]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[有些关于]]></title>
+    <url>%2Fabout%2Findex.html</url>
+    <content type="text"><![CDATA[2017年2017-10-13发现IOS下的Workflow可以提取网页的json数据，这样就能访问有些网站提供的API直接拿数据了，简直就是一只小爬虫，自己做了一个根据书名从豆瓣拉取图书相关信息的workflow –&gt;豆瓣读书 &lt;–，感觉查书什么的挺好用的 2017-10-09当觉得生活无趣又无望时就应该读汪曾祺。虽说小波的文字也是颇有趣的，但哪个百无聊赖的人喜欢听那么理性的话。可这么说肯定是有人不同意第二句的。 2017-10-08今天是在行政楼实验室的最后一天。从我的位置看出去的风景还是挺让人放松的。因为领导换届和单位转型为管理单位，所以废除掉SDN实验室，再加上“新增了领导办公室不够用”、“一个领导一个作风，这个实验室是老领导设办的”、“这是和华三一起做的SDN实验室，但你们在这里的学生有几个是做SDN的”等理由，看上去总是很合理的。但还是感觉似乎不该这样。可能是因为喜欢在这边学习的氛围和深夜写代码的自由。我们都知道归属感来之不易。不过这么说起来就很像是心情不好想埋怨些什么的借口了。 2017-10-05推荐一款cli下的mysql客户端，mycli，支持语法高亮和命令补全，linux下直接install就有，效果相当棒。 2017-08-15又在开源论坛上看到有人在黑php。php因为其一开始的自身定位问题导致现在的特性有很多地方好像不是那么讨（有些）人喜欢，但是这么些年来的不断改进已经让其无愧于其自身定位了，在小规模的站点开发中，缺点基本可以忽略，况且易上手又适合快速开发让它的门槛变得很低。当然了，有人也因为以上的优点而称PHP为屌丝语言，我个人觉得没必要这样，每一门语言都有其自身的特性，优点和缺点都算是，语言只是一个工具，实在不喜欢换一门就行，没必要一边用一边黑。开发本来应该是一件很愉快的事，这样可就搞糟了。 2017-07-29感觉自己的大学生活好像今天坐公交遇到的小男孩，正经时很可爱，冲我笑时却很丑。但我到底还是喜欢的。这么说好像不负责任的旁观者。 一些想说的话放在这里以上]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[tags]]></title>
+    <url>%2Ftags%2Findex.html</url>
+    <content type="text"></content>
   </entry>
   <entry>
     <title></title>
@@ -100,10 +105,5 @@
     <title></title>
     <url>%2Fjs%2Findex.js</url>
     <content type="text"><![CDATA[var inputReady = true; var input = $('.404-input'); input.focus(); $('.container').on('click', function (e) { input.focus(); }); input.on('keyup', function (e) { $('.new-output').text(input.val()); // console.log(inputReady); }); $('.four-oh-four-form').on('submit', function (e) { e.preventDefault(); // var val = $(this).children($('.404-input')).val().toLowerCase(); var val=$('.404-input').val().toLowerCase(); var href; if (val === 'back') { showKittens(); } else { resetForm(); } }); function resetForm(withKittens) { var message = "Sorry that command is not recognized." var input = $('.404-input'); $('.new-output').removeClass('new-output'); input.val(''); $('.terminal').append('' + message + ''); $('.new-output').velocity( 'scroll' ), {duration: 100} } function showKittens() { var parent = document.body; var part1 = document.getElementById("part1"); parent.removeChild(part1); document.styleSheets[0].insertRule('body:before{content:""}',21); document.styleSheets[0].insertRule('body:after{content:""}',22); if(history.length>1) { history.back(); }else{ window.location.href="http://blog.safeandsound.cn"; } // 打印 // $('.terminal').append("" + // "bbbbbbbb" + // "b::::::b kkkkkkkk" + // "b::::::b k::::::k" + // "b::::::b k::::::k" + // " b:::::b k::::::k" + // " b:::::bbbbbbbbb aaaaaaaaaaaaa cccccccccccccccc k:::::k kkkkkkk" + // " b::::::::::::::bb a::::::::::::a cc:::::::::::::::c k:::::k k:::::k" + // " b::::::::::::::::b aaaaaaaaa:::::a c:::::::::::::::::c k:::::k k:::::k" + // " b:::::b b::::::b aaaaaaa:::::a c::::::c ccccccc k::::::k:::::k" + // " b:::::b b:::::b aa::::::::::::a c:::::c k:::::::::::k" + // " b:::::b b:::::b a::::aaaa::::::a c:::::c k:::::::::::k" + // " b:::::b b:::::ba::::a a:::::a c::::::c ccccccc k::::::k:::::k" + // " b:::::bbbbbb::::::ba::::a a:::::a c:::::::cccccc:::::ck::::::k k:::::k" + // " b::::::::::::::::b a:::::aaaa::::::a c:::::::::::::::::ck::::::k k:::::k" + // " b:::::::::::::::b a::::::::::aa:::a cc:::::::::::::::ck::::::k k:::::k" + // " bbbbbbbbbbbbbbbb aaaaaaaaaa aaaa cccccccccccccccckkkkkkkk kkkkkkk" + // " " + // " nnnn nnnnnnnn ooooooooooo wwwwwww wwwww wwwwwww" + // " n:::nn::::::::nn oo:::::::::::oo w:::::w w:::::w w:::::w" + // " n::::::::::::::nn o:::::::::::::::o w:::::w w:::::::w w:::::w" + // " nn:::::::::::::::n o:::::ooooo:::::o w:::::w w:::::::::w w:::::w" + // " n:::::nnnn:::::n o::::o o::::o w:::::w w:::::w:::::w w:::::w" + // " n::::n n::::n o::::o o::::o w:::::w w:::::w w:::::w w:::::w" + // " n::::n n::::n o::::o o::::o w:::::::::w w:::::::::w" + // " n::::n n::::n o:::::ooooo:::::o w:::::::w w:::::::w" + // " n::::n n::::n o:::::::::::::::o w:::::w w:::::w" + // " n::::n n::::n oo:::::::::::oo w:::w w:::w" + // " nnnnnn nnnnnn ooooooooooo www www" + // " " + // " " + // " " + // " "); // var lines = $('.kittens p'); // $.each(lines, function (index, line) { // setTimeout(function () { // $(line).css({ // "opacity": 1 // }); // // textEffect($(line)) // }, index * 100); // }); // // $('.new-output').velocity( // 'scroll' // ), {duration: 100} // // setTimeout(function () { // var gif; // // $.get('http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=kittens', function (result) { // gif = result.data.image_url; // $('.terminal').append(']]></content>
-  </entry>
-  <entry>
-    <title><![CDATA[tags]]></title>
-    <url>%2Ftags%2Findex.html</url>
-    <content type="text"></content>
   </entry>
 </search>
