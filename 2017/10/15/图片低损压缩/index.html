@@ -77,7 +77,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="linux," />
+  <meta name="keywords" content="python," />
 
 
 
@@ -93,25 +93,18 @@
 
 
 
-<meta name="description" content="前述相信大家桌面远程linux服务器大多用的都是vnc（虽然对于linux系统桌面远程用的确实很少），这里提一下xrdp的优势，1.加密，vcn本身的传输是不加密的（可以借助于SSL实现）；2.因为xrdp实质上就是一个 rdp  服务器，所以我们在windows上只需要借助自带的mstsc就可以直连linxu桌面系统，因为都使用了rdp协议，很方便；3. 支持多用户登录；4.第四个优势…要说第四">
-<meta name="keywords" content="linux">
+<meta name="description" content="前言因为有时上传到博客的图片会比较大，所以就想到要压缩一下来减轻网络负载，因为我一般对质量要求不高，所以有点损失的话也无所谓。">
+<meta name="keywords" content="python">
 <meta property="og:type" content="article">
-<meta property="og:title" content="(xrdp+vnc)远程桌面linux">
-<meta property="og:url" content="http://safeandsound.cn/2017/06/15/xrdp-vnc/index.html">
+<meta property="og:title" content="图片低损压缩">
+<meta property="og:url" content="http://safeandsound.cn/2017/10/15/图片低损压缩/index.html">
 <meta property="og:site_name" content="jay&#39;s Blog">
-<meta property="og:description" content="前述相信大家桌面远程linux服务器大多用的都是vnc（虽然对于linux系统桌面远程用的确实很少），这里提一下xrdp的优势，1.加密，vcn本身的传输是不加密的（可以借助于SSL实现）；2.因为xrdp实质上就是一个 rdp  服务器，所以我们在windows上只需要借助自带的mstsc就可以直连linxu桌面系统，因为都使用了rdp协议，很方便；3. 支持多用户登录；4.第四个优势…要说第四">
+<meta property="og:description" content="前言因为有时上传到博客的图片会比较大，所以就想到要压缩一下来减轻网络负载，因为我一般对质量要求不高，所以有点损失的话也无所谓。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://oxebeaim4.bkt.clouddn.com/image/xrdp+vnc/vnc-login.png">
-<meta property="og:image" content="https://oxebeaim4.bkt.clouddn.com/image/xrdp+vnc/1cvt参数.png">
-<meta property="og:image" content="https://oxebeaim4.bkt.clouddn.com/image/xrdp+vnc/2创建新模式.png">
-<meta property="og:image" content="https://oxebeaim4.bkt.clouddn.com/image/xrdp+vnc/3创建新模式成功.png">
-<meta property="og:image" content="https://oxebeaim4.bkt.clouddn.com/image/xrdp+vnc/3添加模式成功.png">
-<meta property="og:image" content="https://oxebeaim4.bkt.clouddn.com/image/xrdp+vnc/修改vnc分辨率.png">
 <meta property="og:updated_time" content="2017-10-15T12:34:07.474Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="(xrdp+vnc)远程桌面linux">
-<meta name="twitter:description" content="前述相信大家桌面远程linux服务器大多用的都是vnc（虽然对于linux系统桌面远程用的确实很少），这里提一下xrdp的优势，1.加密，vcn本身的传输是不加密的（可以借助于SSL实现）；2.因为xrdp实质上就是一个 rdp  服务器，所以我们在windows上只需要借助自带的mstsc就可以直连linxu桌面系统，因为都使用了rdp协议，很方便；3. 支持多用户登录；4.第四个优势…要说第四">
-<meta name="twitter:image" content="https://oxebeaim4.bkt.clouddn.com/image/xrdp+vnc/vnc-login.png">
+<meta name="twitter:title" content="图片低损压缩">
+<meta name="twitter:description" content="前言因为有时上传到博客的图片会比较大，所以就想到要压缩一下来减轻网络负载，因为我一般对质量要求不高，所以有点损失的话也无所谓。">
 
 
 
@@ -139,13 +132,13 @@
 
 
 
-  <link rel="canonical" href="http://safeandsound.cn/2017/06/15/xrdp-vnc/"/>
+  <link rel="canonical" href="http://safeandsound.cn/2017/10/15/图片低损压缩/"/>
 
 
 
 
 
-  <title>(xrdp+vnc)远程桌面linux | jay's Blog</title>
+  <title>图片低损压缩 | jay's Blog</title>
   
 
 
@@ -531,7 +524,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://safeandsound.cn/2017/06/15/xrdp-vnc/">
+    <link itemprop="mainEntityOfPage" href="http://safeandsound.cn/2017/10/15/图片低损压缩/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="jay">
@@ -548,7 +541,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">(xrdp+vnc)远程桌面linux</h1>
+          <h1 class="post-title" itemprop="name headline">图片低损压缩</h1>
         
 
         <div class="post-meta">
@@ -560,8 +553,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-15T05:37:36+00:00">
-                2017-06-15
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-15T11:07:14+00:00">
+                2017-10-15
               </time>
             
 
@@ -595,30 +588,16 @@
       
 
       
-        <h3 id="前述"><a href="#前述" class="headerlink" title="前述"></a>前述</h3><p>相信大家桌面远程linux服务器大多用的都是vnc（虽然对于linux系统桌面远程用的确实很少），这里提一下xrdp的优势，1.加密，vcn本身的传输是不加密的（可以借助于SSL实现）；2.因为xrdp实质上就是一个<a href="https://zh.wikipedia.org/wiki/%E9%81%A0%E7%AB%AF%E6%A1%8C%E9%9D%A2%E5%8D%94%E5%AE%9A" target="_blank" rel="external"> rdp </a> 服务器，所以我们在windows上只需要借助自带的mstsc就可以直连linxu桌面系统，因为都使用了rdp协议，很方便；3. 支持多用户登录；4.第四个优势…要说第四个优势的话……开源算么？（逃…<br><a id="more"></a></p>
-<h3 id="操作步骤"><a href="#操作步骤" class="headerlink" title="操作步骤"></a>操作步骤</h3><h4 id="安装xrdp-vncserver："><a href="#安装xrdp-vncserver：" class="headerlink" title="安装xrdp+vncserver："></a>安装xrdp+vncserver：</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#CentOS</span></div><div class="line">yum install epel-release</div><div class="line">yum update</div><div class="line">yum install xrdp tigervnc-server</div><div class="line"><span class="comment">#Ubuntu</span></div><div class="line">apt-get update</div><div class="line">apt-get install xrdp tigervnc-server</div></pre></td></tr></table></figure>
-<p>如果服务器桌面系统都没装的话，建议选择xfce一类轻量型桌面</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#CentOS</span></div><div class="line">yum groupinstall xfce4</div><div class="line"><span class="comment">#Ubuntu</span></div><div class="line">apt-get install xubuntu-desktop</div><div class="line"><span class="comment">#安装完成后运行</span></div><div class="line">systemctl <span class="built_in">set</span>-default graphical.target <span class="comment">#使系统默认从GUI启动</span></div><div class="line"><span class="comment">#如果要恢复默认从CLI启动</span></div><div class="line">systemctl <span class="built_in">set</span>-default multi-user.target <span class="comment">#使系统默认从CLI启动</span></div></pre></td></tr></table></figure>
-<h4 id="设置xrdp开机自启："><a href="#设置xrdp开机自启：" class="headerlink" title="设置xrdp开机自启："></a>设置xrdp开机自启：</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">systemctl <span class="built_in">enable</span> xrdp.service</div><div class="line"><span class="comment">#启动xrdp服务</span></div><div class="line">systemctl start xrdp</div></pre></td></tr></table></figure>
-<p>如果xrdp报错的话可以参考 <a href="https://www.centos.org/forums/viewtopic.php?t=51875" target="_blank" rel="external"> 该链接 </a>，运行：<br></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#Allow SElinux to allow:</span></div><div class="line">chcon --<span class="built_in">type</span>=bin_t /usr/sbin/xrdp</div><div class="line">chcon --<span class="built_in">type</span>=bin_t /usr/sbin/xrdp-sesman</div><div class="line"><span class="comment">#Start it </span></div><div class="line">systemctl start xrdp</div></pre></td></tr></table></figure>
-<h4 id="运行”vncserver”命令在当前用户家目录实例化vnc配置"><a href="#运行”vncserver”命令在当前用户家目录实例化vnc配置" class="headerlink" title="运行”vncserver”命令在当前用户家目录实例化vnc配置"></a>运行”vncserver”命令在当前用户家目录实例化vnc配置</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#如果想以其他用户的身份连接远程连接，需要先使用su命令来切换用户</span></div><div class="line">vncserver</div></pre></td></tr></table></figure>
-<h4 id="配置vncserver服务："><a href="#配置vncserver服务：" class="headerlink" title="配置vncserver服务："></a>配置vncserver服务：</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">cp /lib/systemd/system/vncserver@.service /etc/systemd/system/vncserver@:&lt;NUMBER&gt;.service</div><div class="line"><span class="comment">#&lt;NUMBER&gt;为数字</span></div><div class="line"><span class="comment">#将/etc/systemd/system/vncserver@:&lt;NUMBER&gt;.service中的&lt;USER&gt;替换为你的用户名，共两处。</span></div><div class="line"><span class="comment">#如果是root用户的话，其中的家目录需要改为/root，而非/home/&lt;USER&gt;</span></div></pre></td></tr></table></figure>
-<h4 id="systemctl重新加载配置文件"><a href="#systemctl重新加载配置文件" class="headerlink" title="systemctl重新加载配置文件"></a>systemctl重新加载配置文件</h4> <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">systemctl daemon-reload</div></pre></td></tr></table></figure>
-<h4 id="防火墙允许服务"><a href="#防火墙允许服务" class="headerlink" title="防火墙允许服务"></a>防火墙允许服务</h4><p>注意iptables规则是否有拦截xrdp和vnc服务访问网络。</p>
-<h5 id="Centos7及以上上需要配置firewall允许xrdp和vnc"><a href="#Centos7及以上上需要配置firewall允许xrdp和vnc" class="headerlink" title="Centos7及以上上需要配置firewall允许xrdp和vnc:"></a>Centos7及以上上需要配置firewall允许xrdp和vnc:</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">firewall-cmd --permanent --zone=public --add-port=3389/tcp <span class="comment">#允许xrdp（默认端口为3389）</span></div><div class="line">firewall-cmd --permanent --zone=public --add-service=vnc-server</div><div class="line">firewall-cmd --reload</div></pre></td></tr></table></figure>
-<h4 id="启动vnc"><a href="#启动vnc" class="headerlink" title="启动vnc"></a>启动vnc</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">systemctl start vncserver@:&lt;Nummer&gt;.service</div></pre></td></tr></table></figure>
-<h3 id="赘述"><a href="#赘述" class="headerlink" title="赘述"></a>赘述</h3><p>Windows上mstsc直连session需要选择xvnc<br><img src="https://oxebeaim4.bkt.clouddn.com/image/xrdp+vnc/vnc-login.png" alt="注意选择"></p>
-<p>如果需要以root身份登录，则需要以root身份运行vncserver,配置vncserver@:{n}.service文件后，在/home目录创建root文件夹，将其链接到/root目录即可</p>
-<p>若使用vnc客户端连接的话，分辨率可能会导致无法满屏显示，这时可以直接修改vnc的分辨率(<a href="https://wiki.ubuntu.com/X/Config/Resolution" target="_blank" rel="external"> 参考链接 </a>)：<br></p>
-<p>如果要使用的分辨率在现有的模式中没有的话，我们可以自己手动添加<br><br>1.首先查询所需要参数，cvt 加分辨率<br>例如我需要1366*768的分辨率，则输入“cvt 1366 768”，查询该分辨率的有效扫描频率是多少<br>将Modeline “1368x768_60.00” 后面的“85.25  1368 1440 1576 1784  768 771 781 798 -hsync +vsync”参数复制<br><img src="https://oxebeaim4.bkt.clouddn.com/image/xrdp+vnc/1cvt参数.png" alt="图1"><br><br>2.创建所需的模式</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">xrandr --newmode <span class="string">"模式名"</span>  + 上一步复制的参数</div></pre></td></tr></table></figure>
-<p><img src="https://oxebeaim4.bkt.clouddn.com/image/xrdp+vnc/2创建新模式.png" alt="图2"><br><br>3.这时接使用刚刚创建的模式会提示找不到模式，需要手动添加一下<br></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">xrandr --addmode 显示器名 <span class="string">"模式名"</span></div></pre></td></tr></table></figure>
-<p>创建成功：<br><img src="https://oxebeaim4.bkt.clouddn.com/image/xrdp+vnc/3创建新模式成功.png" alt="图3"><br><br>添加成功：<br><img src="https://oxebeaim4.bkt.clouddn.com/image/xrdp+vnc/3添加模式成功.png" alt="图3"><br><br>4.使用新建模式</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">xrandr --output 显示器名 --mode <span class="string">"模式名"</span></div></pre></td></tr></table></figure>
-<p><img src="https://oxebeaim4.bkt.clouddn.com/image/xrdp+vnc/修改vnc分辨率.png" alt="使用"><br>当前设置在重启后失效，可以将其写入配置文件保证设置永久有效</p>
-<p>分辨率也可以通过vnc客户端设置，但是画质会受影响<br>本文部分参考<a href="http://misliang.blog.51cto.com/6973084/1533172" target="_blank" rel="external"> 该博文 </a></p>
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>因为有时上传到博客的图片会比较大，所以就想到要压缩一下来减轻网络负载，因为我一般对质量要求不高，所以有点损失的话也无所谓。<br><a id="more"></a></p>
+<h3 id="详述"><a href="#详述" class="headerlink" title="详述"></a>详述</h3><p>首先我去查了下压缩的方法，知乎上有个方法挺好使的，即“先转成GIF图片，再转成png图片”，我用PS试了下，都是直接用最高品质直接保存，结果图片大小由将近2M降为1M出头，接近一半，当然了，质量在过程中是有损的，不过不放大了仔细看的话基本看不出什么区别。</p>
+<p>当然当然，肯定不可能每压缩一张图片就要拉到PS里去，这里只是讲述一种可行方法。</p>
+<p>那就用python写个脚本吧。网上查了下文档发现Image模块处理到最后保存有一个quality参数可选，试试：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</div><div class="line"><span class="keyword">import</span> os,sys</div><div class="line"></div><div class="line">imgFile=sys.argv[<span class="number">1</span>]</div><div class="line">inputName = os.path.splitext(imgFile.split(<span class="string">"/"</span>)[<span class="number">-1</span>])</div><div class="line">suffix=inputName[<span class="number">1</span>]<span class="comment">#图片后缀名</span></div><div class="line">outputName=inputName[<span class="number">0</span>]+<span class="string">"-convert"</span><span class="comment">#保存的图片名</span></div><div class="line"><span class="keyword">try</span>:</div><div class="line">	inputFile=Image.open(imgFile)</div><div class="line">	inputFile.save(outputName+<span class="string">".jpg"</span>,quality=<span class="number">80</span>)</div><div class="line">	print(<span class="string">"\ncompression success"</span>)</div><div class="line"><span class="keyword">except</span> Exception <span class="keyword">as</span> e:</div><div class="line">	print(<span class="string">"\ncompression failure"</span>)</div></pre></td></tr></table></figure>
+<p>执行脚本带上一个图片路径参数（windows下请注意用“\\”对路径进行分割），测试中一张1.31M的图片压缩后为201K，效果还是可以的，图就不贴出了，可以自己转一下试试。</p>
+<p>quality参数最终定在80是因为这样压缩率很大但图片质量损失不会很大，可以自行选择合适的。</p>
+<p>对于GIF图片的压缩，我直接调用了<a href="https://developers.google.com/speed/webp/docs/gif2webp" target="_blank" rel="external">WebP官网</a>提供的gif2webp程序，反正现在主流浏览器都支持webp格式，况且webp的优势那么大。<a href="https://storage.googleapis.com/downloads.webmproject.org/releases/webp/index.html" target="_blank" rel="external">下载地址在这里</a>。</p>
+<p>最终的代码只是整合了一下，就不贴出了，<a href="https://github.com/VanjayDo/scripts/blob/master/imgCompress.py" target="_blank" rel="external">代码地址在这</a>。</p>
+<h3 id="赘述"><a href="#赘述" class="headerlink" title="赘述"></a>赘述</h3><p>jpg、png等也可以用WebP官网提供的img2webp程序转成webp，但是压缩率…………有时（我测试的几张图都是）会是负数。</p>
 
       
     </div>
@@ -648,7 +627,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/linux/" rel="tag"># linux</a>
+            <a href="/tags/python/" rel="tag"># python</a>
           
         </div>
       
@@ -661,8 +640,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/06/06/sublime下markdown环境配置/" rel="next" title="sublime下markdown环境配置">
-                <i class="fa fa-chevron-left"></i> sublime下markdown环境配置
+              <a href="/2017/10/04/校园网中实现免费上网的方法（一）/" rel="next" title="校园网中实现免费上网的方法（一）">
+                <i class="fa fa-chevron-left"></i> 校园网中实现免费上网的方法（一）
               </a>
             
           </div>
@@ -670,10 +649,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/07/31/windows热点不可用解决办法/" rel="prev" title="windows热点不可用解决办法">
-                windows热点不可用解决办法 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -1105,7 +1080,7 @@ a.change {
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前述"><span class="nav-number">1.</span> <span class="nav-text">前述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#操作步骤"><span class="nav-number">2.</span> <span class="nav-text">操作步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装xrdp-vncserver："><span class="nav-number">2.1.</span> <span class="nav-text">安装xrdp+vncserver：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#设置xrdp开机自启："><span class="nav-number">2.2.</span> <span class="nav-text">设置xrdp开机自启：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#运行”vncserver”命令在当前用户家目录实例化vnc配置"><span class="nav-number">2.3.</span> <span class="nav-text">运行”vncserver”命令在当前用户家目录实例化vnc配置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置vncserver服务："><span class="nav-number">2.4.</span> <span class="nav-text">配置vncserver服务：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#systemctl重新加载配置文件"><span class="nav-number">2.5.</span> <span class="nav-text">systemctl重新加载配置文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#防火墙允许服务"><span class="nav-number">2.6.</span> <span class="nav-text">防火墙允许服务</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Centos7及以上上需要配置firewall允许xrdp和vnc"><span class="nav-number">2.6.1.</span> <span class="nav-text">Centos7及以上上需要配置firewall允许xrdp和vnc:</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#启动vnc"><span class="nav-number">2.7.</span> <span class="nav-text">启动vnc</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#赘述"><span class="nav-number">3.</span> <span class="nav-text">赘述</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#详述"><span class="nav-number">2.</span> <span class="nav-text">详述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#赘述"><span class="nav-number">3.</span> <span class="nav-text">赘述</span></a></li></ol></div>
             
 
           </div>
