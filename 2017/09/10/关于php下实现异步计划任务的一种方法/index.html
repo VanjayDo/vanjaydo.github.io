@@ -101,7 +101,7 @@
 <meta property="og:site_name" content="jay&#39;s Blog">
 <meta property="og:description" content="前言在一个网络管理系统的实现过程中需要完成这样一个功能，老师在上课时通过交互界面将该教室的网络关闭，课程结束后系统将自动将教室网络开放，这有两方面的要求，首先是计划任务的实现：下课后自动恢复网络，这里使用循环来检查任务执行情况，因为如果全部都写到操作系统的计划任务中那就太繁重了（当然也可以只写一个系统的计划任务，将它和数据库结合起来实现，这是我最后采用的方法）；二就是老师提交“关闭网络”的请求时应">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-10-21T15:59:41.100Z">
+<meta property="og:updated_time" content="2017-10-23T08:42:29.891Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于php下实现异步计划任务的一种方法">
 <meta name="twitter:description" content="前言在一个网络管理系统的实现过程中需要完成这样一个功能，老师在上课时通过交互界面将该教室的网络关闭，课程结束后系统将自动将教室网络开放，这有两方面的要求，首先是计划任务的实现：下课后自动恢复网络，这里使用循环来检查任务执行情况，因为如果全部都写到操作系统的计划任务中那就太繁重了（当然也可以只写一个系统的计划任务，将它和数据库结合起来实现，这是我最后采用的方法）；二就是老师提交“关闭网络”的请求时应">
@@ -722,23 +722,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.min.js"></script>
 <script>
-  /*
-   * Copyright (C) 2016 Never_yu (Neveryu.github.io) <React.dong.yu@gmail.com>
-   * Sina Weibo (http://weibo.com/Neveryu)
-   *
-   * Licensed under the Apache License, Version 2.0 (the "License");
-   * you may not use this file except in compliance with the License.
-   * You may obtain a copy of the License at
-   *
-   *      http://www.apache.org/licenses/LICENSE-2.0
-   *
-   * Unless required by applicable law or agreed to in writing, software
-   * distributed under the License is distributed on an "AS IS" BASIS,
-   * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-   * See the License for the specific language governing permissions and
-   * limitations under the License.
-   */
-
    /*high一下js脚本*/
     function go() {
     /*歌曲数组

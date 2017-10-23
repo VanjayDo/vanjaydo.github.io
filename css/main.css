@@ -1724,7 +1724,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #60ff6c;
+  background: #ec4a33;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2805,13 +2805,13 @@ hr {
   }
 }
 body {
-  background: url("https://oxebeaim4.bkt.clouddn.com/image/wave-ocean.jpg");
+  background: url("http://cdn.safeandsound.cn/image/wave-ocean.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
 #sidebar {
-  background: url("https://oxebeaim4.bkt.clouddn.com/image/sidebar-bg-forest.jpg");
+  background: url("http://cdn.safeandsound.cn/image/sidebar-bg-forest.jpg");
   background-color: #fff;
   background-size: cover;
   background-position: center;

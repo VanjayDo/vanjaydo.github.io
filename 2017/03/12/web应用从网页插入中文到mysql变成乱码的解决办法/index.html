@@ -101,13 +101,13 @@
 <meta property="og:site_name" content="jay&#39;s Blog">
 <meta property="og:description" content="前言相信既然这么进来了，那么问题肯定是差不多的，下面直接讲述解决办法：">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://oxebeaim4.bkt.clouddn.com/image/web应用从网页插入中文到mysql变成乱码的解决办法/修改.png">
-<meta property="og:image" content="http://oxebeaim4.bkt.clouddn.com/image/web应用从网页插入中文到mysql变成乱码的解决办法/utf8.png">
-<meta property="og:updated_time" content="2017-10-21T15:59:41.100Z">
+<meta property="og:image" content="http://cdn.safeandsound.cn/image/web应用从网页插入中文到mysql变成乱码的解决办法/修改.png">
+<meta property="og:image" content="http://cdn.safeandsound.cn/image/web应用从网页插入中文到mysql变成乱码的解决办法/utf8.png">
+<meta property="og:updated_time" content="2017-10-23T08:42:29.891Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="web应用从网页插入中文到mysql变成乱码的解决办法">
 <meta name="twitter:description" content="前言相信既然这么进来了，那么问题肯定是差不多的，下面直接讲述解决办法：">
-<meta name="twitter:image" content="http://oxebeaim4.bkt.clouddn.com/image/web应用从网页插入中文到mysql变成乱码的解决办法/修改.png">
+<meta name="twitter:image" content="http://cdn.safeandsound.cn/image/web应用从网页插入中文到mysql变成乱码的解决办法/修改.png">
 
 
 
@@ -595,9 +595,9 @@
 <h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><h4 id="首先在mysql配置文件my-ini中进行配置修改"><a href="#首先在mysql配置文件my-ini中进行配置修改" class="headerlink" title="首先在mysql配置文件my.ini中进行配置修改"></a>首先在mysql配置文件my.ini中进行配置修改</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">#搜索找到[mysqld]，在它下面添加配置，如下</div><div class="line">[mysqld]</div><div class="line">character-set-server = utf8</div><div class="line"></div><div class="line">#搜索找到[mysql]，在它下面添加配置，如下</div><div class="line">[mysql]</div><div class="line">default-character-set = utf8</div></pre></td></tr></table></figure>
 <h4 id="修改连接编码和中文字段编码"><a href="#修改连接编码和中文字段编码" class="headerlink" title="修改连接编码和中文字段编码"></a>修改连接编码和中文字段编码</h4><p>接下来我是从phpmyadmin上操作的，如果你没有可视化操作界面，那就转换成sql语句来操作吧。</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">set</span> <span class="keyword">names</span> <span class="string">"uft8"</span>;</div></pre></td></tr></table></figure>
-<p>再将所有需要插入中文的字段进行结构修改：<br>例如下面的message字段<br><img src="http://oxebeaim4.bkt.clouddn.com/image/web应用从网页插入中文到mysql变成乱码的解决办法/修改.png" alt="修改结构"></p>
+<p>再将所有需要插入中文的字段进行结构修改：<br>例如下面的message字段<br><img src="http://cdn.safeandsound.cn/image/web应用从网页插入中文到mysql变成乱码的解决办法/修改.png" alt="修改结构"></p>
 <p>将排序规则修改为utf8_general_ci</p>
-<p><img src="http://oxebeaim4.bkt.clouddn.com/image/web应用从网页插入中文到mysql变成乱码的解决办法/utf8.png" alt="排序规则"></p>
+<p><img src="http://cdn.safeandsound.cn/image/web应用从网页插入中文到mysql变成乱码的解决办法/utf8.png" alt="排序规则"></p>
 <h3 id="赘述"><a href="#赘述" class="headerlink" title="赘述"></a>赘述</h3><p>我曾多次遇到这种问题都是这么解决的，也曾利用修改排序规则的方法帮同学结果过类似问题，在此仅供参考。</p>
 
       
@@ -723,23 +723,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.min.js"></script>
 <script>
-  /*
-   * Copyright (C) 2016 Never_yu (Neveryu.github.io) <React.dong.yu@gmail.com>
-   * Sina Weibo (http://weibo.com/Neveryu)
-   *
-   * Licensed under the Apache License, Version 2.0 (the "License");
-   * you may not use this file except in compliance with the License.
-   * You may obtain a copy of the License at
-   *
-   *      http://www.apache.org/licenses/LICENSE-2.0
-   *
-   * Unless required by applicable law or agreed to in writing, software
-   * distributed under the License is distributed on an "AS IS" BASIS,
-   * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-   * See the License for the specific language governing permissions and
-   * limitations under the License.
-   */
-
    /*high一下js脚本*/
     function go() {
     /*歌曲数组
