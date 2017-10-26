@@ -101,17 +101,17 @@
 <meta property="og:site_name" content="jay&#39;s Blog">
 <meta property="og:description" content="前述相信大家桌面远程linux服务器大多用的都是vnc（虽然对于linux系统桌面远程用的确实很少），这里提一下xrdp的优势，1.加密，vcn本身的传输是不加密的（可以借助于SSL实现）；2.因为xrdp实质上就是一个 rdp  服务器，所以我们在windows上只需要借助自带的mstsc就可以直连linxu桌面系统，因为都使用了rdp协议，很方便；3. 支持多用户登录；4.第四个优势…要说第四">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://cdn.safeandsound.cn/image/xrdp+vnc/vnc-login.png">
-<meta property="og:image" content="http://cdn.safeandsound.cn/image/xrdp+vnc/1cvt参数.png">
-<meta property="og:image" content="http://cdn.safeandsound.cn/image/xrdp+vnc/2创建新模式.png">
-<meta property="og:image" content="http://cdn.safeandsound.cn/image/xrdp+vnc/3创建新模式成功.png">
-<meta property="og:image" content="http://cdn.safeandsound.cn/image/xrdp+vnc/3添加模式成功.png">
-<meta property="og:image" content="http://cdn.safeandsound.cn/image/xrdp+vnc/修改vnc分辨率.png">
-<meta property="og:updated_time" content="2017-10-24T16:10:22.076Z">
+<meta property="og:image" content="https://cdn.safeandsound.cn/image/xrdp+vnc/vnc-login.png">
+<meta property="og:image" content="https://cdn.safeandsound.cn/image/xrdp+vnc/1cvt参数.png">
+<meta property="og:image" content="https://cdn.safeandsound.cn/image/xrdp+vnc/2创建新模式.png">
+<meta property="og:image" content="https://cdn.safeandsound.cn/image/xrdp+vnc/3创建新模式成功.png">
+<meta property="og:image" content="https://cdn.safeandsound.cn/image/xrdp+vnc/3添加模式成功.png">
+<meta property="og:image" content="https://cdn.safeandsound.cn/image/xrdp+vnc/修改vnc分辨率.png">
+<meta property="og:updated_time" content="2017-10-26T15:53:51.551Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="(xrdp+vnc)远程桌面linux">
 <meta name="twitter:description" content="前述相信大家桌面远程linux服务器大多用的都是vnc（虽然对于linux系统桌面远程用的确实很少），这里提一下xrdp的优势，1.加密，vcn本身的传输是不加密的（可以借助于SSL实现）；2.因为xrdp实质上就是一个 rdp  服务器，所以我们在windows上只需要借助自带的mstsc就可以直连linxu桌面系统，因为都使用了rdp协议，很方便；3. 支持多用户登录；4.第四个优势…要说第四">
-<meta name="twitter:image" content="http://cdn.safeandsound.cn/image/xrdp+vnc/vnc-login.png">
+<meta name="twitter:image" content="https://cdn.safeandsound.cn/image/xrdp+vnc/vnc-login.png">
 
 
 
@@ -608,16 +608,16 @@
 <h4 id="防火墙允许服务"><a href="#防火墙允许服务" class="headerlink" title="防火墙允许服务"></a>防火墙允许服务</h4><p>注意iptables规则是否有拦截xrdp和vnc服务访问网络。</p>
 <h5 id="Centos7及以上上需要配置firewall允许xrdp和vnc"><a href="#Centos7及以上上需要配置firewall允许xrdp和vnc" class="headerlink" title="Centos7及以上上需要配置firewall允许xrdp和vnc:"></a>Centos7及以上上需要配置firewall允许xrdp和vnc:</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">firewall-cmd --permanent --zone=public --add-port=3389/tcp <span class="comment">#允许xrdp（默认端口为3389）</span></div><div class="line">firewall-cmd --permanent --zone=public --add-service=vnc-server</div><div class="line">firewall-cmd --reload</div></pre></td></tr></table></figure>
 <h4 id="启动vnc"><a href="#启动vnc" class="headerlink" title="启动vnc"></a>启动vnc</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">systemctl start vncserver@:&lt;Nummer&gt;.service</div></pre></td></tr></table></figure>
-<h3 id="赘述"><a href="#赘述" class="headerlink" title="赘述"></a>赘述</h3><p>Windows上mstsc直连session需要选择xvnc<br><img src="http://cdn.safeandsound.cn/image/xrdp+vnc/vnc-login.png" alt="注意选择"></p>
+<h3 id="赘述"><a href="#赘述" class="headerlink" title="赘述"></a>赘述</h3><p>Windows上mstsc直连session需要选择xvnc<br><img src="https://cdn.safeandsound.cn/image/xrdp+vnc/vnc-login.png" alt="注意选择"></p>
 <p>如果需要以root身份登录，则需要以root身份运行vncserver,配置vncserver@:{n}.service文件后，在/home目录创建root文件夹，将其链接到/root目录即可</p>
 <p>若使用vnc客户端连接的话，分辨率可能会导致无法满屏显示，这时可以直接修改vnc的分辨率(<a href="https://wiki.ubuntu.com/X/Config/Resolution" target="_blank" rel="external"> 参考链接 </a>)：<br></p>
-<p>如果要使用的分辨率在现有的模式中没有的话，我们可以自己手动添加<br><br>1.首先查询所需要参数，cvt 加分辨率<br>例如我需要1366*768的分辨率，则输入“cvt 1366 768”，查询该分辨率的有效扫描频率是多少<br>将Modeline “1368x768_60.00” 后面的“85.25  1368 1440 1576 1784  768 771 781 798 -hsync +vsync”参数复制<br><img src="http://cdn.safeandsound.cn/image/xrdp+vnc/1cvt参数.png" alt="图1"><br><br>2.创建所需的模式</p>
+<p>如果要使用的分辨率在现有的模式中没有的话，我们可以自己手动添加<br><br>1.首先查询所需要参数，cvt 加分辨率<br>例如我需要1366*768的分辨率，则输入“cvt 1366 768”，查询该分辨率的有效扫描频率是多少<br>将Modeline “1368x768_60.00” 后面的“85.25  1368 1440 1576 1784  768 771 781 798 -hsync +vsync”参数复制<br><img src="https://cdn.safeandsound.cn/image/xrdp+vnc/1cvt参数.png" alt="图1"><br><br>2.创建所需的模式</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">xrandr --newmode <span class="string">"模式名"</span>  + 上一步复制的参数</div></pre></td></tr></table></figure>
-<p><img src="http://cdn.safeandsound.cn/image/xrdp+vnc/2创建新模式.png" alt="图2"><br><br>3.这时接使用刚刚创建的模式会提示找不到模式，需要手动添加一下<br></p>
+<p><img src="https://cdn.safeandsound.cn/image/xrdp+vnc/2创建新模式.png" alt="图2"><br><br>3.这时接使用刚刚创建的模式会提示找不到模式，需要手动添加一下<br></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">xrandr --addmode 显示器名 <span class="string">"模式名"</span></div></pre></td></tr></table></figure>
-<p>创建成功：<br><img src="http://cdn.safeandsound.cn/image/xrdp+vnc/3创建新模式成功.png" alt="图3"><br><br>添加成功：<br><img src="http://cdn.safeandsound.cn/image/xrdp+vnc/3添加模式成功.png" alt="图3"><br><br>4.使用新建模式</p>
+<p>创建成功：<br><img src="https://cdn.safeandsound.cn/image/xrdp+vnc/3创建新模式成功.png" alt="图3"><br><br>添加成功：<br><img src="https://cdn.safeandsound.cn/image/xrdp+vnc/3添加模式成功.png" alt="图3"><br><br>4.使用新建模式</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">xrandr --output 显示器名 --mode <span class="string">"模式名"</span></div></pre></td></tr></table></figure>
-<p><img src="http://cdn.safeandsound.cn/image/xrdp+vnc/修改vnc分辨率.png" alt="使用"><br>当前设置在重启后失效，可以将其写入配置文件保证设置永久有效</p>
+<p><img src="https://cdn.safeandsound.cn/image/xrdp+vnc/修改vnc分辨率.png" alt="使用"><br>当前设置在重启后失效，可以将其写入配置文件保证设置永久有效</p>
 <p>分辨率也可以通过vnc客户端设置，但是画质会受影响<br>本文部分参考<a href="http://misliang.blog.51cto.com/6973084/1533172" target="_blank" rel="external"> 该博文 </a></p>
 
       
