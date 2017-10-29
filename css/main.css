@@ -1724,7 +1724,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ffdb50;
+  background: #7e0ad7;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2805,13 +2805,13 @@ hr {
   }
 }
 body {
-  background: url("https://cdn.safeandsound.cn/image/wave-ocean.jpg");
+  background: url("//cdn.safeandsound.cn/image/wave-ocean.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
 #sidebar {
-  background: url("https://cdn.safeandsound.cn/image/sidebar-bg-forest.jpg");
+  background: url("//cdn.safeandsound.cn/image/sidebar-bg-forest.jpg");
   background-color: #fff;
   background-size: cover;
   background-position: center;
