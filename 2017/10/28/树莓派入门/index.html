@@ -101,7 +101,7 @@
 <meta property="og:description" content="前言对于入手树莓派 是蓄谋已久现在如愿以偿。本文整理了使用过程中遇到的一些问题。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://cdn.safeandsound.cn/image/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%85%A5%E9%97%A8/raspberry.jpg">
-<meta property="og:updated_time" content="2017-10-29T04:21:18.279Z">
+<meta property="og:updated_time" content="2017-10-30T08:07:53.241Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="树莓派入门">
 <meta name="twitter:description" content="前言对于入手树莓派 是蓄谋已久现在如愿以偿。本文整理了使用过程中遇到的一些问题。">
@@ -264,6 +264,19 @@
       
       
       <!--j's自定义修改-->
+      
+      <style type="text/css">
+      /*字符上下颠倒*/
+      #upside-down
+      {
+        filter:  progid:DXImageTransform.Microsoft.BasicImage(rotation=2);  /* IE6,IE7 */
+        ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)"; /* IE8 */
+        -moz-transform: rotate(-180deg);  /* 火狐3.5+ */
+        -o-transform: rotate(-180deg);  /* Opera 10.5 */
+        -webkit-transform: rotate(-180deg);  /* Safari 3.1+, Chrome */
+      }
+      </style>
+
       <!--手机浏览器中在导航栏显示High一下-->
       <script>
         function go() {
@@ -273,8 +286,8 @@
            *
            */
           var songs = [
-            "http://mp3.qqmusic.cc/yq/5028219.mp3",
-            "http://mp3.qqmusic.cc/yq/4832020.mp3"
+                "https://cdn.safeandsound.cn/music/crazy-bird.m4a",
+                "https://cdn.safeandsound.cn/music/shape-of-my-heart.m4a"
           ];
 
 
@@ -471,7 +484,7 @@
 
       if(isMobile)
       {
-        document.write('<li class="menu-item"><a onclick=go()><i class="menu-item-icon fa fa-music fa-fw"></i>High一下</a></li>');
+        document.write('<li class="menu-item"><a onclick=go()><i class="menu-item-icon fa fa-music fa-fw"></i>好听的 <i class="fa fa-smile-o" aria-hidden="true" style="font-size:120%" id="upside-down"></i></a></li>');
       }
       </script>
     <!--j's自定义修改结束-->
@@ -748,8 +761,8 @@
     *
     */
     var songs = [
-                "http://mp3.qqmusic.cc/yq/5028219.mp3",
-                "http://mp3.qqmusic.cc/yq/4832020.mp3"
+                "https://cdn.safeandsound.cn/music/crazy-bird.m4a",
+                "https://cdn.safeandsound.cn/music/shape-of-my-heart.m4a"
     ];
 
     
@@ -941,8 +954,17 @@
 
 
 </script>
-
 <style type="text/css">
+/*字符上下颠倒*/
+#upside-down
+{
+filter:  progid:DXImageTransform.Microsoft.BasicImage(rotation=2);  /* IE6,IE7 */
+ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)"; /* IE8 */
+-moz-transform: rotate(-180deg);  /* 火狐3.5+ */
+-o-transform: rotate(-180deg);  /* Opera 10.5 */
+-webkit-transform: rotate(-180deg);  /* Safari 3.1+, Chrome */
+}
+
 a.change {
     display: inline-block;
     padding: 0 10px;
@@ -1021,7 +1043,8 @@ a.change {
   <div class="high-once" style="margin-top:10px">
     <a class="change" id="high" onclick="go()" href="#">
       <i class="menu-item-icon fa fa-music fa-fw"></i>
-      High一下
+      好听的
+      <i class="fa fa-smile-o" aria-hidden="true" style="font-size:120%" id="upside-down"></i>
     </a>
   </div>
 

@@ -105,7 +105,7 @@
 <meta property="og:image" content="https://cdn.safeandsound.cn/image/about/%E8%B1%86%E7%93%A3%E8%AF%BB%E4%B9%A6workflow.png">
 <meta property="og:image" content="https://cdn.safeandsound.cn/image/SDN.jpg">
 <meta property="og:image" content="https://cdn.safeandsound.cn/image/about/mycli.png">
-<meta property="og:updated_time" content="2017-10-29T04:21:18.279Z">
+<meta property="og:updated_time" content="2017-10-30T08:07:53.361Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="有些关于">
 <meta name="twitter:description" content="2017 年10 月 2017-10-27强推一款跨平台的终端连接工具：Termius，尤其是在IOS上，好用又良心。在此之前我在手机上使用的SSH连接工具是Shelly，它仅支持SSH，而且不购买专业版的话就无法保存密码，每次都要重新输入，简直是要逼死使用长密码的人，在我准备购买专业版时发现当前下载的shelly是使用之前的一个Apple ID获取的，购买的话就需要使用现在的账号重新获取，于是删">
@@ -268,6 +268,19 @@
       
       
       <!--j's自定义修改-->
+      
+      <style type="text/css">
+      /*字符上下颠倒*/
+      #upside-down
+      {
+        filter:  progid:DXImageTransform.Microsoft.BasicImage(rotation=2);  /* IE6,IE7 */
+        ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)"; /* IE8 */
+        -moz-transform: rotate(-180deg);  /* 火狐3.5+ */
+        -o-transform: rotate(-180deg);  /* Opera 10.5 */
+        -webkit-transform: rotate(-180deg);  /* Safari 3.1+, Chrome */
+      }
+      </style>
+
       <!--手机浏览器中在导航栏显示High一下-->
       <script>
         function go() {
@@ -277,8 +290,8 @@
            *
            */
           var songs = [
-            "http://mp3.qqmusic.cc/yq/5028219.mp3",
-            "http://mp3.qqmusic.cc/yq/4832020.mp3"
+                "https://cdn.safeandsound.cn/music/crazy-bird.m4a",
+                "https://cdn.safeandsound.cn/music/shape-of-my-heart.m4a"
           ];
 
 
@@ -475,7 +488,7 @@
 
       if(isMobile)
       {
-        document.write('<li class="menu-item"><a onclick=go()><i class="menu-item-icon fa fa-music fa-fw"></i>High一下</a></li>');
+        document.write('<li class="menu-item"><a onclick=go()><i class="menu-item-icon fa fa-music fa-fw"></i>好听的 <i class="fa fa-smile-o" aria-hidden="true" style="font-size:120%" id="upside-down"></i></a></li>');
       }
       </script>
     <!--j's自定义修改结束-->
@@ -531,14 +544,16 @@
     
     
       <h4 id="2017-年"><a href="#2017-年" class="headerlink" title="2017 年"></a>2017 年</h4><h5 id="10-月"><a href="#10-月" class="headerlink" title="10 月"></a>10 月</h5><ul>
-<li><h6 id="2017-10-27"><a href="#2017-10-27" class="headerlink" title="2017-10-27"></a>2017-10-27</h6>强推一款跨平台的终端连接工具：<a href="https://www.termius.com/" target="_blank" rel="external">Termius</a>，尤其是在IOS上，好用又良心。在此之前我在手机上使用的SSH连接工具是Shelly，它仅支持SSH，而且不购买专业版的话就无法保存密码，每次都要重新输入，简直是要逼死使用长密码的人，在我准备购买专业版时发现当前下载的shelly是使用之前的一个Apple ID获取的，购买的话就需要使用现在的账号重新获取，于是删除了shelly后我到App store中搜索了ssh，出现的第一个结果就是Termius，五星的好评让我尝试了一下它，结果就没再安装shelly。</li>
-<li><h6 id="2017-10-24"><a href="#2017-10-24" class="headerlink" title="2017-10-24"></a>2017-10-24</h6>上校图书馆网站查书发现一个很有趣的现象，阿加莎、松本清张的书没人借，退一步，岛田庄司的也没人借，然而东野圭吾的书都基本被借光，不好做什么评论，只觉得挺有意思。</li>
-<li><h6 id="2017-10-21"><a href="#2017-10-21" class="headerlink" title="2017-10-21"></a>2017-10-21</h6>之前linux下查命令参数总是用man配合字符匹配，突然发现有<a href="https://github.com/tldr-pages/tldr" target="_blank" rel="external">tldr</a>这种利器，赶紧推一下。<br><img src="https://cdn.safeandsound.cn/image/about/tldr.png" width="500px"></li>
-<li><h6 id="2017-10-18"><a href="#2017-10-18" class="headerlink" title="2017-10-18"></a>2017-10-18</h6>推荐一款linux下递归搜索文件内容的软件：<a href="https://github.com/ggreer/the_silver_searcher" target="_blank" rel="external">ag</a>，安装步骤：<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">git <span class="built_in">clone</span> https://github.com/ggreer/the_silver_searcher.git</div><div class="line">sudo apt-get install -y automake pkg-config libpcre3-dev zlib1g-dev liblzma-dev</div><div class="line">./build</div><div class="line">sudo make install</div></pre></td></tr></table></figure>
+<li><h6 id="2017-10-27"><a href="#2017-10-27" class="headerlink" title="2017-10-27"></a>2017-10-27</h6><p>强推一款跨平台的终端连接工具：<a href="https://www.termius.com/" target="_blank" rel="external">Termius</a>，尤其是在IOS上，好用又良心。在此之前我在手机上使用的SSH连接工具是Shelly，它仅支持SSH，而且不购买专业版的话就无法保存密码，每次都要重新输入，简直是要逼死使用长密码的人，在我准备购买专业版时发现当前下载的shelly是使用之前的一个Apple ID获取的，购买的话就需要使用现在的账号重新获取，于是删除了shelly后我到App store中搜索了ssh，出现的第一个结果就是Termius，五星的好评让我尝试了一下它，结果就没再安装shelly。</p>
 </li>
-</ul>
-<p>体验还不错，在linux子系统下运行效果图<br><img src="https://cdn.safeandsound.cn/image/about/show-ag.png" width="500px"></p>
-<ul>
+<li><h6 id="2017-10-24"><a href="#2017-10-24" class="headerlink" title="2017-10-24"></a>2017-10-24</h6><p>上校图书馆网站查书发现一个很有趣的现象，阿加莎、松本清张的书没人借，退一步，岛田庄司的也没人借，然而东野圭吾的书都基本被借光，不好做什么评论，只觉得挺有意思。</p>
+</li>
+<li><h6 id="2017-10-21"><a href="#2017-10-21" class="headerlink" title="2017-10-21"></a>2017-10-21</h6><p>之前linux下查命令参数总是用man配合字符匹配，突然发现有<a href="https://github.com/tldr-pages/tldr" target="_blank" rel="external">tldr</a>这种利器，赶紧推一下。<br><img src="https://cdn.safeandsound.cn/image/about/tldr.png" width="500px"></p>
+</li>
+<li><h6 id="2017-10-18"><a href="#2017-10-18" class="headerlink" title="2017-10-18"></a>2017-10-18</h6><p>推荐一款linux下递归搜索文件内容的软件：<a href="https://github.com/ggreer/the_silver_searcher" target="_blank" rel="external">ag</a>，安装步骤：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">git <span class="built_in">clone</span> https://github.com/ggreer/the_silver_searcher.git</div><div class="line">sudo apt-get install -y automake pkg-config libpcre3-dev zlib1g-dev liblzma-dev</div><div class="line">./build</div><div class="line">sudo make install</div></pre></td></tr></table></figure>
+<p>  体验还不错，在linux子系统下运行效果图<br><img src="https://cdn.safeandsound.cn/image/about/show-ag.png" width="500px"></p>
+</li>
 <li><h6 id="2017-10-13"><a href="#2017-10-13" class="headerlink" title="2017-10-13"></a>2017-10-13</h6><p>发现IOS下的Workflow可以提取网页的json数据，这样就能访问有些网站提供的API直接拿数据了，简直就是一只小爬虫，自己做了一个根据书名从豆瓣拉取图书相关信息的workflow –&gt;<a href="https://workflow.is/workflows/cae2c0ec4dd540dab6a773eb0de982bb" target="_blank" rel="external">豆瓣读书</a> &lt;–，感觉查书什么的挺好用的<br><img src="https://cdn.safeandsound.cn/image/about/%E8%B1%86%E7%93%A3%E8%AF%BB%E4%B9%A6workflow.png" width="300px"></p>
 </li>
 <li><h6 id="2017-10-09"><a href="#2017-10-09" class="headerlink" title="2017-10-09"></a>2017-10-09</h6><p>当觉得生活无趣又无望时就应该读汪曾祺。<br>虽说小波的文字也是颇有趣的，但哪个百无聊赖的人喜欢听那么理性的话。<br>可这么说肯定是有人不同意第二句的。</p>
@@ -559,9 +574,10 @@
 </li>
 <li><h6 id="2017-07-20"><a href="#2017-07-20" class="headerlink" title="2017-07-20"></a>2017-07-20</h6><p>windows下在资源管理器右键打开powershell /cmd。进regedit，定位到HKEY_CLASSES_ROOT\Directory\Background\shell\cmd\command表项，对右侧的字符串项的值进行修改：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">#用powershell打开则改为：</div><div class="line">powershell.exe -NoExit Set-Location “%V”</div><div class="line">#用cmd打开则改为：</div><div class="line">cmd.exe /s /k pushd &quot;%V&quot;</div></pre></td></tr></table></figure>
+<p>  确定保存即可</p>
 </li>
 </ul>
-<p>确定保存即可<br><del>一些想说的话放在这里</del><br><del>以上</del></p>
+<p><del>一些想说的话放在这里</del><br><del>以上</del></p>
 
     
   </div>
@@ -630,8 +646,8 @@
     *
     */
     var songs = [
-                "http://mp3.qqmusic.cc/yq/5028219.mp3",
-                "http://mp3.qqmusic.cc/yq/4832020.mp3"
+                "https://cdn.safeandsound.cn/music/crazy-bird.m4a",
+                "https://cdn.safeandsound.cn/music/shape-of-my-heart.m4a"
     ];
 
     
@@ -823,8 +839,17 @@
 
 
 </script>
-
 <style type="text/css">
+/*字符上下颠倒*/
+#upside-down
+{
+filter:  progid:DXImageTransform.Microsoft.BasicImage(rotation=2);  /* IE6,IE7 */
+ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)"; /* IE8 */
+-moz-transform: rotate(-180deg);  /* 火狐3.5+ */
+-o-transform: rotate(-180deg);  /* Opera 10.5 */
+-webkit-transform: rotate(-180deg);  /* Safari 3.1+, Chrome */
+}
+
 a.change {
     display: inline-block;
     padding: 0 10px;
@@ -903,7 +928,8 @@ a.change {
   <div class="high-once" style="margin-top:10px">
     <a class="change" id="high" onclick="go()" href="#">
       <i class="menu-item-icon fa fa-music fa-fw"></i>
-      High一下
+      好听的
+      <i class="fa fa-smile-o" aria-hidden="true" style="font-size:120%" id="upside-down"></i>
     </a>
   </div>
 

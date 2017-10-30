@@ -100,7 +100,7 @@
 <meta property="og:site_name" content="jay&#39;s Blog">
 <meta property="og:description" content="本文提及的方法仅供安全学习，禁止非法利用  前言这个学期我们学校的校园网开始了流（变）量（相）计（卷）费（钱）的策略，不过运营商可以进行代理，所以有的同学使用指定的手机套餐就可以不限流量。但是我的手机卡并不是校园卡，所以使用的还是校园网的单独计费策略，当然套餐里的这点流量对于喜欢看点剧的我肯定是不够用的。平时因为学校机房中有几台服务器在我手里，使用校内流量走代理免费上网完全是没问题的，但是国庆">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-10-29T04:21:18.279Z">
+<meta property="og:updated_time" content="2017-10-30T08:07:53.241Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="校园网中实现免费上网的方法（一）">
 <meta name="twitter:description" content="本文提及的方法仅供安全学习，禁止非法利用  前言这个学期我们学校的校园网开始了流（变）量（相）计（卷）费（钱）的策略，不过运营商可以进行代理，所以有的同学使用指定的手机套餐就可以不限流量。但是我的手机卡并不是校园卡，所以使用的还是校园网的单独计费策略，当然套餐里的这点流量对于喜欢看点剧的我肯定是不够用的。平时因为学校机房中有几台服务器在我手里，使用校内流量走代理免费上网完全是没问题的，但是国庆">
@@ -262,6 +262,19 @@
       
       
       <!--j's自定义修改-->
+      
+      <style type="text/css">
+      /*字符上下颠倒*/
+      #upside-down
+      {
+        filter:  progid:DXImageTransform.Microsoft.BasicImage(rotation=2);  /* IE6,IE7 */
+        ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)"; /* IE8 */
+        -moz-transform: rotate(-180deg);  /* 火狐3.5+ */
+        -o-transform: rotate(-180deg);  /* Opera 10.5 */
+        -webkit-transform: rotate(-180deg);  /* Safari 3.1+, Chrome */
+      }
+      </style>
+
       <!--手机浏览器中在导航栏显示High一下-->
       <script>
         function go() {
@@ -271,8 +284,8 @@
            *
            */
           var songs = [
-            "http://mp3.qqmusic.cc/yq/5028219.mp3",
-            "http://mp3.qqmusic.cc/yq/4832020.mp3"
+                "https://cdn.safeandsound.cn/music/crazy-bird.m4a",
+                "https://cdn.safeandsound.cn/music/shape-of-my-heart.m4a"
           ];
 
 
@@ -469,7 +482,7 @@
 
       if(isMobile)
       {
-        document.write('<li class="menu-item"><a onclick=go()><i class="menu-item-icon fa fa-music fa-fw"></i>High一下</a></li>');
+        document.write('<li class="menu-item"><a onclick=go()><i class="menu-item-icon fa fa-music fa-fw"></i>好听的 <i class="fa fa-smile-o" aria-hidden="true" style="font-size:120%" id="upside-down"></i></a></li>');
       }
       </script>
     <!--j's自定义修改结束-->
@@ -729,8 +742,8 @@
     *
     */
     var songs = [
-                "http://mp3.qqmusic.cc/yq/5028219.mp3",
-                "http://mp3.qqmusic.cc/yq/4832020.mp3"
+                "https://cdn.safeandsound.cn/music/crazy-bird.m4a",
+                "https://cdn.safeandsound.cn/music/shape-of-my-heart.m4a"
     ];
 
     
@@ -922,8 +935,17 @@
 
 
 </script>
-
 <style type="text/css">
+/*字符上下颠倒*/
+#upside-down
+{
+filter:  progid:DXImageTransform.Microsoft.BasicImage(rotation=2);  /* IE6,IE7 */
+ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)"; /* IE8 */
+-moz-transform: rotate(-180deg);  /* 火狐3.5+ */
+-o-transform: rotate(-180deg);  /* Opera 10.5 */
+-webkit-transform: rotate(-180deg);  /* Safari 3.1+, Chrome */
+}
+
 a.change {
     display: inline-block;
     padding: 0 10px;
@@ -1002,7 +1024,8 @@ a.change {
   <div class="high-once" style="margin-top:10px">
     <a class="change" id="high" onclick="go()" href="#">
       <i class="menu-item-icon fa fa-music fa-fw"></i>
-      High一下
+      好听的
+      <i class="fa fa-smile-o" aria-hidden="true" style="font-size:120%" id="upside-down"></i>
     </a>
   </div>
 
