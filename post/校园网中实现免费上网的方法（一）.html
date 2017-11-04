@@ -93,19 +93,17 @@
 
 
 
-<meta name="description" content="前言对于入手树莓派 是蓄谋已久现在如愿以偿。本文整理了使用过程中遇到的一些问题。">
+<meta name="description" content="本文提及的方法仅供安全学习，禁止非法利用  前言这个学期我们学校的校园网开始了流（变）量（相）计（卷）费（钱）的策略，不过运营商可以进行代理，所以有的同学使用指定的手机套餐就可以不限流量。但是我的手机卡并不是校园卡，所以使用的还是校园网的单独计费策略，当然套餐里的这点流量对于喜欢看点剧的我肯定是不够用的。平时因为学校机房中有几台服务器在我手里，使用校内流量走代理免费上网完全是没问题的，但是国庆">
 <meta property="og:type" content="article">
-<meta property="og:title" content="树莓派入门">
-<meta property="og:url" content="http://safeandsound.cn/树莓派入门.html">
+<meta property="og:title" content="校园网中实现免费上网的方法（一）">
+<meta property="og:url" content="http://yoursite.com/post/校园网中实现免费上网的方法（一）.html">
 <meta property="og:site_name" content="jay&#39;s Blog">
-<meta property="og:description" content="前言对于入手树莓派 是蓄谋已久现在如愿以偿。本文整理了使用过程中遇到的一些问题。">
+<meta property="og:description" content="本文提及的方法仅供安全学习，禁止非法利用  前言这个学期我们学校的校园网开始了流（变）量（相）计（卷）费（钱）的策略，不过运营商可以进行代理，所以有的同学使用指定的手机套餐就可以不限流量。但是我的手机卡并不是校园卡，所以使用的还是校园网的单独计费策略，当然套餐里的这点流量对于喜欢看点剧的我肯定是不够用的。平时因为学校机房中有几台服务器在我手里，使用校内流量走代理免费上网完全是没问题的，但是国庆">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://cdn.safeandsound.cn/image/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%85%A5%E9%97%A8/raspberry.jpg">
-<meta property="og:updated_time" content="2017-11-04T12:03:17.378Z">
+<meta property="og:updated_time" content="2017-11-04T12:21:33.600Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="树莓派入门">
-<meta name="twitter:description" content="前言对于入手树莓派 是蓄谋已久现在如愿以偿。本文整理了使用过程中遇到的一些问题。">
-<meta name="twitter:image" content="https://cdn.safeandsound.cn/image/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%85%A5%E9%97%A8/raspberry.jpg">
+<meta name="twitter:title" content="校园网中实现免费上网的方法（一）">
+<meta name="twitter:description" content="本文提及的方法仅供安全学习，禁止非法利用  前言这个学期我们学校的校园网开始了流（变）量（相）计（卷）费（钱）的策略，不过运营商可以进行代理，所以有的同学使用指定的手机套餐就可以不限流量。但是我的手机卡并不是校园卡，所以使用的还是校园网的单独计费策略，当然套餐里的这点流量对于喜欢看点剧的我肯定是不够用的。平时因为学校机房中有几台服务器在我手里，使用校内流量走代理免费上网完全是没问题的，但是国庆">
 
 
 
@@ -133,13 +131,13 @@
 
 
 
-  <link rel="canonical" href="http://safeandsound.cn/树莓派入门.html"/>
+  <link rel="canonical" href="http://yoursite.com/post/校园网中实现免费上网的方法（一）.html"/>
 
 
 
 
 
-  <title>树莓派入门 | jay's Blog</title>
+  <title>校园网中实现免费上网的方法（一） | jay's Blog</title>
   
 
 
@@ -538,7 +536,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://safeandsound.cn/树莓派入门.html">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/post/校园网中实现免费上网的方法（一）.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="jay">
@@ -555,7 +553,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">树莓派入门</h1>
+          <h1 class="post-title" itemprop="name headline">校园网中实现免费上网的方法（一）</h1>
         
 
         <div class="post-meta">
@@ -567,8 +565,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-28T11:39:14+00:00">
-                2017-10-28
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-04T11:01:56+00:00">
+                2017-10-04
               </time>
             
 
@@ -603,38 +601,17 @@
 
       
         <p><link href="/css/myCSS.css" rel="stylesheet" type="text/css"></p>
-<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>对于入手<a href="https://zh.wikipedia.org/wiki/%E6%A0%91%E8%8E%93%E6%B4%BE" target="_blank" rel="external">树莓派</a> 是蓄谋已久<i class="upside-down" style="font-size:120%;"><i class="fa fa-smile-o" aria-hidden="true"></i></i><i class="upside-down-right">现在如愿以偿。</i><br>本文整理了使用过程中遇到的一些问题。<br><a id="more"></a><br><img src="https://cdn.safeandsound.cn/image/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%85%A5%E9%97%A8/raspberry.jpg" width="500px"></p>
-<h3 id="安装系统"><a href="#安装系统" class="headerlink" title="安装系统"></a>安装系统</h3><ul>
-<li><h4 id="下载镜像"><a href="#下载镜像" class="headerlink" title="下载镜像"></a>下载镜像</h4>raspberryPi官方的镜像集合<a href="https://www.raspberrypi.org/downloads/" target="_blank" rel="external">在这里</a>，kali的镜像<a href="https://www.offensive-security.com/kali-linux-arm-images/" target="_blank" rel="external">在这里</a></li>
-<li><h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4>安装系统的网上教程很多，我使用的是Raspbian系统,用rufus直接烧录进去tf卡里；当然也可以将镜像烧录到U盘，然后开机进bios从U盘安装系统，这种方法需要使用显示器和有线键盘。</li>
-</ul>
-<h3 id="指示灯简介"><a href="#指示灯简介" class="headerlink" title="指示灯简介"></a>指示灯简介</h3><p>树莓派上除了rj45网口的led指示灯（speed led【黄灯】：长亮代表100M或者更高速的网卡，不亮代表10M网卡，但有些千兆网卡的灯以颜色区分，不亮代表10M/100M，黄色常亮代表1000M；active led【绿灯】：灯灭代表未连接，长亮代表已连接上但无数据收发，闪烁代表有数据收发）外在电源接口处还有两个状态灯，一个红灯一个绿灯，红灯是电源灯，接通后常亮，如果闪烁说明当前电源不稳定；绿灯是读写指示灯，在存储卡发生数据读写时闪烁，否则熄灭，以此来判断当前是否发生数据读写。</p>
-<h3 id="连接"><a href="#连接" class="headerlink" title="连接"></a>连接</h3><p><strong>注意:</strong> 系统默认ssh服务不随机自启动，我们将tf卡插在笔记本上，在显示出的boot分区中创建一个名为ssh的空白文件来触发ssh服务的开启</p>
 <ul>
-<li><h4 id="网线直连笔记本"><a href="#网线直连笔记本" class="headerlink" title="网线直连笔记本"></a>网线直连笔记本</h4>我采用的方式是笔记本网线直连树莓派，然后将笔记本无线网卡的网络共享给以太网卡，这样不仅树莓派能够上网，我也能ssh到树莓派。<br>网线连接好、树莓派主板加电启动之后，我们使用arp命令扫描一下本地的mac与ip映射表，并抓取出树莓派的地址映射：</li>
+<li><h3 id="本文提及的方法仅供安全学习，禁止非法利用"><a href="#本文提及的方法仅供安全学习，禁止非法利用" class="headerlink" title="本文提及的方法仅供安全学习，禁止非法利用"></a><p style="color:black">本文提及的方法仅供安全学习，禁止非法利用</p></h3></li>
 </ul>
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="function">C:\<span class="title">Users</span>\<span class="title">jay</span>&gt; <span class="title">arp</span> -<span class="title">a</span> |<span class="title">findstr</span> "<span class="title">b8</span>-27-<span class="title">eb</span>"</span></div><div class="line"><span class="function">192.168.137.232       <span class="title">b8</span>-27-<span class="title">eb</span>-8<span class="title">e</span>-9<span class="title">e</span>-<span class="title">fe</span>     静态</span></div></pre></td></tr></table></figure>
-<p>“b8-27-eb”是树莓派网卡mac地址的前三个字节，也就是树莓派制造商的<a href="https://en.wikipedia.org/wiki/Organizationally_unique_identifier" target="_blank" rel="external">OUI（组织唯一识别符）</a>，从IEEE官方提供的<a href="standards-oui.ieee.org/oui.txt">OUI</a>列表，我们可以查询到。<br>获取到ip后我们使用ssh连接，默认用户名为pi，密码为raspberry。</p>
-<ul>
-<li><h4 id="路由器连接"><a href="#路由器连接" class="headerlink" title="路由器连接"></a>路由器连接</h4>如果第一次启动的时候手边没有网线，但是有路由器，可以配置Wi-Fi连接。<br>和第一次开机触发SSH服务的方法一样，将tf卡插在笔记本上，在显示出的boot分区中建立名为wpa_supplicant.conf的文件，里面添加如下内容：</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">country=GB</div><div class="line">ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev</div><div class="line">update_config=1</div><div class="line">network=&#123;</div><div class="line">  ssid=&quot;Wi-Fi名称&quot;</div><div class="line">  psk=&quot;Wi-Fi密码&quot;</div><div class="line">  priority=填写数字，数字越大代表优先级越高</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>树莓派主板加电，稍等几分钟，就会连上Wi-Fi了。</p>
-<h3 id="连接显示器遇到的问题"><a href="#连接显示器遇到的问题" class="headerlink" title="连接显示器遇到的问题"></a>连接显示器遇到的问题</h3><p>我有一次在连接显示器的时候突然黑屏了，在网上搜索一下后得知需要修改boot目录下的config.txt文件，将hdmi_safe=1的注释取消掉。可以参考<a href="http://wangye.org/blog/archives/762/" target="_blank" rel="external">该教程</a>解决使用显示器的问题</p>
-<h3 id="使用root账号"><a href="#使用root账号" class="headerlink" title="使用root账号"></a>使用root账号</h3><p>root账号默认未启用，如果要使用root账号，我们需要:</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span><span class="bash">设置root账号密码</span></div><div class="line">sudo passwd root</div><div class="line"><span class="meta">#</span><span class="bash">启用root账号</span></div><div class="line">sudo passwd --unlock root</div></pre></td></tr></table></figure>
-<p>如非必要不建议使用，毕竟账号pi使用sudo无需输入命令，方便的同时也更安全。</p>
-<h3 id="使用wifi"><a href="#使用wifi" class="headerlink" title="使用wifi"></a>使用wifi</h3><p>可以直接编辑/etc/wpa_supplicant/wpa_supplicant.conf文件，在后面追加</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">network=&#123;</div><div class="line">  ssid=&quot;Wi-Fi名称&quot;</div><div class="line">  psk=&quot;Wi-Fi密码&quot;</div><div class="line">  priority=填写数字，数字越大代表优先级越高</div><div class="line">&#125;</div><div class="line">#如果有多个可选wifi可以继续添加</div><div class="line">network=&#123;</div><div class="line">  ssid=&quot;第二个Wi-Fi的名称&quot;</div><div class="line">  psk=&quot;第二个Wi-Fi的密码&quot;</div><div class="line">  priority=填写数字，数字越大代表优先级越高</div><div class="line">&#125;</div><div class="line">network=&#123;</div><div class="line">  ssid=&quot;第三个Wi-Fi的名称&quot;</div><div class="line">  psk=&quot;第三个Wi-Fi的密码&quot;</div><div class="line">  priority=这里填写数字，数字越大代表优先级越高</div><div class="line">&#125;</div><div class="line">#以此类推</div></pre></td></tr></table></figure>
-<p>完成后重启即可</p>
-<h3 id="静态ip"><a href="#静态ip" class="headerlink" title="静态ip"></a>静态ip</h3><p>有些时候你拔下网线后重新插回去，会导致树莓派重新获取ip，遇到如下的尴尬情况</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"> C:\Users\jay&gt; arp -a |findstr &quot;b8-27-eb&quot;</div><div class="line">192.168.137.232       b8-27-eb-8e-9e-fe     静态</div><div class="line">192.168.137.240       b8-27-eb-8e-9e-fe     静态</div></pre></td></tr></table></figure>
-<p>出现了两个地址映射,这是因为重新插回去后树莓派被分配了一个新的ip,而之前的地址映射还存在arp地址映射表中,所以就出现了两个结果.<br>我们可以编辑dhcpcd.conf配置文件来主动获取静态ip</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo vi /etc/dhcpcd.conf</div></pre></td></tr></table></figure>
-<p>在文件中添加（如果嫌弄乱文件可以搜索”profile static_eth0”这个pattern然后在后面进行修改）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">#根据自己的实际情况来，以下只是我的配置，仅供参考</div><div class="line">interface eth0</div><div class="line">static ip_address=192.168.137.232/24</div><div class="line">static routers=192.168.137.1</div><div class="line">static domain_name_servers=192.168.137.1</div></pre></td></tr></table></figure>
-<p>完成后重启即可<br>注：千万不要像网上有些教程一样修改/etc/network/interfaces文件进行配置，这样一定是不成功的，因为该文件中已经标注的很清楚了：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">#For static IP, consult /etc/dhcpcd.conf and &apos;man dhcpcd.conf&apos;</div></pre></td></tr></table></figure>
+<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>这个学期我们学校的校园网开始了流（变）量（相）计（卷）费（钱）的策略，不过运营商可以进行代理，所以有的同学使用指定的手机套餐就可以不限流量。但是我的手机卡并不是校园卡，所以使用的还是校园网的单独计费策略，当然套餐里的这点流量对于喜欢看点剧的我肯定是不够用的<i class="fa fa-smile-o" aria-hidden="true" style="font-size:120%;"></i>。平时因为学校机房中有几台服务器在我手里，使用校内流量走代理免费上网完全是没问题的，但是国庆期间因为各种原因，校内服务器对外网络基本全部封闭了，所以代理是走不了了，可是剧还是要看的啊<i class="upside-down" style="font-size:120%;"><i class="fa fa-smile-o" aria-hidden="true"></i></i><i class="upside-down-right">，于是就有了这篇博客</i>。<br><a id="more"></a></p>
+<h3 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h3><p>原理很简单，AP使用的是DHCP自动分配ip的策略，我们扫一遍本地网络中的机器，一般都会有在上网的PC，因为AP根据这台PC的mac分配给了它IP地址，而且这台PC登陆了校园网所以已经获取了访问外网的权限，也就是说这个PC的IP是可访问外网的，我们只要拿到它就行了。</p>
+<p>因为是DHCP自动分配，所以我们只要拿到它的mac地址就能拿到IP（这种扫描器有很多，nmap也可以），我们先把网断掉，然后到系统的设置里面将网卡的mac地址修改成与之前扫描到的PC一致（这样的修改只是修改了操作系统从网卡中读取并记录在系统中的mac地址的值，并非修改了烧录在网卡中的地址，所以与“mac地址不可修改的说法并不冲突”，当然了，修改烧录的地址也并非不可行，但是这种硬件操作的方法对用户的专业素质要求很高，因为复杂度高风险也大），然后重新启动网卡，连接到AP，查看自己获取到的IP是不是变得跟之前扫描的PC的ip一致，一致则说明欺骗成功，到登录的认证页面刷新查看，显示出来的登录用户应该是PC的主人。</p>
+<p>在此只讨论方法，对步骤不进行详细说明。</p>
+<h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><p>值得一提的是，这种mac地址欺骗的方法得到的免费上网质量可能比较差，因为在AP看来从外网接收到的数据是一个目标的，但实际上是两台电脑在上网，所以数据包的分发会存在问题，可能就会导致服务掉线、下载文件走走停停之类的结果（我测试时使用了室友的mac地址，他的qq出现了掉线情况，我的迅雷下载时走时停），所以如果只是下载电影什么的还是可以的，放在那让它慢慢跑就可以了，但是打局游戏什么的就不要想了。</p>
+<h3 id="赘述"><a href="#赘述" class="headerlink" title="赘述"></a>赘述</h3><p>当然了，上面只是测试下我想法的可行性，实验一下玩玩罢了，实际并没有这么做的必要，毕竟那么多同学是运营商免流的，需要下载大文件临时借个账号就可以了。</p>
+<p>对于之前提到的服务器代理校内流量出去的问题，用pip装个影梭代理一下就可以了，就简单的使用上并没什么技术可言，网上之类的教程也很多，如果学校使用的是提供ipv6地址的网络（如教育网），那么校外的有ipv6地址的服务器也是可以的，因为现在校园网ipv6应该都是不计费的（不绝对，天知道你的学校为了安（赚）全（钱）会做出什么出格的事），流量可以直接出去。</p>
+<p>在这过程中，我遇到的一个问题就是：服务器有v6地址，本地PC也有v6地址，两个都可以单独访问Google，但是PC走服务器代理的话就无法访问Google一类被墙掉的网站，服务器使用的是双栈代理，而且PC此时也可以访问六维一类的v6站点，说明v6流量是出的去的，对此我做了很多测试，但仍毫无头绪，如果有朋友知道其中的缘由，还望告知。</p>
 
       
     </div>
@@ -671,8 +648,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/图片低损压缩.html" rel="next" title="图片低损压缩">
-                <i class="fa fa-chevron-left"></i> 图片低损压缩
+              <a href="/post/关于php下实现异步计划任务的一种方法.html" rel="next" title="关于php下实现异步计划任务的一种方法">
+                <i class="fa fa-chevron-left"></i> 关于php下实现异步计划任务的一种方法
               </a>
             
           </div>
@@ -680,6 +657,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/post/图片低损压缩.html" rel="prev" title="图片低损压缩">
+                图片低损压缩 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -1104,7 +1085,7 @@ a.change {
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装系统"><span class="nav-number">2.</span> <span class="nav-text">安装系统</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#下载镜像"><span class="nav-number">2.1.</span> <span class="nav-text">下载镜像</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装"><span class="nav-number">2.2.</span> <span class="nav-text">安装</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#指示灯简介"><span class="nav-number">3.</span> <span class="nav-text">指示灯简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#连接"><span class="nav-number">4.</span> <span class="nav-text">连接</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#网线直连笔记本"><span class="nav-number">4.1.</span> <span class="nav-text">网线直连笔记本</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#路由器连接"><span class="nav-number">4.2.</span> <span class="nav-text">路由器连接</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#连接显示器遇到的问题"><span class="nav-number">5.</span> <span class="nav-text">连接显示器遇到的问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用root账号"><span class="nav-number">6.</span> <span class="nav-text">使用root账号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用wifi"><span class="nav-number">7.</span> <span class="nav-text">使用wifi</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#静态ip"><span class="nav-number">8.</span> <span class="nav-text">静态ip</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#本文提及的方法仅供安全学习，禁止非法利用"><span class="nav-number">1.</span> <span class="nav-text">本文提及的方法仅供安全学习，禁止非法利用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">2.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#原理"><span class="nav-number">3.</span> <span class="nav-text">原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题"><span class="nav-number">4.</span> <span class="nav-text">问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#赘述"><span class="nav-number">5.</span> <span class="nav-text">赘述</span></a></li></ol></div>
             
 
           </div>
