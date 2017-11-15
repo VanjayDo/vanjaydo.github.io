@@ -93,16 +93,27 @@
 
 
 
-<meta name="description" content="&quot;暗暗受苦，默默享乐.&quot;">
-<meta property="og:type" content="website">
-<meta property="og:title" content="jay&#39;s Blog">
-<meta property="og:url" content="http://yoursite.com/archives/2017/03/index.html">
+<meta name="description" content="之前使用AppVeyor实现了提交源码到仓库然后自动拉取、生成静态页面并推送到Github Pages仓库的功能，但是我想在自己的服务器上再做一个同步更新的博客站点，因为最近在学node，所以先开始想着用node写一个监听的服务器，然后利用githook来自动拉取代码，搜了下相关的库，果然有一个叫github-webh">
+<meta property="og:type" content="article">
+<meta property="og:title" content="jenkins入门">
+<meta property="og:url" content="http://yoursite.com/post/jenkins入门.html">
 <meta property="og:site_name" content="jay&#39;s Blog">
-<meta property="og:description" content="&quot;暗暗受苦，默默享乐.&quot;">
+<meta property="og:description" content="之前使用AppVeyor实现了提交源码到仓库然后自动拉取、生成静态页面并推送到Github Pages仓库的功能，但是我想在自己的服务器上再做一个同步更新的博客站点，因为最近在学node，所以先开始想着用node写一个监听的服务器，然后利用githook来自动拉取代码，搜了下相关的库，果然有一个叫github-webhook-handler，操作了半天，一直报node版本的错，怎么调都不行……默默">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://cdn.safeandsound.cn/image/jenkins入门/unlock.png">
+<meta property="og:image" content="https://cdn.safeandsound.cn/image/jenkins入门/installPlugins.png">
+<meta property="og:image" content="https://cdn.safeandsound.cn/image/jenkins入门/gettingStarted.png">
+<meta property="og:image" content="https://cdn.safeandsound.cn/image/jenkins入门/githubToken.png">
+<meta property="og:image" content="https://cdn.safeandsound.cn/image/jenkins入门/newToken.png">
+<meta property="og:image" content="https://cdn.safeandsound.cn/image/jenkins入门/addServer.png">
+<meta property="og:image" content="https://cdn.safeandsound.cn/image/jenkins入门/addCredentials.png">
+<meta property="og:image" content="https://cdn.safeandsound.cn/image/jenkins入门/newBuild.png">
+<meta property="og:image" content="https://cdn.safeandsound.cn/image/jenkins入门/buildSteps.png">
+<meta property="og:updated_time" content="2017-11-15T15:36:24.204Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="jay&#39;s Blog">
-<meta name="twitter:description" content="&quot;暗暗受苦，默默享乐.&quot;">
+<meta name="twitter:title" content="jenkins入门">
+<meta name="twitter:description" content="之前使用AppVeyor实现了提交源码到仓库然后自动拉取、生成静态页面并推送到Github Pages仓库的功能，但是我想在自己的服务器上再做一个同步更新的博客站点，因为最近在学node，所以先开始想着用node写一个监听的服务器，然后利用githook来自动拉取代码，搜了下相关的库，果然有一个叫github-webhook-handler，操作了半天，一直报node版本的错，怎么调都不行……默默">
+<meta name="twitter:image" content="https://cdn.safeandsound.cn/image/jenkins入门/unlock.png">
 
 
 
@@ -130,13 +141,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/archives/2017/03/"/>
+  <link rel="canonical" href="http://yoursite.com/post/jenkins入门.html"/>
 
 
 
 
 
-  <title>归档 | jay's Blog</title>
+  <title>jenkins入门 | jay's Blog</title>
   
 
 
@@ -161,7 +172,7 @@
     
   
 
-  <div class="container sidebar-position-left  page-archive  ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -526,66 +537,154 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-    <span class="archive-page-counter">
-      
-      
-      
-        
-      
-      嗯..! 目前共计 12 篇日志。 继续努力。
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/post/jenkins入门.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="jay">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://cdn.safeandsound.cn/image/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="jay's Blog">
     </span>
 
     
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">jenkins入门</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-15T09:15:42+00:00">
+                2017-11-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
 
       
       
-      
 
+      
+        <p>之前使用AppVeyor实现了提交源码到仓库然后自动拉取、生成静态页面并推送到Github Pages仓库的功能，但是我想在自己的服务器上再做一个同步更新的博客站点，因为最近在学node，所以先开始想着用node写一个监听的服务器，然后利用githook来自动拉取代码，搜了下相关的库，果然有一个叫<a href="https://github.com/rvagg/github-webhook-handler" target="_blank" rel="noopener">github-webhook-handler</a>，操作了半天，一直报node版本的错，怎么调都不行……默默放弃了，还是选择了Jenkins（之前一直担心Jenkins会额外消耗比较多的资源，因为自己的云服务器配置较低，使用后感觉自己多虑了）。在此记录一下简单的使用过程。<br><a id="more"></a></p>
+<h3 id="安装Jenkins"><a href="#安装Jenkins" class="headerlink" title="安装Jenkins"></a>安装Jenkins</h3><h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><p>Ubuntu 安装：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ wget -q -O - https://pkg.jenkins.io/debian/jenkins-ci.org.key | sudo apt-key add -</span><br><span class="line">$ sudo <span class="built_in">echo</span> <span class="string">"deb http://pkg.jenkins.io/debian-stable binary/"</span> &gt; /etc/apt/sources.list.d/jenkins.list</span><br><span class="line">$ sudo apt update</span><br><span class="line">$ sudo apt install jenkins</span><br><span class="line">$ systemctl start jenkins</span><br></pre></td></tr></table></figure></p>
+<h4 id="登录并创建账户"><a href="#登录并创建账户" class="headerlink" title="登录并创建账户"></a>登录并创建账户</h4><p>安装后第一次使用需要手动获取密码来登录：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cat /var/lib/jenkins/secrets/initialAdminPassword</span><br></pre></td></tr></table></figure></p>
+<p>得到密码密码后访问你服务器的8080端口（Jenkins默认8080端口，可以通过修改配置文件【Ubuntu下是/etc/default/jenkins】中的HTTP_PORT参数来指定），打开页面后提示你输入密码进行访问，将密码粘贴进去后进入操作界面：<br><img src="https://cdn.safeandsound.cn/image/jenkins入门/unlock.png" alt="Alt text"><br>选择安装推荐的插件，或者你也可以自选：<br><img src="https://cdn.safeandsound.cn/image/jenkins入门/installPlugins.png" alt="Alt text"><br>安装完成后会跳转到创建用户页面让你注册用户：<br><img src="https://cdn.safeandsound.cn/image/jenkins入门/gettingStarted.png" alt="Alt text"><br>“Save and Finish”后提示”Jenkins is ready！”<br>之后如果要添加用户/修改密码可以在系统管理的管理用户里操作。</p>
+<h3 id="添加一个GitHub项目的构建"><a href="#添加一个GitHub项目的构建" class="headerlink" title="添加一个GitHub项目的构建"></a>添加一个GitHub项目的构建</h3><h4 id="创建自己github账户的access-tokens"><a href="#创建自己github账户的access-tokens" class="headerlink" title="创建自己github账户的access tokens"></a>创建自己github账户的access tokens</h4><p>关于生成personal access token的<a href="https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/" target="_blank" rel="noopener">官网介绍</a>。<br>到你账户的settings -&gt; Developer settings -&gt; Personal access tokens，选择Generate new token,Token description可以填一些描述性文字，Select scopes里必选repo和admin:repo_hook两项（子内容全选），如下图：<br><img src="https://cdn.safeandsound.cn/image/jenkins入门/githubToken.png" alt="Alt text"><br>完成后点击Generate token，不出意外则跳转到生成成功页面，记住复制红框中生成的token：<br><img src="https://cdn.safeandsound.cn/image/jenkins入门/newToken.png" alt="Alt text"></p>
+<h4 id="添加github账号到jenkins"><a href="#添加github账号到jenkins" class="headerlink" title="添加github账号到jenkins"></a>添加github账号到jenkins</h4><p>为了能够使用我们的GitHub账号进行操作，我们需要在Jenkins系统设置中添加自己的github账户：<br>系统管理 -&gt; 系统设置 -&gt; GitHub Servers ,如图：<br><img src="https://cdn.safeandsound.cn/image/jenkins入门/addServer.png" alt="Alt text"><br>点击“Add GitHub Server”<br>Name填自己的github用户名<br>在Credentials选择Add一个Jenkins，其中Kind选择为Secret text，如图：<br><img src="https://cdn.safeandsound.cn/image/jenkins入门/addCredentials.png" alt="Alt text"><br>将刚才生成的token粘贴进Secret栏中，点击add，添加成功。</p>
+<p>完成后点击Test connection<br>效果为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Credentials verified for user ****, rate limit: ****</span><br></pre></td></tr></table></figure></p>
+<h4 id="给Jenkins添加权限"><a href="#给Jenkins添加权限" class="headerlink" title="给Jenkins添加权限"></a>给Jenkins添加权限</h4><p>编辑Jenkins配置文件(ubuntu下是/etc/default/jenkins),将<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">JENKINS_USER=$NAME</span><br></pre></td></tr></table></figure></p>
+<p>修改为<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">JENKINS_USER=&quot;root&quot;</span><br></pre></td></tr></table></figure></p>
+<p>保存退出后执行命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ chown -R root:root /var/lib/jenkins</span><br><span class="line">$ chown -R root:root /var/cache/jenkins</span><br><span class="line">$ chown -R root:root /var/log/jenkins</span><br><span class="line">$ service jenkins restart</span><br></pre></td></tr></table></figure></p>
+<p>即可。</p>
+<h4 id="添加一个构建"><a href="#添加一个构建" class="headerlink" title="添加一个构建"></a>添加一个构建</h4><p>点击jenkins左边栏中的”新建”，选择“构建一个自由风格的软件项目”，如图：<br><img src="https://cdn.safeandsound.cn/image/jenkins入门/newBuild.png" alt="Alt text"><br>点击”OK”，进入配置页面，源码管理选择Git,<br>Repository URL:填上你项目的repo地址<br>Credentials:在下拉框里选择你在系统设置里添加的那个server<br>构建触发器:选择GitHub hook trigger for GITScm polling<br>构建:选择添加自己需要的构建步骤，这里因为我需要的是自动拉取GitHub Pages库里的静态页面并部署到服务器上，所以我选择Execute shell，填上命令，如图：<br><img src="https://cdn.safeandsound.cn/image/jenkins入门/buildSteps.png" alt="构建步骤"></p>
+<p>保存后在左边面板上点击“立即构建”<br>左下方Build History中结果前面的小球显示为蓝色则成功，为红则失败。</p>
+
+      
+    </div>
+
+    <div>
       
         
-        <div class="collection-title">
-          <h2 class="archive-year motion-element" id="archive-year-2017">2017</h2>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/post/树莓派入门.html" rel="next" title="树莓派入门">
+                <i class="fa fa-chevron-left"></i> 树莓派入门
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
         </div>
       
-      
 
       
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/post/web应用从网页插入中文到mysql变成乱码的解决办法.html" itemprop="url">
-              
-                <span itemprop="name">web应用从网页插入中文到mysql变成乱码的解决办法</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-03-12T22:15:13+08:00"
-              content="2017-03-12" >
-          03-12
-        </time>
-      </div>
-
-    </header>
+      
+    </footer>
   </article>
 
 
 
-    
-
-  </section>
-
-  
-
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -593,6 +692,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -613,8 +716,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="https://cdn.safeandsound.cn/image/avatar.jpg"
@@ -973,6 +1085,22 @@ a.change {
       </div>
       <!--修改结束-->
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Jenkins"><span class="nav-number">1.</span> <span class="nav-text">安装Jenkins</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装"><span class="nav-number">1.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#登录并创建账户"><span class="nav-number">1.2.</span> <span class="nav-text">登录并创建账户</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加一个GitHub项目的构建"><span class="nav-number">2.</span> <span class="nav-text">添加一个GitHub项目的构建</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#创建自己github账户的access-tokens"><span class="nav-number">2.1.</span> <span class="nav-text">创建自己github账户的access tokens</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#添加github账号到jenkins"><span class="nav-number">2.2.</span> <span class="nav-text">添加github账号到jenkins</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#给Jenkins添加权限"><span class="nav-number">2.3.</span> <span class="nav-text">给Jenkins添加权限</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#添加一个构建"><span class="nav-number">2.4.</span> <span class="nav-text">添加一个构建</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -1091,11 +1219,9 @@ a.change {
   
 
   
-  
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
-  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
 
 
   

@@ -101,7 +101,7 @@
 <meta property="og:description" content="对于入手树莓派 是蓄谋已久现在如愿以偿。本文整理了使用过程中遇到的一些问题。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://cdn.safeandsound.cn/image/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%85%A5%E9%97%A8/raspberry.jpg">
-<meta property="og:updated_time" content="2017-11-13T13:17:11.383Z">
+<meta property="og:updated_time" content="2017-11-15T15:36:24.204Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="树莓派入门">
 <meta name="twitter:description" content="对于入手树莓派 是蓄谋已久现在如愿以偿。本文整理了使用过程中遇到的一些问题。">
@@ -605,9 +605,9 @@
       
         <link href="/css/myCSS.css" rel="stylesheet" type="text/css">
 
-<p>对于入手<a href="https://zh.wikipedia.org/wiki/%E6%A0%91%E8%8E%93%E6%B4%BE" target="_blank" rel="external">树莓派</a> 是蓄谋已久<i class="upside-down" style="font-size:120%;"><i class="fa fa-smile-o" aria-hidden="true"></i></i><i class="upside-down-right">现在如愿以偿。</i><br>本文整理了使用过程中遇到的一些问题。<br><a id="more"></a><br><img src="https://cdn.safeandsound.cn/image/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%85%A5%E9%97%A8/raspberry.jpg" width="500px"></p>
+<p>对于入手<a href="https://zh.wikipedia.org/wiki/%E6%A0%91%E8%8E%93%E6%B4%BE" target="_blank" rel="noopener">树莓派</a> 是蓄谋已久<i class="upside-down" style="font-size:120%;"><i class="fa fa-smile-o" aria-hidden="true"></i></i><i class="upside-down-right">现在如愿以偿。</i><br>本文整理了使用过程中遇到的一些问题。<br><a id="more"></a><br><img src="https://cdn.safeandsound.cn/image/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%85%A5%E9%97%A8/raspberry.jpg" width="500px"></p>
 <h3 id="安装系统"><a href="#安装系统" class="headerlink" title="安装系统"></a>安装系统</h3><ul>
-<li><h4 id="下载镜像"><a href="#下载镜像" class="headerlink" title="下载镜像"></a>下载镜像</h4>raspberryPi官方的镜像集合<a href="https://www.raspberrypi.org/downloads/" target="_blank" rel="external">在这里</a>，kali的镜像<a href="https://www.offensive-security.com/kali-linux-arm-images/" target="_blank" rel="external">在这里</a></li>
+<li><h4 id="下载镜像"><a href="#下载镜像" class="headerlink" title="下载镜像"></a>下载镜像</h4>raspberryPi官方的镜像集合<a href="https://www.raspberrypi.org/downloads/" target="_blank" rel="noopener">在这里</a>，kali的镜像<a href="https://www.offensive-security.com/kali-linux-arm-images/" target="_blank" rel="noopener">在这里</a></li>
 <li><h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4>安装系统的网上教程很多，我使用的是Raspbian系统,用rufus直接烧录进去tf卡里；当然也可以将镜像烧录到U盘，然后开机进bios从U盘安装系统，这种方法需要使用显示器和有线键盘。</li>
 </ul>
 <h3 id="指示灯简介"><a href="#指示灯简介" class="headerlink" title="指示灯简介"></a>指示灯简介</h3><p>树莓派上除了rj45网口的led指示灯（speed led【黄灯】：长亮代表100M或者更高速的网卡，不亮代表10M网卡，但有些千兆网卡的灯以颜色区分，不亮代表10M/100M，黄色常亮代表1000M；active led【绿灯】：灯灭代表未连接，长亮代表已连接上但无数据收发，闪烁代表有数据收发）外在电源接口处还有两个状态灯，一个红灯一个绿灯，红灯是电源灯，接通后常亮，如果闪烁说明当前电源不稳定；绿灯是读写指示灯，在存储卡发生数据读写时闪烁，否则熄灭，以此来判断当前是否发生数据读写。</p>
@@ -616,13 +616,13 @@
 <li><h4 id="网线直连笔记本"><a href="#网线直连笔记本" class="headerlink" title="网线直连笔记本"></a>网线直连笔记本</h4>我采用的方式是笔记本网线直连树莓派，然后将笔记本无线网卡的网络共享给以太网卡，这样不仅树莓派能够上网，我也能ssh到树莓派。<br>网线连接好、树莓派主板加电启动之后，我们使用arp命令扫描一下本地的mac与ip映射表，并抓取出树莓派的地址映射：</li>
 </ul>
 <figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">C:\<span class="title">Users</span>\<span class="title">jay</span>&gt; <span class="title">arp</span> -<span class="title">a</span> |<span class="title">findstr</span> "<span class="title">b8</span>-27-<span class="title">eb</span>"</span></span><br><span class="line"><span class="function">192.168.137.232       <span class="title">b8</span>-27-<span class="title">eb</span>-8<span class="title">e</span>-9<span class="title">e</span>-<span class="title">fe</span>     静态</span></span><br></pre></td></tr></table></figure>
-<p>“b8-27-eb”是树莓派网卡mac地址的前三个字节，也就是树莓派制造商的<a href="https://en.wikipedia.org/wiki/Organizationally_unique_identifier" target="_blank" rel="external">OUI（组织唯一识别符）</a>，从IEEE官方提供的<a href="standards-oui.ieee.org/oui.txt">OUI</a>列表，我们可以查询到。<br>获取到ip后我们使用ssh连接，默认用户名为pi，密码为raspberry。</p>
+<p>“b8-27-eb”是树莓派网卡mac地址的前三个字节，也就是树莓派制造商的<a href="https://en.wikipedia.org/wiki/Organizationally_unique_identifier" target="_blank" rel="noopener">OUI（组织唯一识别符）</a>，从IEEE官方提供的<a href="standards-oui.ieee.org/oui.txt">OUI</a>列表，我们可以查询到。<br>获取到ip后我们使用ssh连接，默认用户名为pi，密码为raspberry。</p>
 <ul>
 <li><h4 id="路由器连接"><a href="#路由器连接" class="headerlink" title="路由器连接"></a>路由器连接</h4>如果第一次启动的时候手边没有网线，但是有路由器，可以配置Wi-Fi连接。<br>和第一次开机触发SSH服务的方法一样，将tf卡插在笔记本上，在显示出的boot分区中建立名为wpa_supplicant.conf的文件，里面添加如下内容：</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">country=GB</span><br><span class="line">ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev</span><br><span class="line">update_config=1</span><br><span class="line">network=&#123;</span><br><span class="line">  ssid=&quot;Wi-Fi名称&quot;</span><br><span class="line">  psk=&quot;Wi-Fi密码&quot;</span><br><span class="line">  priority=填写数字，数字越大代表优先级越高</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>树莓派主板加电，稍等几分钟，就会连上Wi-Fi了。</p>
-<h3 id="连接显示器遇到的问题"><a href="#连接显示器遇到的问题" class="headerlink" title="连接显示器遇到的问题"></a>连接显示器遇到的问题</h3><p>我有一次在连接显示器的时候突然黑屏了，在网上搜索一下后得知需要修改boot目录下的config.txt文件，将hdmi_safe=1的注释取消掉。可以参考<a href="http://wangye.org/blog/archives/762/" target="_blank" rel="external">该教程</a>解决使用显示器的问题</p>
+<h3 id="连接显示器遇到的问题"><a href="#连接显示器遇到的问题" class="headerlink" title="连接显示器遇到的问题"></a>连接显示器遇到的问题</h3><p>我有一次在连接显示器的时候突然黑屏了，在网上搜索一下后得知需要修改boot目录下的config.txt文件，将hdmi_safe=1的注释取消掉。可以参考<a href="http://wangye.org/blog/archives/762/" target="_blank" rel="noopener">该教程</a>解决使用显示器的问题</p>
 <h3 id="使用root账号"><a href="#使用root账号" class="headerlink" title="使用root账号"></a>使用root账号</h3><p>root账号默认未启用，如果要使用root账号，我们需要:</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">设置root账号密码</span></span><br><span class="line">sudo passwd root</span><br><span class="line"><span class="meta">#</span><span class="bash">启用root账号</span></span><br><span class="line">sudo passwd --unlock root</span><br></pre></td></tr></table></figure>
 <p>如非必要不建议使用，毕竟账号pi使用sudo无需输入命令，方便的同时也更安全。</p>
@@ -682,6 +682,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/post/jenkins入门.html" rel="prev" title="jenkins入门">
+                jenkins入门 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -1023,7 +1027,7 @@ a.change {
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-count">12</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
