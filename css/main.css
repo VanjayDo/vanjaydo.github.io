@@ -507,7 +507,7 @@ pre,
   padding: 0;
   font-size: 13px;
   color: #c5c8c6;
-  background: #1d1f21;
+  background: #2e2c1f;
   line-height: 1.6;
 }
 pre,
@@ -569,15 +569,15 @@ pre code {
 .highlight .gutter pre {
   padding-left: 10px;
   padding-right: 10px;
-  color: #888f96;
+  color: #a8a27e;
   text-align: right;
-  background-color: #000;
+  background-color: #171610 /*百分号代表代码行号的背景透明度*/;
 }
 .highlight .code pre {
   width: 100%;
   padding-left: 10px;
   padding-right: 10px;
-  background-color: #1d1f21;
+  background-color: #2e2c1f;
 }
 .highlight .line {
   height: 20px;
@@ -1724,7 +1724,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #f01783;
+  background: #33ff4a;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2838,6 +2838,19 @@ body {
 }
 .main {
   padding-bottom: 0px;
+}
+div #div-border-left-yellow {
+  border-radius: 3px;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-left-width: 5px;
+  border-left-color: #f0ad4e;
+}
+code {
+  color: #c7254e;
+  background: #f9f2f4;
+  border: 1px solid #d6d6d6;
 }
 .site-title {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
