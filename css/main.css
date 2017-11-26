@@ -1724,7 +1724,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #33ff4a;
+  background: #a8fa53;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2847,7 +2847,7 @@ div #div-border-left-yellow {
   border-left-width: 5px;
   border-left-color: #f0ad4e;
 }
-code {
+#inp {
   color: #c7254e;
   background: #f9f2f4;
   border: 1px solid #d6d6d6;

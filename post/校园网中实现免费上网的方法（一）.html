@@ -100,7 +100,7 @@
 <meta property="og:site_name" content="jay&#39;s Blog">
 <meta property="og:description" content="这个学期我们学校的校园网开始了流（变）量（相）计（卷）费（钱）的策略，不过运营商可以进行代理，所以有的同学使用指定的手机套餐就可以不限流量。但是我的手机卡并不是校园卡，所以使用的还是校园网的单独计费策略，当然套餐里的这点流量对于喜欢看点剧的我肯定是不够用的。平时因为学校机房中有几台服务器在我手里，使用校内流量走代理免费上网完全是没问题的，但是国庆期间因为各种原因，校内服务器对外网络基本全部封">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-11-26T03:11:31.761Z">
+<meta property="og:updated_time" content="2017-11-26T07:17:07.310Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="校园网中实现免费上网的方法（一）">
 <meta name="twitter:description" content="这个学期我们学校的校园网开始了流（变）量（相）计（卷）费（钱）的策略，不过运营商可以进行代理，所以有的同学使用指定的手机套餐就可以不限流量。但是我的手机卡并不是校园卡，所以使用的还是校园网的单独计费策略，当然套餐里的这点流量对于喜欢看点剧的我肯定是不够用的。平时因为学校机房中有几台服务器在我手里，使用校内流量走代理免费上网完全是没问题的，但是国庆期间因为各种原因，校内服务器对外网络基本全部封">
@@ -139,6 +139,9 @@
   
 <!-- j's自定义 网页加载进度条 -->
 <script src="https://cdn.safeandsound.cn/js/pace.min.js"></script>
+
+<!-- prettify高亮代码css引入 -->
+<link href="/plugins/prettify/tranquil-heart.css" rel="stylesheet" type="text/css">
 
   <title>校园网中实现免费上网的方法（一） | jay's Blog</title>
   
@@ -1063,11 +1066,6 @@ a.change {
         
         
 
-        <!-- <div id="163musicPlayer">
-        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=298 height=52 src="//music.163.com/outchain/player?type=2&id=27845535&auto=0&height=32"></iframe>
-        </div> -->
-       
-
         
         
 
@@ -1587,6 +1585,18 @@ a.change {
   
 
   
+
+
+
+
+<!-- j's自定义修改 -->
+<script type="text/javascript" src="/plugins/prettify/prettify.js"></script>
+<script type="text/javascript">
+$(window).load(function(){
+  $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
+  prettyPrint();
+})    
+</script>
 
 </body>
 </html>

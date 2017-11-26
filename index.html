@@ -139,6 +139,9 @@
 <!-- j's自定义 网页加载进度条 -->
 <script src="https://cdn.safeandsound.cn/js/pace.min.js"></script>
 
+<!-- prettify高亮代码css引入 -->
+<link href="/plugins/prettify/tranquil-heart.css" rel="stylesheet" type="text/css">
+
   <title>jay's Blog - Codes save you, rather than gods.</title>
   
 
@@ -1193,9 +1196,11 @@
 
       
         
-          <p>最近在使用php实现从服务器Oracle数据库拉取数据表到本地mysql功能时遇到了这个问题：我使用的是xampp集成的php5.6.3版本，在它的php.ini配置文件中关于oci8拓展的配置是这样的：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">extension=php_oci8_12c.dll  ; Use with Oracle Database 12c Instant Client</span><br></pre></td></tr></table></figure></p>
-<p>从Oracle官网下载instantclient-basic-nt-12.2.0.1.0.zip拓展，解压后我把得到的instantclient_12_2目录移动到C:\Program Files下并加入环境变量，但是idea运行项目时一直在报:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">PHP Warning:  PHP Startup: Unable to load dynamic library &apos;C:\xampp\php\ext\php_oci8_12c.dll&apos;</span><br></pre></td></tr></table></figure></p>
-<p>导致oci8接口函数，如oci_connect等无法使用。<br>
+          <p>最近在使用php实现从服务器Oracle数据库拉取数据表到本地mysql功能时遇到了这个问题：我使用的是xampp集成的php5.6.3版本，在它的php.ini配置文件中关于oci8拓展的配置是这样的：</p>
+<pre><code>extension=php_oci8_12c.dll  ; Use with Oracle Database 12c Instant Client
+</code></pre><p>从Oracle官网下载instantclient-basic-nt-12.2.0.1.0.zip拓展，解压后我把得到的instantclient_12_2目录移动到C:\Program Files下并加入环境变量，但是idea运行项目时一直在报:</p>
+<pre><code>PHP Warning:  PHP Startup: Unable to load dynamic library &#39;C:\xampp\php\ext\php_oci8_12c.dll&#39;
+</code></pre><p>导致oci8接口函数，如oci_connect等无法使用。<br>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/post/php部分版本使用oci8拓展问题.html#more" rel="contents">
@@ -2077,11 +2082,6 @@ a.change {
         
         
 
-        <!-- <div id="163musicPlayer">
-        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=298 height=52 src="//music.163.com/outchain/player?type=2&id=27845535&auto=0&height=32"></iframe>
-        </div> -->
-       
-
         
         
 
@@ -2585,6 +2585,18 @@ a.change {
   
 
   
+
+
+
+
+<!-- j's自定义修改 -->
+<script type="text/javascript" src="/plugins/prettify/prettify.js"></script>
+<script type="text/javascript">
+$(window).load(function(){
+  $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
+  prettyPrint();
+})    
+</script>
 
 </body>
 </html>

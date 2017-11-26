@@ -105,7 +105,7 @@
 <meta property="og:image" content="https://cdn.safeandsound.cn/image/about/%E8%B1%86%E7%93%A3%E8%AF%BB%E4%B9%A6workflow.png">
 <meta property="og:image" content="https://cdn.safeandsound.cn/image/about/SDN.jpg">
 <meta property="og:image" content="https://cdn.safeandsound.cn/image/about/mycli.png">
-<meta property="og:updated_time" content="2017-11-26T03:11:31.761Z">
+<meta property="og:updated_time" content="2017-11-26T07:17:07.326Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="有些关于">
 <meta name="twitter:description" content="2017 年11 月 2017-11-12最近比较迷Alvaro Soler的Sofía（一开始以为是情歌，结果查资料才知道是Alvaro Soler失恋后写的），虽然是西班牙语的民谣，根本不知道在唱什么😂但是曲子很有活力，节奏感很强，口哨可以轻松带起来。很棒的歌。   2017-11-10今天趁着田老师有空，请他带着我去文理楼机房调整维护了自己的两台服务器，因为没有远程控制卡（毕竟之前是废弃在">
@@ -145,6 +145,9 @@
   
 <!-- j's自定义 网页加载进度条 -->
 <script src="https://cdn.safeandsound.cn/js/pace.min.js"></script>
+
+<!-- prettify高亮代码css引入 -->
+<link href="/plugins/prettify/tranquil-heart.css" rel="stylesheet" type="text/css">
 
   <title>有些关于 | jay's Blog</title>
   
@@ -556,7 +559,10 @@
 <li><h6 id="2017-11-09"><a href="#2017-11-09" class="headerlink" title="2017-11-09"></a>2017-11-09</h6><p><a href="https://gist.github.com/trandaison/40b1d83618ae8e3d2da59df8c395093a" target="_blank" rel="noopener">Get full version of StarUML</a>    startUML获取证书，V2.8.0亲测可用.</p>
 </li>
 <li><h6 id="2017-11-01"><a href="#2017-11-01" class="headerlink" title="2017-11-01"></a>2017-11-01</h6><p>最近配置nginx时总是遇到nginx -t测试配置文件时没问题，但是restart服务却一直失败，重启一下吧又好了，突然想起来会不会是端口被占了，查一下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># netstat -anp|grep ":80"   </span></span><br><span class="line">tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      8205/nginx.conf </span><br><span class="line">tcp        0      0 0.0.0.0:8080            0.0.0.0:*               LISTEN      1356/java</span><br></pre></td></tr></table></figure>
+<pre><code class="bash"># netstat -anp|grep &quot;:80&quot;   
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      8205/nginx.conf 
+tcp        0      0 0.0.0.0:8080            0.0.0.0:*               LISTEN      1356/java
+</code></pre>
 <p>  端口果然被占用了，kill掉这个进程即可。</p>
 </li>
 </ul>
@@ -568,7 +574,11 @@
 <li><h6 id="2017-10-21"><a href="#2017-10-21" class="headerlink" title="2017-10-21"></a>2017-10-21</h6><p>之前linux下查命令参数总是用man配合字符匹配，突然发现有<a href="https://github.com/tldr-pages/tldr" target="_blank" rel="noopener">tldr</a>这种利器，赶紧推一下。<br><img src="https://cdn.safeandsound.cn/image/about/tldr.png" width="500px"></p>
 </li>
 <li><h6 id="2017-10-18"><a href="#2017-10-18" class="headerlink" title="2017-10-18"></a>2017-10-18</h6><p>推荐一款linux下递归搜索文件内容的软件：<a href="https://github.com/ggreer/the_silver_searcher" target="_blank" rel="noopener">ag</a>，安装步骤：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/ggreer/the_silver_searcher.git</span><br><span class="line">sudo apt-get install -y automake pkg-config libpcre3-dev zlib1g-dev liblzma-dev</span><br><span class="line">./build</span><br><span class="line">sudo make install</span><br></pre></td></tr></table></figure>
+<pre><code class="bash">git clone https://github.com/ggreer/the_silver_searcher.git
+sudo apt-get install -y automake pkg-config libpcre3-dev zlib1g-dev liblzma-dev
+./build
+sudo make install
+</code></pre>
 <p>  体验还不错，在linux子系统下运行效果图<br><img src="https://cdn.safeandsound.cn/image/about/show-ag.png" width="500px"></p>
 </li>
 <li><h6 id="2017-10-13"><a href="#2017-10-13" class="headerlink" title="2017-10-13"></a>2017-10-13</h6><p>发现IOS下的Workflow可以提取网页的json数据，这样就能访问有些网站提供的API直接拿数据了，简直就是一只小爬虫，自己做了一个根据书名从豆瓣拉取图书相关信息的workflow –&gt;<a href="https://workflow.is/workflows/cae2c0ec4dd540dab6a773eb0de982bb" target="_blank" rel="noopener">豆瓣读书</a> &lt;–，感觉查书什么的挺好用的<br><img src="https://cdn.safeandsound.cn/image/about/%E8%B1%86%E7%93%A3%E8%AF%BB%E4%B9%A6workflow.png" width="300px"></p>
@@ -587,12 +597,17 @@
 <li><h6 id="2017-07-29"><a href="#2017-07-29" class="headerlink" title="2017-07-29"></a>2017-07-29</h6><p>感觉自己的大学生活好像今天坐公交遇到的小男孩，正经时很可爱，冲我笑时却很丑。<br>但我到底还是喜欢的。<br>这么说好像不负责任的旁观者。</p>
 </li>
 <li><h6 id="2017-07-21"><a href="#2017-07-21" class="headerlink" title="2017-07-21"></a>2017-07-21</h6><p>powershell启动加速。参见该<a href="https://blogs.msdn.microsoft.com/powershell/2007/11/08/update-gac-ps1/" target="_blank" rel="noopener">官方博文</a>,将以下命令粘贴到powershell，等待执行完毕。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Set-Alias ngen @(</span><br><span class="line">dir (join-path $&#123;env:\windir&#125; “Microsoft.NET\Framework”) ngen.exe -recurse |</span><br><span class="line">sort -descending lastwritetime</span><br><span class="line">)[0].fullName</span><br><span class="line">[appdomain]::currentdomain.getassemblies() | %&#123;ngen $_.location&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><h6 id="2017-07-20"><a href="#2017-07-20" class="headerlink" title="2017-07-20"></a>2017-07-20</h6><p>windows下在资源管理器右键打开powershell /cmd。进regedit，定位到HKEY_CLASSES_ROOT\Directory\Background\shell\cmd\command表项，对右侧的字符串项的值进行修改：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#用powershell打开则改为：</span><br><span class="line">powershell.exe -NoExit Set-Location “%V”</span><br><span class="line">#用cmd打开则改为：</span><br><span class="line">cmd.exe /s /k pushd &quot;%V&quot;</span><br></pre></td></tr></table></figure>
-<p>  确定保存即可</p>
-</li>
+<pre><code>Set-Alias ngen @(
+dir (join-path ${env:\windir} “Microsoft.NET\Framework”) ngen.exe -recurse |
+sort -descending lastwritetime
+)[0].fullName
+[appdomain]::currentdomain.getassemblies() | %{ngen $_.location}
+</code></pre></li>
+<li><h6 id="2017-07-20"><a href="#2017-07-20" class="headerlink" title="2017-07-20"></a>2017-07-20</h6>windows下在资源管理器右键打开powershell /cmd。进regedit，定位到HKEY_CLASSES_ROOT\Directory\Background\shell\cmd\command表项，对右侧的字符串项的值进行修改：<pre><code>#用powershell打开则改为：
+powershell.exe -NoExit Set-Location “%V”
+#用cmd打开则改为：
+cmd.exe /s /k pushd &quot;%V&quot;
+</code></pre>  确定保存即可</li>
 </ul>
 <p><del>一些想说的话和零碎的知识点放在这里</del><br><del>以上</del></p>
 
@@ -980,11 +995,6 @@ a.change {
 
         
         
-
-        <!-- <div id="163musicPlayer">
-        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=298 height=52 src="//music.163.com/outchain/player?type=2&id=27845535&auto=0&height=32"></iframe>
-        </div> -->
-       
 
         
         
@@ -1505,6 +1515,18 @@ a.change {
   
 
   
+
+
+
+
+<!-- j's自定义修改 -->
+<script type="text/javascript" src="/plugins/prettify/prettify.js"></script>
+<script type="text/javascript">
+$(window).load(function(){
+  $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
+  prettyPrint();
+})    
+</script>
 
 </body>
 </html>

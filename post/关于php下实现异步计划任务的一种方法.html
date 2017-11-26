@@ -101,7 +101,7 @@
 <meta property="og:site_name" content="jay&#39;s Blog">
 <meta property="og:description" content="在一个网络管理系统的实现过程中需要完成这样一个功能，老师在上课时通过交互界面将该教室的网络关闭，课程结束后系统将自动将教室网络开放，这有两方面的要求，首先是计划任务的实现：下课后自动恢复网络，这里使用循环来检查任务执行情况，因为如果全部都写到操作系统的计划任务中那就太繁重了（当然也可以只写一个系统的计划任务，将它和数据库结合起来实现，这是我最后采用的方法）；二就是老师提交“关闭网络”的请求时应当异">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-11-26T03:11:31.761Z">
+<meta property="og:updated_time" content="2017-11-26T07:17:07.310Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于php下实现异步计划任务的一种方法">
 <meta name="twitter:description" content="在一个网络管理系统的实现过程中需要完成这样一个功能，老师在上课时通过交互界面将该教室的网络关闭，课程结束后系统将自动将教室网络开放，这有两方面的要求，首先是计划任务的实现：下课后自动恢复网络，这里使用循环来检查任务执行情况，因为如果全部都写到操作系统的计划任务中那就太繁重了（当然也可以只写一个系统的计划任务，将它和数据库结合起来实现，这是我最后采用的方法）；二就是老师提交“关闭网络”的请求时应当异">
@@ -140,6 +140,9 @@
   
 <!-- j's自定义 网页加载进度条 -->
 <script src="https://cdn.safeandsound.cn/js/pace.min.js"></script>
+
+<!-- prettify高亮代码css引入 -->
+<link href="/plugins/prettify/tranquil-heart.css" rel="stylesheet" type="text/css">
 
   <title>关于php下实现异步计划任务的一种方法 | jay's Blog</title>
   
@@ -609,7 +612,71 @@
 <a id="more"></a>
 <h3 id="具体过程"><a href="#具体过程" class="headerlink" title="具体过程"></a>具体过程</h3><h4 id="计划任务唯一化"><a href="#计划任务唯一化" class="headerlink" title="计划任务唯一化"></a>计划任务唯一化</h4><p>因为一堂课上可能会多次切换网络状态，所以必须让当前教室的网络恢复计划任务唯一化，新的计划任务应当取代旧的，这里我使用文件flag的方式来实现：用$_SESSION[‘ID’]加上当前时间戳的方式来命名flag文件，$_SESSION[‘ID’]为用户ID，由于老师一堂课只能在一个教室上课，所以这是唯一的；当前时间戳（time()函数获取）精确到秒，足够保证用户在这个时间段内操作唯一。<br>每一次生成计划任务时我们都生成这样一个文件保存在flag文件夹中，并将文件名传给任务函数，让它去检查这个文件状态，存在的话则任务有效，否则终止任务；相对的，生成新任务时，我们把flag文件夹中的所有以当前$_SESSION[‘ID’]开头的flag文件全部删除，再生成新的任务和flag，这样旧的任务就会失效，由此保证任务的唯一性。</p>
 <h4 id="异步"><a href="#异步" class="headerlink" title="异步"></a>异步</h4><p>这里是用fsockopen函数来实现异步，这样实现的好处就是有很大的自定义空间，例如相比于popen()函数的不可传递参数。</p>
-<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//user.php</span></span><br><span class="line"><span class="comment">//作用：用户交互界面，提交数据给set-network.php</span></span><br><span class="line"><span class="comment">//代码如下：</span></span><br><span class="line">$url = <span class="string">"http://localhost:8081/tch/set-network.php"</span>;</span><br><span class="line">sock_get($url, $_GET[<span class="string">"network"</span>], $_GET[<span class="string">"classroomName"</span>],$endTimestamp);</span><br><span class="line"><span class="comment">//fsockopen模拟get提交函数</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sock_get</span><span class="params">($url, $network, $classroomName, $endTimestamp)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">//设置get提交的数据</span></span><br><span class="line">    $data = <span class="keyword">array</span>(</span><br><span class="line">        <span class="string">"network"</span> =&gt; $network,</span><br><span class="line">        <span class="string">"classroomName"</span> =&gt; $classroomName,</span><br><span class="line">        <span class="string">"endTimestamp"</span> =&gt; $endTimestamp);</span><br><span class="line">    $http_data = http_build_query($data);</span><br><span class="line">    $info = parse_url($url);</span><br><span class="line">    $fp = fsockopen($info[<span class="string">"host"</span>], $info[<span class="string">"port"</span>], $errno, $errstr, <span class="number">3</span>);</span><br><span class="line">    $head = <span class="string">"GET "</span> . $info[<span class="string">'path'</span>] . <span class="string">"?"</span> . $http_data . <span class="string">" HTTP/1.0\r\n"</span>;</span><br><span class="line">    $head .= <span class="string">"Host: "</span> . $info[<span class="string">'host'</span>] . <span class="string">":"</span> . $info[<span class="string">'port'</span>] . <span class="string">"\r\n"</span>;</span><br><span class="line">    $head .= <span class="string">"\r\n"</span>;</span><br><span class="line">    fputs($fp, $head);</span><br><span class="line">    fclose($fp);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//set-network.php</span></span><br><span class="line"><span class="comment">//作用：从用户操作接收数据用来生成计划任务</span></span><br><span class="line"><span class="comment">//代码如下：</span></span><br><span class="line"><span class="keyword">require</span> <span class="string">"restore-network.php"</span></span><br><span class="line"><span class="comment">//查找当前用户有无已存在的flag，有的话删除，即终止已存在的恢复网络计划任务</span></span><br><span class="line">$search = glob(<span class="string">"./flags/"</span> . $_SESSION[<span class="string">'ID'</span>] . <span class="string">"*"</span>);</span><br><span class="line"><span class="keyword">if</span> ($search) &#123;</span><br><span class="line">    <span class="keyword">foreach</span> ($search <span class="keyword">as</span> $item) &#123;</span><br><span class="line">        unlink($item);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">$flag = <span class="string">"./flags/"</span> . $_SESSION[<span class="string">"ID"</span>] . time() . <span class="string">".flag"</span>;</span><br><span class="line">file_put_contents($flag, <span class="string">""</span>, FILE_APPEND);</span><br><span class="line">$schedule = <span class="keyword">new</span> restore_network();</span><br><span class="line">$schedule-&gt;keepWake($flag, $endTimestamp);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//restore-network.php</span></span><br><span class="line"><span class="comment">//作用：计划任务和恢复网络的功能实现</span></span><br><span class="line"><span class="comment">//代码如下：</span></span><br><span class="line">ignore_user_abort();<span class="comment">//关掉浏览器，PHP脚本也可以继续执行.</span></span><br><span class="line">set_time_limit(<span class="number">0</span>);<span class="comment">//设置不响应最长时间不受限制,让程序可以无限制的执行下去</span></span><br><span class="line"><span class="comment">//定时任务函数，不断循环来定时执行任务</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">keepWake</span><span class="params">($flagFile, $endTimestamp)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">//当前时间戳比结束时间戳小则一直循环</span></span><br><span class="line">    <span class="keyword">while</span> (time() &lt; $endTimestamp) &#123;</span><br><span class="line">        <span class="comment">// 定时任务终止条件:本任务的flag文件不存在</span></span><br><span class="line">        <span class="keyword">if</span> (!file_exists($flagFile)) &#123;</span><br><span class="line">            <span class="keyword">die</span>(<span class="string">'process terminated'</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        sleep(<span class="number">120</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//删除flag文件</span></span><br><span class="line">    unlink($flagFile);</span><br><span class="line">    <span class="comment">//执行恢复网络功能函数，这不是重点，在此忽略函数内容</span></span><br><span class="line">    <span class="keyword">$this</span>-&gt;restoreNet();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><pre><code class="php">//user.php
+//作用：用户交互界面，提交数据给set-network.php
+//代码如下：
+$url = &quot;http://localhost:8081/tch/set-network.php&quot;;
+sock_get($url, $_GET[&quot;network&quot;], $_GET[&quot;classroomName&quot;],$endTimestamp);
+//fsockopen模拟get提交函数
+function sock_get($url, $network, $classroomName, $endTimestamp)
+{
+    //设置get提交的数据
+    $data = array(
+        &quot;network&quot; =&gt; $network,
+        &quot;classroomName&quot; =&gt; $classroomName,
+        &quot;endTimestamp&quot; =&gt; $endTimestamp);
+    $http_data = http_build_query($data);
+    $info = parse_url($url);
+    $fp = fsockopen($info[&quot;host&quot;], $info[&quot;port&quot;], $errno, $errstr, 3);
+    $head = &quot;GET &quot; . $info[&#39;path&#39;] . &quot;?&quot; . $http_data . &quot; HTTP/1.0\r\n&quot;;
+    $head .= &quot;Host: &quot; . $info[&#39;host&#39;] . &quot;:&quot; . $info[&#39;port&#39;] . &quot;\r\n&quot;;
+    $head .= &quot;\r\n&quot;;
+    fputs($fp, $head);
+    fclose($fp);
+}
+
+
+
+//set-network.php
+//作用：从用户操作接收数据用来生成计划任务
+//代码如下：
+require &quot;restore-network.php&quot;
+//查找当前用户有无已存在的flag，有的话删除，即终止已存在的恢复网络计划任务
+$search = glob(&quot;./flags/&quot; . $_SESSION[&#39;ID&#39;] . &quot;*&quot;);
+if ($search) {
+    foreach ($search as $item) {
+        unlink($item);
+    }
+}
+$flag = &quot;./flags/&quot; . $_SESSION[&quot;ID&quot;] . time() . &quot;.flag&quot;;
+file_put_contents($flag, &quot;&quot;, FILE_APPEND);
+$schedule = new restore_network();
+$schedule-&gt;keepWake($flag, $endTimestamp);
+
+
+
+//restore-network.php
+//作用：计划任务和恢复网络的功能实现
+//代码如下：
+ignore_user_abort();//关掉浏览器，PHP脚本也可以继续执行.
+set_time_limit(0);//设置不响应最长时间不受限制,让程序可以无限制的执行下去
+//定时任务函数，不断循环来定时执行任务
+function keepWake($flagFile, $endTimestamp)
+{
+    //当前时间戳比结束时间戳小则一直循环
+    while (time() &lt; $endTimestamp) {
+        // 定时任务终止条件:本任务的flag文件不存在
+        if (!file_exists($flagFile)) {
+            die(&#39;process terminated&#39;);
+        }
+        sleep(120);
+    }
+    //删除flag文件
+    unlink($flagFile);
+    //执行恢复网络功能函数，这不是重点，在此忽略函数内容
+    $this-&gt;restoreNet();
+}
+</code></pre>
 <h3 id="赘述"><a href="#赘述" class="headerlink" title="赘述"></a>赘述</h3><p>尽管我最后用的并不是这种解决办法，因为考虑到万一web服务器软件宕掉的话那么这些计划任务都会丢失，我采用了将定时任务所需的参数存入数据库，再将一个php脚本写入操作系统计划任务中（如linux的crontab），每隔几分钟执行一遍，由这个脚本去数据库查询是否有到期的定时任务，有的话则调出数据进行执行，再数据库中相应的任务删除。整个过程可能考虑的不是很周到，只能算是一个实现目标的方法。</p>
 
       
@@ -1064,11 +1131,6 @@ a.change {
 
         
         
-
-        <!-- <div id="163musicPlayer">
-        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=298 height=52 src="//music.163.com/outchain/player?type=2&id=27845535&auto=0&height=32"></iframe>
-        </div> -->
-       
 
         
         
@@ -1589,6 +1651,18 @@ a.change {
   
 
   
+
+
+
+
+<!-- j's自定义修改 -->
+<script type="text/javascript" src="/plugins/prettify/prettify.js"></script>
+<script type="text/javascript">
+$(window).load(function(){
+  $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
+  prettyPrint();
+})    
+</script>
 
 </body>
 </html>

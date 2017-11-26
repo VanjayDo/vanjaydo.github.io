@@ -101,7 +101,7 @@
 <meta property="og:site_name" content="jay&#39;s Blog">
 <meta property="og:description" content="因为有时上传到博客的图片会比较大，所以就想到要压缩一下来减轻网(带)络(宽)负(有)载(限)，因为我一般对质量要求不高，所以有点损失的话也无所谓。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-11-26T03:11:31.761Z">
+<meta property="og:updated_time" content="2017-11-26T07:17:07.326Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="图片低损压缩">
 <meta name="twitter:description" content="因为有时上传到博客的图片会比较大，所以就想到要压缩一下来减轻网(带)络(宽)负(有)载(限)，因为我一般对质量要求不高，所以有点损失的话也无所谓。">
@@ -140,6 +140,9 @@
   
 <!-- j's自定义 网页加载进度条 -->
 <script src="https://cdn.safeandsound.cn/js/pace.min.js"></script>
+
+<!-- prettify高亮代码css引入 -->
+<link href="/plugins/prettify/tranquil-heart.css" rel="stylesheet" type="text/css">
 
   <title>图片低损压缩 | jay's Blog</title>
   
@@ -609,7 +612,20 @@
 <h3 id="详述"><a href="#详述" class="headerlink" title="详述"></a>详述</h3><p>首先我去查了下压缩的方法，知乎上有个方法挺好使的，即“先转成GIF图片，再转成png图片”，我用PS试了下，都是用最高品质直接保存，结果图片大小由将近2M降为1M出头，接近一半，当然了，质量在过程中是有损的，不过不放大了仔细看的话基本看不出什么区别。</p>
 <p>当然当然，肯定不可能每压缩一张图片就要拉到PS里去，这里只是讲述一种可行方法。</p>
 <p>想用python写个脚本。网上查了下文档发现Image模块处理到最后保存有一个quality参数可选，试试：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"><span class="keyword">import</span> os,sys</span><br><span class="line"></span><br><span class="line">imgFile=sys.argv[<span class="number">1</span>]</span><br><span class="line">inputName = os.path.splitext(imgFile.split(<span class="string">"/"</span>)[<span class="number">-1</span>])</span><br><span class="line">suffix=inputName[<span class="number">1</span>]<span class="comment">#图片后缀名</span></span><br><span class="line">outputName=inputName[<span class="number">0</span>]+<span class="string">"-convert"</span><span class="comment">#保存的图片名</span></span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">	inputFile=Image.open(imgFile)</span><br><span class="line">	inputFile.save(outputName+<span class="string">".jpg"</span>,quality=<span class="number">80</span>)</span><br><span class="line">	print(<span class="string">"\ncompression success"</span>)</span><br><span class="line"><span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">	print(<span class="string">"\ncompression failure"</span>)</span><br></pre></td></tr></table></figure>
+<pre><code class="python">from PIL import Image
+import os,sys
+
+imgFile=sys.argv[1]
+inputName = os.path.splitext(imgFile.split(&quot;/&quot;)[-1])
+suffix=inputName[1]#图片后缀名
+outputName=inputName[0]+&quot;-convert&quot;#保存的图片名
+try:
+    inputFile=Image.open(imgFile)
+    inputFile.save(outputName+&quot;.jpg&quot;,quality=80)
+    print(&quot;\ncompression success&quot;)
+except Exception as e:
+    print(&quot;\ncompression failure&quot;)
+</code></pre>
 <p>执行脚本带上一个图片路径参数（windows下请注意用“\\”对路径进行分割），测试中一张1.31M的图片压缩后为201K，效果还是可以的，图就不贴出了，可以自己转一下试试。</p>
 <p>quality参数最终定在80是因为这样压缩率很大但图片质量损失不会很大，可以自行选择合适的。</p>
 <p>对于GIF图片的压缩，我直接调用了<a href="https://developers.google.com/speed/webp/docs/gif2webp" target="_blank" rel="noopener">WebP官网</a>提供的gif2webp程序，现在主流浏览器都支持webp格式，况且webp的优势挺大。<a href="https://storage.googleapis.com/downloads.webmproject.org/releases/webp/index.html" target="_blank" rel="noopener">下载地址在这里</a>。</p>
@@ -1068,11 +1084,6 @@ a.change {
 
         
         
-
-        <!-- <div id="163musicPlayer">
-        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=298 height=52 src="//music.163.com/outchain/player?type=2&id=27845535&auto=0&height=32"></iframe>
-        </div> -->
-       
 
         
         
@@ -1593,6 +1604,18 @@ a.change {
   
 
   
+
+
+
+
+<!-- j's自定义修改 -->
+<script type="text/javascript" src="/plugins/prettify/prettify.js"></script>
+<script type="text/javascript">
+$(window).load(function(){
+  $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
+  prettyPrint();
+})    
+</script>
 
 </body>
 </html>
