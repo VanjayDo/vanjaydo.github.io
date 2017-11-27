@@ -1724,7 +1724,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #47d7cf;
+  background: #3de788;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2839,15 +2839,21 @@ body {
 .main {
   padding-bottom: 0px;
 }
-div #div-border-left-yellow {
+div .div-border-left-yellow {
   border-radius: 3px;
   padding: 10px;
-  margin: 10px 0;
   border: 1px solid #ccc;
   border-left-width: 5px;
   border-left-color: #f0ad4e;
 }
-#inp {
+.from {
+  display: inline-block;
+  margin-top: 15px;
+  margin-bottom: 0;
+  margin-left: 20px;
+  color: #ffa500;
+}
+.shortCode {
   color: #c7254e;
   background: #f9f2f4;
   border: 1px solid #d6d6d6;
