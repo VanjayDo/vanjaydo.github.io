@@ -93,16 +93,21 @@
 
 
 
-<meta name="description" content="&quot;暗暗受苦，默默享乐.&quot;">
-<meta property="og:type" content="website">
-<meta property="og:title" content="jay&#39;s Blog">
-<meta property="og:url" content="http://yoursite.com/page/2/index.html">
+<meta name="description" content="之前对于备份hexo搭建的博客源码采用的方式是在Github Pages对应的库中新开一个分支，每当源码有重要的客制化变更时都推一次到备份的分支上，但是这样并不是一个好办法，因为，但是新开一个库专门存源码的话又不想每一次更新时推两次（一次到源码库，一次到GitHub Pages的静态页面库）怎么办？答案就是使用CI。我们直接推源码的更新到源码库，然后让CI工具自动拉取源码生成静态页面后再自动推到静">
+<meta property="og:type" content="article">
+<meta property="og:title" content="appveyor入门">
+<meta property="og:url" content="http://yoursite.com/post/appveyor入门.html">
 <meta property="og:site_name" content="jay&#39;s Blog">
-<meta property="og:description" content="&quot;暗暗受苦，默默享乐.&quot;">
+<meta property="og:description" content="之前对于备份hexo搭建的博客源码采用的方式是在Github Pages对应的库中新开一个分支，每当源码有重要的客制化变更时都推一次到备份的分支上，但是这样并不是一个好办法，因为，但是新开一个库专门存源码的话又不想每一次更新时推两次（一次到源码库，一次到GitHub Pages的静态页面库）怎么办？答案就是使用CI。我们直接推源码的更新到源码库，然后让CI工具自动拉取源码生成静态页面后再自动推到静">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://cdn.safeandsound.cn/image/appveyor%E5%85%A5%E9%97%A8/appveyor2.png">
+<meta property="og:image" content="https://cdn.safeandsound.cn/image/appveyor%E5%85%A5%E9%97%A8/appveyor0.png">
+<meta property="og:image" content="https://cdn.safeandsound.cn/image/appveyor%E5%85%A5%E9%97%A8/appveyor1.png">
+<meta property="og:updated_time" content="2017-12-12T09:40:59.092Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="jay&#39;s Blog">
-<meta name="twitter:description" content="&quot;暗暗受苦，默默享乐.&quot;">
+<meta name="twitter:title" content="appveyor入门">
+<meta name="twitter:description" content="之前对于备份hexo搭建的博客源码采用的方式是在Github Pages对应的库中新开一个分支，每当源码有重要的客制化变更时都推一次到备份的分支上，但是这样并不是一个好办法，因为，但是新开一个库专门存源码的话又不想每一次更新时推两次（一次到源码库，一次到GitHub Pages的静态页面库）怎么办？答案就是使用CI。我们直接推源码的更新到源码库，然后让CI工具自动拉取源码生成静态页面后再自动推到静">
+<meta name="twitter:image" content="https://cdn.safeandsound.cn/image/appveyor%E5%85%A5%E9%97%A8/appveyor2.png">
 
 
 
@@ -110,7 +115,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/page/2/">
+  <link rel="canonical" href="http://yoursite.com/post/appveyor入门.html">
 
 
 
@@ -121,7 +126,7 @@
 
 
 <link href="/plugins/prettify/tranquil-heart.css" rel="stylesheet" type="text/css">
-  <title>jay's Blog - Codes save you, rather than gods.</title>
+  <title>appveyor入门 | jay's Blog</title>
   
 
 
@@ -146,7 +151,7 @@
     
   
 
-  <div class="container sidebar-position-left page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -289,9 +294,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -300,7 +305,7 @@
   
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/post/(xrdp+vnc)远程linux桌面.html">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/post/appveyor入门.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="jay">
@@ -317,9 +322,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/post/(xrdp+vnc)远程linux桌面.html" itemprop="url">(xrdp+vnc)远程linux桌面</a></h1>
+          <h1 class="post-title" itemprop="name headline">appveyor入门</h1>
         
 
         <div class="post-meta">
@@ -331,8 +334,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-15T13:37:36+08:00">
-                2017-06-15
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-09T16:23:07+00:00">
+                2017-11-10
               </time>
             
 
@@ -367,28 +370,122 @@
 
       
       
+        <p>之前对于备份hexo搭建的博客源码采用的方式是在Github Pages对应的库中新开一个分支，每当源码有重要的客制化变更时都推一次到备份的分支上，但是这样并不是一个好办法，因为，但是新开一个库专门存源码的话又不想每一次更新时推两次（一次到源码库，一次到GitHub Pages的静态页面库）怎么办？答案就是使用CI。我们直接推源码的更新到源码库，然后让CI工具自动拉取源码生成静态页面后再自动推到静态页面库中。如题，这里采用的CI工具是appveyor。</p>
+<a id="more"></a>
+<h3 id="appveyor简介"><a href="#appveyor简介" class="headerlink" title="appveyor简介"></a>appveyor简介</h3><p><a href="https://www.appveyor.com/" target="_blank" rel="noopener">appveyor</a>的特点就是操作全部上云, 与用户平台无关, 你可以在采用本地appveyor.yml配置文件(代码托管方[如github]必须提供了相关API)或在appveyor项目里配置两种方式对你的CI项目进行配置, 项目会运行在官方预安装了很多软件的虚拟机中;项目按照你的配置build完成后会将结果以邮件的方式反馈给你(有时延迟比较大, 需要等个二三十分钟).<br><img src="https://cdn.safeandsound.cn/image/appveyor%E5%85%A5%E9%97%A8/appveyor2.png" alt="Alt text"></p>
+<p>反正我个人感觉非常好用, 非常非常好用, 嗯!<br>具体的请自己去了解吧.</p>
+<h3 id="基本使用"><a href="#基本使用" class="headerlink" title="基本使用"></a>基本使用</h3><p>首先当然是注册账号了, 用github账号登录就好了(反正后面也是要绑定的).</p>
+<h4 id="创建一个项目"><a href="#创建一个项目" class="headerlink" title="创建一个项目"></a>创建一个项目</h4><p>这里以GitHub上的项目为例讲一下push commit到GitHub仓库后appveyor自动拉取项目并进行操作的过程:</p>
+<ol>
+<li>登录上去后点<a href="https://ci.appveyor.com/projects/new" target="_blank" rel="noopener">NEW PROJECT</a>添加项目;</li>
+<li>在GitHub账户里选择项目, 点击<code>ADD</code><br> <img src="https://cdn.safeandsound.cn/image/appveyor%E5%85%A5%E9%97%A8/appveyor0.png" alt="选择项目"></li>
+<li>在GitHub仓库里添加appveyor.yml配置文件, 因为配置的选项有很多, 具体的写法请查看<a href="https://www.appveyor.com/docs/" target="_blank" rel="noopener">appveyor文档</a>, 这里只举一个很简单的例子:appveyor自动拉取github项目后, 在build之前列一下当前目录里的文件, 然后在build过程中只打印一句”this is just a test”.<br>我们在GitHub仓库的根目录里添加一个文件, 取名为appveyor.yml, 然后在里面输入:<pre><code> before_build:
+   - dir
+ build_script:
+   - echo &quot;this is just a test&quot;
+</code></pre>然后保存, commit即可.<br>随后我们到appveyor项目界面可以看到已经自动在运行了, console里会打印出如下类似内容<pre><code>Build started
+git clone -q --branch=master https://github.com/VanjayDo/test.git C:\projects\test
+git checkout -qf 65d495665aae3ead5e4ddc06c88a67246847b621
+dir
+Volume in drive C is Windows
+Volume Serial Number is D4AB-4044
+Directory of C:\projects\test
+12/12/2017  01:54 AM    &lt;DIR&gt;          .
+12/12/2017  01:54 AM    &lt;DIR&gt;          ..
+12/12/2017  01:54 AM                68 appveyor.yml
+            1 File(s)             68 bytes
+            2 Dir(s)  40, 973, 512, 704 bytes free
+echo &quot;this is just a test&quot;
+&quot;this is just a test&quot;
+Discovering tests...OK
+Build success
+</code></pre>这就算是一个成功的例子了, 整个配置文件很简单, 如果需要比较复杂的操作可以参考<a href="https://www.appveyor.com/docs/appveyor-yml/" target="_blank" rel="noopener">appveyor-yml的参考文档</a>, 具体的也可以查<a href="https://www.appveyor.com/docs/" target="_blank" rel="noopener">appveyor docs</a></li>
+</ol>
+<h4 id="基本流程"><a href="#基本流程" class="headerlink" title="基本流程"></a>基本流程</h4><p>整个过程是这样的:</p>
+<ol>
+<li>你添加自己的GitHub仓库后, appveyor会自动到该GitHub仓库的设置里添加一个webhook(触发事件默认为Pull request和Push), 与当前的appveyor项目绑定, 所以每当你有新的推送时, GitHub会自动触发该webhook;</li>
+<li>appveyor项目被触发后会先调用GitHub官方的api查看该repo根目录下是否有appveyor.yml配置文件, 如果有就先只下载该文件对项目环境进行配置, 然后clone该repo, 再进行项目的整个build;如果没有配置文件则默认使用msbuild, 即UI配置, 这需要你预先在项目设置里进行配置.</li>
+<li>什么?UI配置和yaml配置能不能共存?你问这个啊, 官方文档里写的很清楚了:<br><div class="div-border-left-yellow">It’s worth noticing that both appveyor.yml and UI configuration are mutually exclusive. It’s always either YAML or UI - the settings from each are not merged. If you have appveyor.yml in your repo it will override all settings made on the UI unless explicitly disabled by Ignore appveyor.yml. There are few exceptions,  which are:<br>1.Environment variables. Variables defined on UI are getting merged with those ones defined in appveyor.yml. Variable values with the same names are getting overridden with values from UI.<br>2.Notification settings defined on UI are getting merged with those ones defined in appveyor.yml.<br>3.Build version format is taken from UI if it is not set in appveyor.yml.</div><br>简而言之就是, 二者不能共存(不能合并), yaml配置文件的优先级更高, 如果有yaml配置则UI配置会全部失效(除非你在UI配置里选择忽略yaml配置文件), 当然, 除了最后列出的三点例外(环境变量<code>[两者都有则合并]</code>, 提醒<code>[两者都有则合并]</code>和build版本<code>[yaml没写而UI配置了则用UI的]</code>).</li>
+</ol>
+<h3 id="要推送artifacts怎么办"><a href="#要推送artifacts怎么办" class="headerlink" title="要推送artifacts怎么办"></a>要推送artifacts怎么办</h3><p>如果你需要在build完成之后将成功生成的产品发布/推送到你的GitHub仓库的话, 那就还需要进一步设置.在官方文档的<a href="https://www.appveyor.com/docs/how-to/git-push/" target="_blank" rel="noopener">Git push from build</a>也说明了, 这里我以hexo博客为例进行具体说明, 我创建了hexo源码库与静态页面库两个repo, 将源码和博客站点分开, 想要的效果是: 我主动推送更新到源码库中之后, appveyor自动拉取帮我生成静态页面然后推到静态页面库中, 这样博客站点就自动更新了, 这个过程大概是:</p>
+<ol>
+<li>hexo源码库更新后触发webhook;</li>
+<li>appveyor项目自动拉取appveyor.yml对环境进行配置, 然后clone项目;</li>
+<li>在<code>install</code>部分用npm安装一系列依赖, 在<code>build_script</code>部分生成静态页面, 在<code>on_success</code>部分定义生成成功后进行推送的步骤;</li>
+<li>build其实主要是<code>hexo g</code>来生成静态页面, 也可能你需要后期处理一下(如压缩代码), 完成build后会将之前定义的artifacts文件夹中的内容(在这里是public文件夹, 即静态页面生成后存放的文件夹)推送到静态页面库中, 大功告成</li>
+</ol>
+<p>其实, 整个过程和上面的基本流程相比也就是多了一个推送的步骤而已, 想想, 如果你需要commit到仓库, 除了登录到GitHub还能用什么办法?那就是OAuth token了, 也就是personal access token, 能够通过GitHub认证, 拿到用户完全的操作权限.</p>
+<p>具体的操作如下:</p>
+<ol>
+<li><h4 id="生成personal-access-token"><a href="#生成personal-access-token" class="headerlink" title="生成personal access token"></a>生成personal access token</h4>基本操作, 不会的请参考<a href="https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/" target="_blank" rel="noopener">官方文档</a><br>保存生成的token,等会用</li>
+<li><h4 id="加密生成的token"><a href="#加密生成的token" class="headerlink" title="加密生成的token"></a>加密生成的token</h4>到<a href="https://ci.appveyor.com/tools/encrypt" target="_blank" rel="noopener">Appveyor加密页面</a>对刚刚生成的token进行加密(加密后的token才能放心的写到appveyor.yml配置文件里)<br>对于这个<code>Encrypt data</code>, 官方文档里也有<a href="https://www.appveyor.com/docs/build-configuration/#secure-variables" target="_blank" rel="noopener">说明在此</a>.<br>保存加密的token,等会用</li>
+<li><h4 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h4>这里我也是在网上复制的配置文件,反正比我写的条理多了</li>
+</ol>
+<pre><code>clone_depth: 1
+
+environment:
+  access_token:
+    secure: [填上刚刚加密后的token]
+
+install:
+  - node --version
+  - npm --version
+  - npm install
+  - npm install hexo-cli -g
+
+build_script:
+  - hexo g
+
+artifacts:
+  - path: public
+
+on_success:
+  - git config --global credential.helper store
+  - ps: Add-Content &quot;$env:USERPROFILE\.git-credentials&quot; &quot;https://$($env:access_token):x-oauth-basic@github.com`n&quot;
+  - git config --global user.email &quot;%GIT_USER_EMAIL%&quot;
+  - git config --global user.name &quot;%GIT_USER_NAME%&quot;
+  - git clone --depth 5 -q --branch=%TARGET_BRANCH% %STATIC_SITE_REPO% %TEMP%\static-site
+  - cd %TEMP%\static-site
+  - del * /f /q
+  - for /d %%p IN (*) do rmdir &quot;%%p&quot; /s /q
+  - SETLOCAL EnableDelayedExpansion &amp; robocopy &quot;%APPVEYOR_BUILD_FOLDER%\public&quot; &quot;%TEMP%\static-site&quot; /e &amp; IF !ERRORLEVEL! EQU 1 (exit 0) ELSE (IF !ERRORLEVEL! EQU 3 (exit 0) ELSE (exit 1))
+  - git add -A
+  - if &quot;%APPVEYOR_REPO_BRANCH%&quot;==&quot;master&quot; if not defined APPVEYOR_PULL_REQUEST_NUMBER (git diff --quiet --exit-code --cached || git commit -m &quot;Update Static Site&quot; &amp;&amp; git push origin %TARGET_BRANCH% &amp;&amp; appveyor AddMessage &quot;Static Site Updated&quot;)
+</code></pre><p>然后在UI设置的<code>Environment</code>里,添加四个环境变量:<code>STATIC_SITE_REPO</code>(是要提交到的repo地址,也就是我静态页面库的地址)，<code>TARGET_BRANCH</code>(repo分支,填master即可)，<code>GIT_USER_EMAIL</code>(GitHub账户的邮箱)和<code>GIT_USER_NAME</code>(GitHub账号用户名),贴上我的供参考:<br><img src="https://cdn.safeandsound.cn/image/appveyor%E5%85%A5%E9%97%A8/appveyor1.png" alt="Alt text"><br>当然, 你也可以直接在配置文件里修改, 直接将环境变量改成相应的值即可.</p>
+<p>这样再推送就可以看到appveyor自动进行build了.</p>
+<h3 id="赘述"><a href="#赘述" class="headerlink" title="赘述"></a>赘述</h3><ol>
+<li><p>使用appveyor期间遇到了比较诡异的情况:提交后有时候会build成功, 有时候会build失败, 有时候失败了再build一次就成功了, 有时候失败了再build好几次成功不了, 完全是概率问题.以下是错误日志:</p>
+<pre><code>*html .test{color:#090;}       /* For IE6 and earlier */
+*+ html .test{color:#ff0;}     /* For IE7 */
+.test:lang(zh-cn){color:#f00;}  /* For IE8+ and not IE */
+.test:nth-child(1){color:#0ff;} /* For IE9+ and not IE */
+</code></pre><p>看日志好像是权限的问题，Google了一下, 在appveyor官方的github账户中的<a href="https://github.com/appveyor/ci/issues/1058" target="_blank" rel="noopener">该issue</a>中提到了将npm版本安装为5.3即可:<code>npm -g install npm@5.3</code>，到底还是版本的问题</p>
+</li>
+<li><p>如果创建project时选择的是Git, 即使用Clone URL的方式添加git repo来创建项目的话, 那么源项目中即便有appveyor.yml配置文件也无法使用, 其原因被我在appveyor官方github的<a href="https://github.com/appveyor/ci/issues/1309#issuecomment-278821821" target="_blank" rel="noopener">一个issue中</a>找到, 因为配置文件的工作原理是appveyor在build创建之前通过Github等托管方提供的API先将配置文件下载下来再自动对运行环境进行配置, 而是使用这个API是需要access token的, 当然, 你可能要问”为什么不直接去下appveyor.yml文件?而非要使用API呢?像octotree一类的插件不就是可以直接下载么?”可是<a href="https://github.com/buunguyen/octotree" target="_blank" rel="noopener">octotree</a>的项目中也说了它也是用的api:<br></p><div class="div-border-left-yellow">Octotree uses GitHub API to retrieve repository metadata. By default,  it makes unauthenticated requests to the GitHub API. However,  there are two situations when requests must be authenticated:<br>1.You access a private repository<br>2.You exceed the rate limit of unauthenticated requests<br>When that happens,  Octotree will ask for your GitHub personal access token. If you don’t already have one,  create one,  then copy and paste it into the textbox. Note that the minimal scopes that should be granted are public_repo and repo (if you need access to private repositories).<br></div><br>关于API调用速率限制的<a href="https://developer.github.com/v3/#rate-limiting" target="_blank" rel="noopener">github官方说明</a>, 简而言之, 未登录则对ip进行限制, 每小时60次;使用登录认证或OAuth token则对用户进行限制, 每小时5000次;所以如果appveyor要使用API的话肯定是使用认证的方式.<br>再回到git方式创建的项目无法使用配置文件的问题上, 你可能要问”既然我在appveyor的账户里填了我的github personal access token, 为什么官方不在这个创建方式上做些判断, 检测到是GitHub/BitBucket等的项目就带上token去拉”, 这……你还不如登录自己的GitHub账号直接fork这个项目, 然后在appveyor里选择github方式创建项目, 万事大吉.<br>总而言之, 如果使用git方式创建项目的话, 就只能使用GUI的方式来配置项目, 不能在git仓库里使用配置文件的方式.<p></p>
+</li>
+</ol>
+
+      
+    </div>
+
+    <div>
+      
         
-          <p>相信大家桌面远程linux服务器大多用的都是vnc（虽然对于linux系统桌面远程用的确实很少），这里提一下xrdp的优势，1.加密，vcn本身的传输是不加密的（可以借助于SSL实现）；2.因为xrdp实质上就是一个<a href="https://zh.wikipedia.org/wiki/%E9%81%A0%E7%AB%AF%E6%A1%8C%E9%9D%A2%E5%8D%94%E5%AE%9A" target="_blank" rel="noopener"> rdp </a> 服务器，所以我们在windows上只需要借助自带的mstsc就可以直连linxu桌面系统，因为都使用了rdp协议，很方便；3. 支持多用户登录；4.第四个优势…要说第四个优势的话……开源算么？（逃…<br>
-          
-          </p><div class="change">
-            <a class="btn" href="/post/(xrdp+vnc)远程linux桌面.html#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          
+
+      
+    </div>
+
+    <div>
+      
         
+
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
-      
-    </div>
-
-    <div>
       
     </div>
 
@@ -396,377 +493,42 @@
       
 
       
-
-      
-
       
       
-        <div class="post-eof"></div>
+
       
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/post/sublime下markdown环境配置.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="jay">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://cdn.safeandsound.cn/image/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="jay's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/post/sublime下markdown环境配置.html" itemprop="url">sublime下markdown环境配置</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-06T20:04:46+08:00">
-                2017-06-06
-              </time>
+              <a href="/post/树莓派入门.html" rel="next" title="树莓派入门">
+                <i class="fa fa-chevron-left"></i> 树莓派入门
+              </a>
             
+          </div>
 
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-
+              <a href="/post/jenkins入门.html" rel="prev" title="jenkins入门">
+                jenkins入门 <i class="fa fa-chevron-right"></i>
+              </a>
             
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-      
-        
-          <p>因为用的挺顺手的，所以推荐一下。<br>我在sublime上编写markdown文档的环境配置是:</p>
-<p><strong><em> Markdown Editing + OmniMarkupPreviewer + Markdown Extended + Monokai Extended </em></strong><br>
-          
-          </p><div class="change">
-            <a class="btn" href="/post/sublime下markdown环境配置.html#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-      
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/post/拓展chrome插件json-viewer.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="jay">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://cdn.safeandsound.cn/image/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="jay's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/post/拓展chrome插件json-viewer.html" itemprop="url">拓展chrome插件json-viewer</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-04T00:00:00+08:00">
-                2017-06-04
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-      
-        
-          <p>最近在学习维护学校iptv服务器时获得了电视墙缓存图片的json数据，chrome打开页面后jsonViewer无法格式化代码，<br>
-          
-          </p><div class="change">
-            <a class="btn" href="/post/拓展chrome插件json-viewer.html#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          
-        
+    <div class="post-spread">
       
     </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/post/web应用从网页插入中文到mysql变成乱码的解决办法.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="jay">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://cdn.safeandsound.cn/image/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="jay's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/post/web应用从网页插入中文到mysql变成乱码的解决办法.html" itemprop="url">web应用从网页插入中文到mysql变成乱码的解决办法</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-12T22:15:13+08:00">
-                2017-03-12
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-      
-        
-          <p>相信既然这么进来了，那么问题肯定是差不多的，下面直接讲述解决办法：<br>
-          
-          </p><div class="change">
-            <a class="btn" href="/post/web应用从网页插入中文到mysql变成乱码的解决办法.html#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-  </section>
-
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
-  </nav>
-
+  </div>
 
 
           </div>
@@ -774,6 +536,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -794,8 +560,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image" src="https://cdn.safeandsound.cn/image/avatar.jpg" alt="jay">
           <p class="site-author-name" itemprop="name">jay</p>
@@ -885,6 +660,22 @@
 
       </div></section>
       </div>
+      
+      
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#appveyor简介"><span class="nav-number">1.</span> <span class="nav-text"><a href="#appveyor&#x7B80;&#x4ECB;" class="headerlink" title="appveyor&#x7B80;&#x4ECB;"></a>appveyor&#x7B80;&#x4ECB;</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基本使用"><span class="nav-number">2.</span> <span class="nav-text"><a href="#&#x57FA;&#x672C;&#x4F7F;&#x7528;" class="headerlink" title="&#x57FA;&#x672C;&#x4F7F;&#x7528;"></a>&#x57FA;&#x672C;&#x4F7F;&#x7528;</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#创建一个项目"><span class="nav-number">2.1.</span> <span class="nav-text"><a href="#&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x9879;&#x76EE;" class="headerlink" title="&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x9879;&#x76EE;"></a>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x9879;&#x76EE;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#基本流程"><span class="nav-number">2.2.</span> <span class="nav-text"><a href="#&#x57FA;&#x672C;&#x6D41;&#x7A0B;" class="headerlink" title="&#x57FA;&#x672C;&#x6D41;&#x7A0B;"></a>&#x57FA;&#x672C;&#x6D41;&#x7A0B;</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#要推送artifacts怎么办"><span class="nav-number">3.</span> <span class="nav-text"><a href="#&#x8981;&#x63A8;&#x9001;artifacts&#x600E;&#x4E48;&#x529E;" class="headerlink" title="&#x8981;&#x63A8;&#x9001;artifacts&#x600E;&#x4E48;&#x529E;"></a>&#x8981;&#x63A8;&#x9001;artifacts&#x600E;&#x4E48;&#x529E;</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#生成personal-access-token"><span class="nav-number">3.1.</span> <span class="nav-text"><a href="#&#x751F;&#x6210;personal-access-token" class="headerlink" title="&#x751F;&#x6210;personal access token"></a>&#x751F;&#x6210;personal access token</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#加密生成的token"><span class="nav-number">3.2.</span> <span class="nav-text"><a href="#&#x52A0;&#x5BC6;&#x751F;&#x6210;&#x7684;token" class="headerlink" title="&#x52A0;&#x5BC6;&#x751F;&#x6210;&#x7684;token"></a>&#x52A0;&#x5BC6;&#x751F;&#x6210;&#x7684;token</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置文件"><span class="nav-number">3.3.</span> <span class="nav-text"><a href="#&#x914D;&#x7F6E;&#x6587;&#x4EF6;" class="headerlink" title="&#x914D;&#x7F6E;&#x6587;&#x4EF6;"></a>&#x914D;&#x7F6E;&#x6587;&#x4EF6;</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#赘述"><span class="nav-number">4.</span> <span class="nav-text"><a href="#&#x8D58;&#x8FF0;" class="headerlink" title="&#x8D58;&#x8FF0;"></a>&#x8D58;&#x8FF0;</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
       
       
 
@@ -994,10 +785,10 @@
   
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
 
-  
+
 
   
 
