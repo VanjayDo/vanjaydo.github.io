@@ -1,8 +1,43 @@
-<!DOCTYPE html><html class="theme-next mist use-motion" lang="zh-Hans"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"><link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css"><link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css"><link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css"><meta name="keywords" content="Hexo, NexT"><link rel="shortcut icon" type="image/x-icon" href="https://cdn.safeandsound.cn/image/icon.ico?v=5.1.1"><meta name="description" content="2017 年12月 2017-12-17USTC的ubuntu源文件自动生成器  2017-12-09有时候需要在当前文件夹开一个临时的端口来访问一下看看效果可以使用http-server.需要使用npm全局安装http-sever: npm install -g http-server使用http-server在本地开一个临时的server: http-server -a 127.0.0.1 -"><meta property="og:type" content="website"><meta property="og:title" content="备忘录"><meta property="og:url" content="https://safeandsound.cn/memo/index.html"><meta property="og:site_name" content="jay&#39;s Blog"><meta property="og:description" content="2017 年12月 2017-12-17USTC的ubuntu源文件自动生成器  2017-12-09有时候需要在当前文件夹开一个临时的端口来访问一下看看效果可以使用http-server.需要使用npm全局安装http-sever: npm install -g http-server使用http-server在本地开一个临时的server: http-server -a 127.0.0.1 -"><meta property="og:locale" content="zh-Hans"><meta property="og:image" content="https://cdn.safeandsound.cn/image/memo/tldr.png"><meta property="og:image" content="https://cdn.safeandsound.cn/image/memo/show-ag.png"><meta property="og:image" content="https://cdn.safeandsound.cn/image/memo/%E8%B1%86%E7%93%A3%E8%AF%BB%E4%B9%A6workflow.png"><meta property="og:image" content="https://cdn.safeandsound.cn/image/memo/SDN.jpg"><meta property="og:image" content="https://cdn.safeandsound.cn/image/memo/mycli.png"><meta property="og:updated_time" content="2017-12-27T14:42:41.644Z"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="备忘录"><meta name="twitter:description" content="2017 年12月 2017-12-17USTC的ubuntu源文件自动生成器  2017-12-09有时候需要在当前文件夹开一个临时的端口来访问一下看看效果可以使用http-server.需要使用npm全局安装http-sever: npm install -g http-server使用http-server在本地开一个临时的server: http-server -a 127.0.0.1 -"><meta name="twitter:image" content="https://cdn.safeandsound.cn/image/memo/tldr.png"><script type="text/javascript" id="hexo.configurations">var NexT=window.NexT||{},CONFIG={root:"/",scheme:"Mist",sidebar:{position:"left",display:"post",offset:12,offset_float:0,b2t:!1,scrollpercent:!1,onmobile:!1},fancybox:!0,motion:!0,duoshuo:{userId:"0",author:"博主"},algolia:{applicationID:"",apiKey:"",indexName:"",hits:{per_page:10},labels:{input_placeholder:"Search for Posts",hits_empty:"We didn't find any results for the search: ${query}",hits_stats:"${hits} results found in ${time} ms"}}}</script><link rel="canonical" href="https://safeandsound.cn/memo/"><script src="https://cdn.safeandsound.cn/js/pace.min.js"></script><link href="/plugins/prettify/tranquil-heart.css" rel="stylesheet" type="text/css"><title>备忘录 | jay's Blog</title></head><body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans"><div class="container sidebar-position-left page-post-detail"><div class="headband"></div><header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="header-inner"><div class="top-scroll-bar"></div><div class="site-brand-wrapper"><div class="site-meta"><div class="custom-logo-site-title"><a href="/" class="brand" rel="start"><span class="logo-line-before"><i></i></span> <span class="site-title">jay's Blog</span> <span class="logo-line-after"><i></i></span></a></div><p class="site-subtitle">Codes save you, rather than gods.</p></div><div class="site-nav-toggle"><button><span class="btn-bar"></span> <span class="btn-bar"></span> <span class="btn-bar"></span></button></div></div><nav class="site-nav"><ul id="menu" class="menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i><br>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i><br>关于</a></li><li class="menu-item menu-item-memo"><a href="/memo/" rel="section"><i class="menu-item-icon fa fa-fw fa-sticky-note"></i><br>备忘</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i><br>标签</a></li><li class="menu-item menu-item-entries"><a href="/entries/" rel="section"><i class="menu-item-icon fa fa-fw fa-tasks"></i><br>词条</a></li><li class="menu-item menu-item-search"><a href="javascript:;" class="popup-trigger"><i class="menu-item-icon fa fa-search fa-fw"></i><br>搜索</a></li><style type="text/css">#upside-down{ms-filter:"progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";-moz-transform:rotate(-180deg);-o-transform:rotate(-180deg);-webkit-transform:rotate(-180deg)}</style><script>function go(){var e=["https://cdn.safeandsound.cn/music/crazy-bird.m4a","https://cdn.safeandsound.cn/music/shape-of-my-heart.m4a","https://cdn.safeandsound.cn/music/Sof%C3%ADa.m4a"];function t(e){var t,n=(t=e,{height:t.offsetHeight,width:t.offsetWidth});return n.height>o&&n.height<a&&n.width>s&&n.width<d}function n(e){var t=function(e){for(var t=e,n=0;t;)n+=t.offsetTop,t=t.offsetParent;return n}(e);return t>=p&&t<=b+p}function i(){for(var e=document.getElementsByClassName(c),t=new RegExp("\\b"+c+"\\b");0<e.length;)e[0].className=e[0].className.replace(t,"")}!function(){var e=document.getElementById("audio_element_id");null===e&&((e=document.createElement("audio")).setAttribute("class",g),e.setAttribute("curSongIndex",0),e.id="audio_element_id",e.loop=!1,e.bgcolor=0,e.addEventListener("canplay",function(){setTimeout(function(){w.className+=" "+c+" "+l},500),setTimeout(function(){i(),function(){var e=document.createElement("div");e.setAttribute("class",f),document.body.appendChild(e),setTimeout(function(){document.body.removeChild(e)},100)}();for(var e=0;e<_.length;e++)_[e].className+=" "+c+" "+m[Math.floor(Math.random()*m.length)]},15500)},!0),e.addEventListener("ended",function(){i(),function(){for(var e=document.getElementsByClassName(g),t=0;t<e.length;t++)document.body.removeChild(e[t])}(),go()},!0),e.innerHTML=" <p>If you are reading this, it is because your browser does not support the audio element. We recommend that you get a new browser.</p> <p>",document.body.appendChild(e))}();for(var o=30,s=30,a=350,d=350,r=parseInt(document.getElementById("audio_element_id").getAttribute("curSongIndex")),u=e[r],c="mw-harlem_shake_me",l="im_first",m=["im_drunk","im_baked","im_trippin","im_blown"],f="mw-strobe_light",h="//cdn.safeandsound.cn/css/harlem-shake-style.css",g="mw_added_css",b=function(){var e=document.documentElement;return window.innerWidth?window.innerHeight:e&&!isNaN(e.clientHeight)?e.clientHeight:0}(),p=window.pageYOffset?window.pageYOffset:Math.max(document.documentElement.scrollTop,document.body.scrollTop),y=document.getElementsByTagName("*"),w=null,v=0;v<y.length;v++){if(t(A=y[v])&&n(A)){w=A;break}}if(null!==A){!function(){var e=document.createElement("link");e.setAttribute("type","text/css"),e.setAttribute("rel","stylesheet"),e.setAttribute("href",h),e.setAttribute("class",g),document.body.appendChild(e)}(),function(){var t=document.getElementById("audio_element_id");if(null!=t){var n=parseInt(t.getAttribute("curSongIndex"));n>e.length-2?n=0:n++,t.setAttribute("curSongIndex",n),i()}t.src=u,t.play()}();var _=[];for(v=0;v<y.length;v++){var A;t(A=y[v])&&_.push(A)}}else console.warn("Could not find a node of the right size. Please try a different page.")}var ua=navigator.userAgent;isAndroid=/Android/i.test(ua),isBlackBerry=/BlackBerry/i.test(ua),isWindowPhone=/IEMobile/i.test(ua),isIOS=/iPhone|iPad|iPod/i.test(ua),isMobile=isAndroid||isBlackBerry||isWindowPhone||isIOS,isAndroid&&(isMobile="android"),isBlackBerry&&(isMobile="BlackBerry"),isWindowPhone&&(isMobile="WindowPhone"),isIOS&&(isMobile="IOS"),isMobile&&document.write('<li class="menu-item"><a onclick=go()><i class="menu-item-icon fa fa-music fa-fw"></i> 好听的   <i class="fa fa-smile-o" aria-hidden="true" style="font-size:120%" id="upside-down"></i></a></li>')</script></ul><div class="site-search"><div class="popup search-popup local-search-popup"><div class="local-search-header clearfix"><span class="search-icon"><i class="fa fa-search"></i> </span><span class="popup-btn-close"><i class="fa fa-times-circle"></i></span><div class="local-search-input-wrapper"><input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input"></div></div><div id="local-search-result"></div></div></div></nav></div></header><main id="main" class="main"><div class="main-inner"><div class="content-wrap"><div id="content" class="content"><div id="posts" class="posts-expand"><header class="post-header"><h1 class="post-title" itemprop="name headline">备忘录</h1></header><h4 id="2017-年"><a href="#2017-年" class="headerlink" title="2017 年"></a>2017 年</h4><h5 id="12月"><a href="#12月" class="headerlink" title="12月"></a>12月</h5><ul><li><h6 id="2017-12-17"><a href="#2017-12-17" class="headerlink" title="2017-12-17"></a>2017-12-17</h6><p><a href="https://mirrors.ustc.edu.cn/repogen/" target="_blank" rel="noopener">USTC的ubuntu源文件自动生成器</a></p></li><li><h6 id="2017-12-09"><a href="#2017-12-09" class="headerlink" title="2017-12-09"></a>2017-12-09</h6><p>有时候需要在当前文件夹开一个临时的端口来访问一下看看效果可以使用<code>http-server</code>.<br>需要使用npm全局安装http-sever: <code>npm install -g http-server</code><br>使用http-server在本地开一个临时的server: <code>http-server -a 127.0.0.1 -p [端口号]</code>根目录默认为当前目录,也可以直接在http-server后面指定目录地址(相对/绝对都可以),如果不加<code>-a</code>参数的话则会默认在本地的几个网卡地址上都进行设置(如:你有一个10.10.10.1的虚拟网卡,如果你有一台虚拟机使用的是这个网卡,则虚拟机也可以访问当前设置的地址)</p></li><li><h6 id="2017-12-06"><a href="#2017-12-06" class="headerlink" title="2017-12-06"></a>2017-12-06</h6><p>有些同学不会下载离线完整版的chrome,方法是:google搜索关键词”chrome 帮助”,会得到结果”Google Chrome帮助 - Google Support”,下面的小标题有”下载和安装Google Chrome”,点进去,在”在 Windows 设备上安装 Chrome”下方会有小标题”离线安装 Chrome”,点击展开,会出现链接<a href="https://www.google.com/intl/zh-CN/chrome/browser/desktop/index.html?standalone=1" target="_blank" rel="noopener">备用 Chrome 安装程序</a>,点击后可以看到打开的页面URL最后有属性<code>standalone=1</code>,在该页面下载的chrome即是离线版的.</p></li><li><h6 id="2017-12-01"><a href="#2017-12-01" class="headerlink" title="2017-12-01"></a>2017-12-01</h6><p>从浏览器复制网站地址后粘贴到别处,如果地址中有中文,往往发现地址里的中文被转码成了<a href="https://zh.wikipedia.org/wiki/百分号编码" target="_blank" rel="noopener">URL编码</a>,如<code>https://zh.wikipedia.org/wiki/维基百科</code>被转成了<code>https://zh.wikipedia.org/wiki/%E7%BB%B4%E5%9F%BA%E7%99%BE%E7%A7%91</code>,其实使用剪切而非复制就不会出现这种尴尬的问题.</p></li></ul><h5 id="11-月"><a href="#11-月" class="headerlink" title="11 月"></a>11 月</h5><ul><li><h6 id="2017-11-29"><a href="#2017-11-29" class="headerlink" title="2017-11-29"></a>2017-11-29</h6><p>今天在使用服务器做ss代理的时候一直提示<code>ERROR: unable to resolve……</code>，很奇怪，这个配置已经用过很多遍都没出问题，而且明明服务器配置了多个DNS，却显示无法解析域名。<br>最后还是查相关文档后，在配置文件里加了<code>&quot;nameserver&quot;: &quot;8.8.8.8&quot;</code>这个字段，问题就解决了。<br>然后，在使用proxifier时突然报错</p><pre><code>[11.29 16:56:25] Error: Windows network (Winsock) is not properly configured to work with Proxifier. 
+<!DOCTYPE html><html class="theme-next mist use-motion" lang="zh-Hans"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"><link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css"><link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css"><link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css"><meta name="keywords" content="Hexo, NexT"><link rel="shortcut icon" type="image/x-icon" href="https://cdn.safeandsound.cn/image/icon.ico?v=5.1.1"><meta name="description" content="2018 年1月 2018-01-03从GitHub下载单个文件 =&amp;gt; https://raw.githubusercontent.com/username/repository/branch(master)/filename  2017 年12月 2017-12-24从阮一峰老师的博客学习了一下git commit的写法,在这里摘抄一下:commit message包括三个部分:heade"><meta property="og:type" content="website"><meta property="og:title" content="备忘录"><meta property="og:url" content="https://safeandsound.cn/memo/index.html"><meta property="og:site_name" content="jay&#39;s Blog"><meta property="og:description" content="2018 年1月 2018-01-03从GitHub下载单个文件 =&amp;gt; https://raw.githubusercontent.com/username/repository/branch(master)/filename  2017 年12月 2017-12-24从阮一峰老师的博客学习了一下git commit的写法,在这里摘抄一下:commit message包括三个部分:heade"><meta property="og:locale" content="zh-Hans"><meta property="og:image" content="https://cdn.safeandsound.cn/image/memo/tldr.png"><meta property="og:image" content="https://cdn.safeandsound.cn/image/memo/show-ag.png"><meta property="og:image" content="https://cdn.safeandsound.cn/image/memo/%E8%B1%86%E7%93%A3%E8%AF%BB%E4%B9%A6workflow.png"><meta property="og:image" content="https://cdn.safeandsound.cn/image/memo/SDN.jpg"><meta property="og:image" content="https://cdn.safeandsound.cn/image/memo/mycli.png"><meta property="og:updated_time" content="2018-01-03T02:56:54.553Z"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="备忘录"><meta name="twitter:description" content="2018 年1月 2018-01-03从GitHub下载单个文件 =&amp;gt; https://raw.githubusercontent.com/username/repository/branch(master)/filename  2017 年12月 2017-12-24从阮一峰老师的博客学习了一下git commit的写法,在这里摘抄一下:commit message包括三个部分:heade"><meta name="twitter:image" content="https://cdn.safeandsound.cn/image/memo/tldr.png"><script type="text/javascript" id="hexo.configurations">var NexT=window.NexT||{},CONFIG={root:"/",scheme:"Mist",sidebar:{position:"left",display:"post",offset:12,offset_float:0,b2t:!1,scrollpercent:!1,onmobile:!1},fancybox:!0,motion:!0,duoshuo:{userId:"0",author:"博主"},algolia:{applicationID:"",apiKey:"",indexName:"",hits:{per_page:10},labels:{input_placeholder:"Search for Posts",hits_empty:"We didn't find any results for the search: ${query}",hits_stats:"${hits} results found in ${time} ms"}}}</script><link rel="canonical" href="https://safeandsound.cn/memo/"><script src="https://cdn.safeandsound.cn/js/pace.min.js"></script><link href="/plugins/prettify/tranquil-heart.css" rel="stylesheet" type="text/css"><title>备忘录 | jay's Blog</title></head><body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans"><div class="container sidebar-position-left page-post-detail"><div class="headband"></div><header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="header-inner"><div class="top-scroll-bar"></div><div class="site-brand-wrapper"><div class="site-meta"><div class="custom-logo-site-title"><a href="/" class="brand" rel="start"><span class="logo-line-before"><i></i></span> <span class="site-title">jay's Blog</span> <span class="logo-line-after"><i></i></span></a></div><p class="site-subtitle">Codes save you, rather than gods.</p></div><div class="site-nav-toggle"><button><span class="btn-bar"></span> <span class="btn-bar"></span> <span class="btn-bar"></span></button></div></div><nav class="site-nav"><ul id="menu" class="menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i><br>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i><br>关于</a></li><li class="menu-item menu-item-memo"><a href="/memo/" rel="section"><i class="menu-item-icon fa fa-fw fa-sticky-note"></i><br>备忘</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i><br>标签</a></li><li class="menu-item menu-item-entries"><a href="/entries/" rel="section"><i class="menu-item-icon fa fa-fw fa-tasks"></i><br>词条</a></li><li class="menu-item menu-item-search"><a href="javascript:;" class="popup-trigger"><i class="menu-item-icon fa fa-search fa-fw"></i><br>搜索</a></li><style type="text/css">#upside-down{ms-filter:"progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";-moz-transform:rotate(-180deg);-o-transform:rotate(-180deg);-webkit-transform:rotate(-180deg)}</style><script>function go(){var e=["https://cdn.safeandsound.cn/music/crazy-bird.m4a","https://cdn.safeandsound.cn/music/shape-of-my-heart.m4a","https://cdn.safeandsound.cn/music/Sof%C3%ADa.m4a"];function t(e){var t,n=(t=e,{height:t.offsetHeight,width:t.offsetWidth});return n.height>o&&n.height<a&&n.width>s&&n.width<d}function n(e){var t=function(e){for(var t=e,n=0;t;)n+=t.offsetTop,t=t.offsetParent;return n}(e);return t>=p&&t<=b+p}function i(){for(var e=document.getElementsByClassName(c),t=new RegExp("\\b"+c+"\\b");0<e.length;)e[0].className=e[0].className.replace(t,"")}!function(){var e=document.getElementById("audio_element_id");null===e&&((e=document.createElement("audio")).setAttribute("class",g),e.setAttribute("curSongIndex",0),e.id="audio_element_id",e.loop=!1,e.bgcolor=0,e.addEventListener("canplay",function(){setTimeout(function(){w.className+=" "+c+" "+l},500),setTimeout(function(){i(),function(){var e=document.createElement("div");e.setAttribute("class",f),document.body.appendChild(e),setTimeout(function(){document.body.removeChild(e)},100)}();for(var e=0;e<_.length;e++)_[e].className+=" "+c+" "+m[Math.floor(Math.random()*m.length)]},15500)},!0),e.addEventListener("ended",function(){i(),function(){for(var e=document.getElementsByClassName(g),t=0;t<e.length;t++)document.body.removeChild(e[t])}(),go()},!0),e.innerHTML=" <p>If you are reading this, it is because your browser does not support the audio element. We recommend that you get a new browser.</p> <p>",document.body.appendChild(e))}();for(var o=30,s=30,a=350,d=350,r=parseInt(document.getElementById("audio_element_id").getAttribute("curSongIndex")),u=e[r],c="mw-harlem_shake_me",l="im_first",m=["im_drunk","im_baked","im_trippin","im_blown"],f="mw-strobe_light",h="//cdn.safeandsound.cn/css/harlem-shake-style.css",g="mw_added_css",b=function(){var e=document.documentElement;return window.innerWidth?window.innerHeight:e&&!isNaN(e.clientHeight)?e.clientHeight:0}(),p=window.pageYOffset?window.pageYOffset:Math.max(document.documentElement.scrollTop,document.body.scrollTop),y=document.getElementsByTagName("*"),w=null,v=0;v<y.length;v++){if(t(A=y[v])&&n(A)){w=A;break}}if(null!==A){!function(){var e=document.createElement("link");e.setAttribute("type","text/css"),e.setAttribute("rel","stylesheet"),e.setAttribute("href",h),e.setAttribute("class",g),document.body.appendChild(e)}(),function(){var t=document.getElementById("audio_element_id");if(null!=t){var n=parseInt(t.getAttribute("curSongIndex"));n>e.length-2?n=0:n++,t.setAttribute("curSongIndex",n),i()}t.src=u,t.play()}();var _=[];for(v=0;v<y.length;v++){var A;t(A=y[v])&&_.push(A)}}else console.warn("Could not find a node of the right size. Please try a different page.")}var ua=navigator.userAgent;isAndroid=/Android/i.test(ua),isBlackBerry=/BlackBerry/i.test(ua),isWindowPhone=/IEMobile/i.test(ua),isIOS=/iPhone|iPad|iPod/i.test(ua),isMobile=isAndroid||isBlackBerry||isWindowPhone||isIOS,isAndroid&&(isMobile="android"),isBlackBerry&&(isMobile="BlackBerry"),isWindowPhone&&(isMobile="WindowPhone"),isIOS&&(isMobile="IOS"),isMobile&&document.write('<li class="menu-item"><a onclick=go()><i class="menu-item-icon fa fa-music fa-fw"></i> 好听的   <i class="fa fa-smile-o" aria-hidden="true" style="font-size:120%" id="upside-down"></i></a></li>')</script></ul><div class="site-search"><div class="popup search-popup local-search-popup"><div class="local-search-header clearfix"><span class="search-icon"><i class="fa fa-search"></i> </span><span class="popup-btn-close"><i class="fa fa-times-circle"></i></span><div class="local-search-input-wrapper"><input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input"></div></div><div id="local-search-result"></div></div></div></nav></div></header><main id="main" class="main"><div class="main-inner"><div class="content-wrap"><div id="content" class="content"><div id="posts" class="posts-expand"><header class="post-header"><h1 class="post-title" itemprop="name headline">备忘录</h1></header><h4 id="2018-年"><a href="#2018-年" class="headerlink" title="2018 年"></a>2018 年</h4><h5 id="1月"><a href="#1月" class="headerlink" title="1月"></a>1月</h5><ul><li><h6 id="2018-01-03"><a href="#2018-01-03" class="headerlink" title="2018-01-03"></a>2018-01-03</h6>从GitHub下载单个文件 =&gt; <code>https://raw.githubusercontent.com/username/repository/branch(master)/filename</code></li></ul><h4 id="2017-年"><a href="#2017-年" class="headerlink" title="2017 年"></a>2017 年</h4><h5 id="12月"><a href="#12月" class="headerlink" title="12月"></a>12月</h5><ul><li><h6 id="2017-12-24"><a href="#2017-12-24" class="headerlink" title="2017-12-24"></a>2017-12-24</h6><p>从<a href="http://www.ruanyifeng.com/blog/2016/01/commit_message_change_log.html" target="_blank" rel="noopener">阮一峰老师的博客</a>学习了一下git commit的写法,在这里摘抄一下:<br>commit message包括三个部分:<code>header</code>,<code>Body</code>和<code>footer</code>, 形如:</p><pre><code>&lt;type&gt;(&lt;scope&gt;): &lt;subject&gt;
+// 空一行
+&lt;body&gt;
+// 空一行
+&lt;footer&gt;
+</code></pre><div class="div-border-left-yellow">其中<code>header</code>是必须的,<code>body</code>和<code>footer</code>可以省略.<br><strong>Header</strong><br>header部分只有一行，包括三个字段：type（必需）、scope（可选）和subject（必需）。<br><code>(1)type</code><br>type用于说明 commit 的类别，只允许使用下面7个标识。<br>feat：新功能（feature）<br>fix：修补bug<br>docs：文档（documentation）<br>style： 格式（不影响代码运行的变动）<br>refactor：重构（即不是新增功能，也不是修改bug的代码变动）<br>test：增加测试<br>chore：构建过程或辅助工具的变动<br>如果type为feat和fix，则该 commit 将肯定出现在 Change log 之中。其他情况（docs、chore、style、refactor、test）由你决定，要不要放入 Change log，建议是不要。<br><code>(2)scope</code><br>scope用于说明 commit 影响的范围，比如数据层、控制层、视图层等等，视项目不同而不同。<br><code>(3)subject</code><br>subject是 commit 目的的简短描述，不超过50个字符。<br>以动词开头，使用第一人称现在时，比如change，而不是changed或changes<br>第一个字母小写<br>结尾不加句号（.）<br><strong>Body</strong><br>Body 部分是对本次 commit 的详细描述，可以分成多行。下面是一个范例。<br>More detailed explanatory text, if necessary. Wrap it to<br>about 72 characters or so.<br>Further paragraphs come after blank lines.<br>-Bullet points are okay, too<br>-Use a hanging indent<br>有两个注意点。<br>（1）使用第一人称现在时，比如使用change而不是changed或changes。<br>（2）应该说明代码变动的动机，以及与以前行为的对比。<br><strong>Footer</strong><br>Footer 部分只用于两种情况。<br><code>(1)不兼容变动</code><br>如果当前代码与上一个版本不兼容，则 Footer 部分以BREAKING CHANGE开头，后面是对变动的描述、以及变动理由和迁移方法。<br><pre>BREAKING CHANGE: isolate scope bindings definition has changed.<br>  To migrate the code follow the example below:<br>  Before:<br>  scope: {<br>    myAttr: ‘attribute’,<br>  }<br>  After:<br>  scope: {<br>    myAttr: ‘@’,<br>  }<br>  The removed inject wasn’t generaly useful for directives so there should be no code using it.</pre><br><code>(2)关闭 Issue</code><br>如果当前 commit 针对某个issue，那么可以在 Footer 部分关闭这个 issue 。<br><pre>Closes #234<br>也可以一次关闭多个 issue 。<br>Closes #123, #245, #992</pre><br><strong>Revert</strong><br>还有一种特殊情况，如果当前 commit 用于撤销以前的 commit，则必须以revert:开头，后面跟着被撤销 Commit 的 Header。<br><pre>revert: feat(pencil): add ‘graphiteWidth’ option<br>This reverts commit 667ecc1654a317a13331b17617d973392f415f02.<br></pre><br>Body部分的格式是固定的，必须写成This reverts commit &lt;hash&gt;.，其中的hash是被撤销 commit 的 SHA 标识符。<br>如果当前 commit 与被撤销的 commit，在同一个发布（release）里面，那么它们都不会出现在 Change log 里面。如果两者在不同的发布，那么当前 commit，会出现在 Change log 的Reverts小标题下面。<br></div>
+</li>
+<li><h6 id="2017-12-17"><a href="#2017-12-17" class="headerlink" title="2017-12-17"></a>2017-12-17</h6><p><a href="https://mirrors.ustc.edu.cn/repogen/" target="_blank" rel="noopener">USTC的ubuntu源文件自动生成器</a></p>
+</li>
+<li><h6 id="2017-12-09"><a href="#2017-12-09" class="headerlink" title="2017-12-09"></a>2017-12-09</h6><p>有时候需要在当前文件夹开一个临时的端口来访问一下看看效果可以使用<code>http-server</code>.<br>需要使用npm全局安装http-sever: <code>npm install -g http-server</code><br>使用http-server在本地开一个临时的server: <code>http-server -a 127.0.0.1 -p [端口号]</code>根目录默认为当前目录,也可以直接在http-server后面指定目录地址(相对/绝对都可以),如果不加<code>-a</code>参数的话则会默认在本地的几个网卡地址上都进行设置(如:你有一个10.10.10.1的虚拟网卡,如果你有一台虚拟机使用的是这个网卡,则虚拟机也可以访问当前设置的地址)</p>
+</li>
+<li><h6 id="2017-12-06"><a href="#2017-12-06" class="headerlink" title="2017-12-06"></a>2017-12-06</h6><p>有些同学不会下载离线完整版的chrome,方法是:google搜索关键词”chrome 帮助”,会得到结果”Google Chrome帮助 - Google Support”,下面的小标题有”下载和安装Google Chrome”,点进去,在”在 Windows 设备上安装 Chrome”下方会有小标题”离线安装 Chrome”,点击展开,会出现链接<a href="https://www.google.com/intl/zh-CN/chrome/browser/desktop/index.html?standalone=1" target="_blank" rel="noopener">备用 Chrome 安装程序</a>,点击后可以看到打开的页面URL最后有属性<code>standalone=1</code>,在该页面下载的chrome即是离线版的.</p>
+</li>
+<li><h6 id="2017-12-01"><a href="#2017-12-01" class="headerlink" title="2017-12-01"></a>2017-12-01</h6><p>从浏览器复制网站地址后粘贴到别处,如果地址中有中文,往往发现地址里的中文被转码成了<a href="https://zh.wikipedia.org/wiki/百分号编码" target="_blank" rel="noopener">URL编码</a>,如<code>https://zh.wikipedia.org/wiki/维基百科</code>被转成了<code>https://zh.wikipedia.org/wiki/%E7%BB%B4%E5%9F%BA%E7%99%BE%E7%A7%91</code>,其实使用剪切而非复制就不会出现这种尴尬的问题.</p>
+</li>
+</ul>
+<h5 id="11-月"><a href="#11-月" class="headerlink" title="11 月"></a>11 月</h5><ul>
+<li><h6 id="2017-11-29"><a href="#2017-11-29" class="headerlink" title="2017-11-29"></a>2017-11-29</h6><p>今天在使用服务器做ss代理的时候一直提示<code>ERROR: unable to resolve……</code>，很奇怪，这个配置已经用过很多遍都没出问题，而且明明服务器配置了多个DNS，却显示无法解析域名。<br>最后还是查相关文档后，在配置文件里加了<code>&quot;nameserver&quot;: &quot;8.8.8.8&quot;</code>这个字段，问题就解决了。<br>然后，在使用proxifier时突然报错</p>
+<pre><code>[11.29 16:56:25] Error: Windows network (Winsock) is not properly configured to work with Proxifier. 
 [11.29 16:56:25] Proxifier or some of its parts may work incorrectly. 
 [11.29 16:56:25] It is highly recommended that you run SysSettings tool to address this problem.
-</code></pre><p>一脸懵逼，之前用还好好的，估计可能是前几天一次win10版本大更新导致的，根据提示中的<code>SysSettings</code>，用everything查找了一下系统，发现是proxifier自带的一个设置程序，就在proxifier的安装目录下，进去之后先运行了64位的“SysSettings64.exe”，显示<code>proxifier module is not installed</code>，当然是点击install了，安装后重启proxifier，并没什么用（挠头），索性运行了32位的“SysSettings32.exe”，也安装了下，重启，成了。应该是更新时系统把proxifier的部分模块给删了导致的问题。</p></li><li><h6 id="2017-11-29-1"><a href="#2017-11-29-1" class="headerlink" title="2017-11-29"></a>2017-11-29</h6><p><a href="http://distro.ibiblio.org/tinycorelinux/" target="_blank" rel="noopener">Tiny Core</a>，仅10+M的linux，因为轻量而被追捧，网上的教程也不少。<br>进入系统后输入命令，<code>tce</code>可以进入Tiny Core Extension，即CLI应用浏览器，按<code>s</code>进入搜索模式，输入需要的软件/库名即可，系统会列出相关的选择。<br>关于Tiny Core Plus，是带GUI的版本，稍大，100+M，在vmware直接从IOS启动时只有选择”Boot Core with only X/GUI (TinyCore)”及以下的启动项才能正常启动，原因未知。</p></li><li><h6 id="2017-11-27"><a href="#2017-11-27" class="headerlink" title="2017-11-27"></a>2017-11-27</h6><p>发现<code>curl v4.ifconfig.co</code>命令获取本机ip地址的速度比<code>curl ifconfig.co</code>来的快得多，好用。<br>注：适用于虚拟机、云服务器之类使用NAT转换、使用ifconfig命令无法直接获取公网地址的主机。</p></li><li><h6 id="2017-11-20"><a href="#2017-11-20" class="headerlink" title="2017-11-20"></a>2017-11-20</h6><p>今天更新kali后发现shadowsocks无法使用，运行后报错：</p><pre><code class="bash">AttributeError: /usr/lib/x86_64-linux-gnu/libcrypto.so.1.1: undefined symbol: EVP_CIPHER_CTX_cleanup
-</code></pre><p>看错误应该是加密方面的问题，因为ss依赖openssl，那就应该是openssl的问题了，上网搜了下，<a href="https://blog.lyz810.com/article/2016/09/shadowsocks-with-openssl-greater-than-110/" target="_blank" rel="noopener">解决办法在此</a></p></li><li><h6 id="2017-11-12"><a href="#2017-11-12" class="headerlink" title="2017-11-12"></a>2017-11-12</h6><p>最近比较迷Alvaro Soler的Sofía（一开始以为是情歌，结果查资料才知道是歌手失恋后写的,感情上可以说很乐观了），虽然是西班牙语的民谣，根本不知道在唱什么😂但是曲子很有活力，节奏感很强，口哨可以轻松带起来。很棒的歌。</p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="110" src="https://music.163.com/outchain/player?type=1&id=34609360&auto=1&height=90"></iframe></li><li><h6 id="2017-11-10"><a href="#2017-11-10" class="headerlink" title="2017-11-10"></a>2017-11-10</h6><p>今天趁着田老师有空，请他带着我去文理楼机房调整维护了自己的两台服务器，因为没有远程控制卡（毕竟之前是废弃在仓库的老机器了），所以只要出现故障就只能现场维修，有一台还是自己七月份时候配iptables规则的时候不小心把网络全封了……很蛋疼🌚。<br>不得不说田老师的为人真的超赞，不仅网络方面的技术好，作为指导老师也很平易，非常照顾学生。<br>感觉自己虽然会用linux，但是在系统的管理和维护上的能力还有欠缺。打算明年考RHCE的认证，不得不准备就业的事了。</p></li><li><h6 id="2017-11-09"><a href="#2017-11-09" class="headerlink" title="2017-11-09"></a>2017-11-09</h6><p><a href="https://gist.github.com/trandaison/40b1d83618ae8e3d2da59df8c395093a" target="_blank" rel="noopener">Get full version of StarUML</a> startUML获取证书，V2.8.0亲测可用.</p></li><li><h6 id="2017-11-05"><a href="#2017-11-05" class="headerlink" title="2017-11-05"></a>2017-11-05</h6><p>之前的ssl证书都是在七牛上获取的trustasia颁发的免费证书，但是过程比较繁琐，需要先申请然后用dns或文件的方式验证，一般一天后通过验证，然后要把证书下载下来传到服务器，再配置nginx……<br>发现lnmp现在自带了有ssl添加功能，试了下，报错：</p><pre><code>Traceback (most recent call last):
+</code></pre><p>  一脸懵逼，之前用还好好的，估计可能是前几天一次win10版本大更新导致的，根据提示中的<code>SysSettings</code>，用everything查找了一下系统，发现是proxifier自带的一个设置程序，就在proxifier的安装目录下，进去之后先运行了64位的“SysSettings64.exe”，显示<code>proxifier module is not installed</code>，当然是点击install了，安装后重启proxifier，并没什么用（挠头），索性运行了32位的“SysSettings32.exe”，也安装了下，重启，成了。应该是更新时系统把proxifier的部分模块给删了导致的问题。</p>
+</li>
+<li><h6 id="2017-11-29-1"><a href="#2017-11-29-1" class="headerlink" title="2017-11-29"></a>2017-11-29</h6><p><a href="http://distro.ibiblio.org/tinycorelinux/" target="_blank" rel="noopener">Tiny Core</a>，仅10+M的linux，因为轻量而被追捧，网上的教程也不少。<br>进入系统后输入命令，<code>tce</code>可以进入Tiny Core Extension，即CLI应用浏览器，按<code>s</code>进入搜索模式，输入需要的软件/库名即可，系统会列出相关的选择。<br>关于Tiny Core Plus，是带GUI的版本，稍大，100+M，在vmware直接从IOS启动时只有选择”Boot Core with only X/GUI (TinyCore)”及以下的启动项才能正常启动，原因未知。</p>
+</li>
+<li><h6 id="2017-11-27"><a href="#2017-11-27" class="headerlink" title="2017-11-27"></a>2017-11-27</h6><p>发现<code>curl v4.ifconfig.co</code>命令获取本机ip地址的速度比<code>curl ifconfig.co</code>来的快得多，好用。<br>注：适用于虚拟机、云服务器之类使用NAT转换、使用ifconfig命令无法直接获取公网地址的主机。</p>
+</li>
+<li><h6 id="2017-11-20"><a href="#2017-11-20" class="headerlink" title="2017-11-20"></a>2017-11-20</h6><p>今天更新kali后发现shadowsocks无法使用，运行后报错：</p>
+<pre><code class="bash">AttributeError: /usr/lib/x86_64-linux-gnu/libcrypto.so.1.1: undefined symbol: EVP_CIPHER_CTX_cleanup
+</code></pre>
+<p>  看错误应该是加密方面的问题，因为ss依赖openssl，那就应该是openssl的问题了，上网搜了下，<a href="https://blog.lyz810.com/article/2016/09/shadowsocks-with-openssl-greater-than-110/" target="_blank" rel="noopener">解决办法在此</a></p>
+</li>
+<li><h6 id="2017-11-12"><a href="#2017-11-12" class="headerlink" title="2017-11-12"></a>2017-11-12</h6><p>最近比较迷Alvaro Soler的Sofía（一开始以为是情歌，结果查资料才知道是歌手失恋后写的,感情上可以说很乐观了），虽然是西班牙语的民谣，根本不知道在唱什么🌚但是曲子很有活力，节奏感很强，口哨可以轻松带起来。很棒的歌。</p>
+</li>
+<li><h6 id="2017-11-10"><a href="#2017-11-10" class="headerlink" title="2017-11-10"></a>2017-11-10</h6><p>今天趁着田老师有空，请他带着我去文理楼机房调整维护了自己的两台服务器，因为没有远程控制卡（毕竟之前是废弃在仓库的老机器了），所以只要出现故障就只能现场维修，有一台还是自己七月份时候配iptables规则的时候不小心把网络全封了……很蛋疼🌚。<br>不得不说田老师的为人真的超赞，不仅网络方面的技术好，作为指导老师也很平易，非常照顾学生。<br>感觉自己虽然会用linux，但是在系统的管理和维护上的能力还有欠缺。打算明年考RHCE的认证，不得不准备就业的事了。</p>
+</li>
+<li><h6 id="2017-11-09"><a href="#2017-11-09" class="headerlink" title="2017-11-09"></a>2017-11-09</h6><p><a href="https://gist.github.com/trandaison/40b1d83618ae8e3d2da59df8c395093a" target="_blank" rel="noopener">Get full version of StarUML</a>    startUML获取证书，V2.8.0亲测可用.</p>
+</li>
+<li><h6 id="2017-11-05"><a href="#2017-11-05" class="headerlink" title="2017-11-05"></a>2017-11-05</h6><p>之前的ssl证书都是在七牛上获取的trustasia颁发的免费证书，但是过程比较繁琐，需要先申请然后用dns或文件的方式验证，一般一天后通过验证，然后要把证书下载下来传到服务器，再配置nginx……<br>发现lnmp现在自带了有ssl添加功能，试了下，报错：</p>
+<pre><code>Traceback (most recent call last):
 File &quot;/usr/lib/python3/dist-packages/virtualenv.py&quot;, line 2363, in &lt;module&gt;
   main()
 File &quot;/usr/lib/python3/dist-packages/virtualenv.py&quot;, line 719, in main
@@ -15,24 +50,391 @@ File &quot;/usr/lib/python3/dist-packages/virtualenv.py&quot;, line 812, in call
   % (cmd_desc, proc.returncode))
 OSError: Command /opt/eff.org/certbot/venv/bin/python2.7 - setuptools pkg_resources pip wheel failed with error code 2
 Let&#39;s Encrypt SSL Certificate create failed!
-</code></pre><p><a href="https://github.com/certbot/certbot/issues/2883" target="_blank" rel="noopener">在此找到解决办法</a>，最终是用@knowThis小伙伴的办法解决的：</p><pre><code>$ apt-get purge python-virtualenv python3-virtualenv virtualenv 
+</code></pre><p>  <a href="https://github.com/certbot/certbot/issues/2883" target="_blank" rel="noopener">在此找到解决办法</a>，最终是用@knowThis小伙伴的办法解决的：</p>
+<pre><code>$ apt-get purge python-virtualenv python3-virtualenv virtualenv 
 $ pip install --upgrade pip
 $ pip install virtualenv
 $ vim /bin/lnmp  #将&quot;/bin/certbot certonly&quot;替换成&quot;/bin/certbot --no-bootstrap certonly&quot;。仅一处。
-</code></pre><p>使用lnmp自带的添加ssl功能有个好处就是它会配置默认将http流量直接转发到https;<br>直接使用lnmp 生成ssl后，vhost站点的配置文件在/usr/local/nginx/conf/vhost，需要进行配置的话可以进去修改，80端口的server是http的配置，443端口的是https，以下举例：<br><strong><em>1.</em></strong> 需要启用404页面，当资源访问错误时跳转到指定页面：<br>取消<code>error_page</code>的注释，将其修改为<code>error_page 404 403 500 502 503 504 = /404.html;</code><br>注意：/404.html文件的路径是相对于配置中的<code>root</code>字段的值，所以如果<code>root</code>字段的值为<code>/home/wwwroot/default</code>,那么404.html在系统中的绝对路径为/home/wwwroot/default/404.html。其次，http和https的配置是分开的，所以如果只配置了http的404页面，那么在https协议访问发生资源错误时是不会跳转到http配置中设置的404页面的。<br><strong><em>2.</em></strong> http访问配置好的404页面发现不会自动跳转到https。需要我们手动把http流量强制转发到https，在http配置中添加<code>rewrite ^ https://$server_name$request_uri? permanent;</code><br><strong><em>3.</em></strong> 修改配置文件后需要重启nginx服务才能生效。如果无法重启，首先使用<code>nginx -t</code>命令检测配置文件，如果报错说明是配置文件的错；如果没有报错，使用<code>netstat -anp|grep :80</code>查看80端口是否被占，如果被占则需要kill掉使用80端口的进程；如果没有被占，使用<code>journalctl -xe</code>查看启动服务时的报错日志进行调试解决。</p></li></ul><ul><li><h6 id="2017-11-01"><a href="#2017-11-01" class="headerlink" title="2017-11-01"></a>2017-11-01</h6>最近配置nginx时总是遇到nginx -t测试配置文件时没问题，但是restart服务却一直失败，重启一下吧又好了，突然想起来会不会是端口被占了，查一下：<pre><code class="bash"># netstat -anp|grep &quot;:80&quot;   
+</code></pre><p>使用lnmp自带的添加ssl功能有个好处就是它会配置默认将http流量直接转发到https;<br>直接使用lnmp 生成ssl后，vhost站点的配置文件在/usr/local/nginx/conf/vhost，需要进行配置的话可以进去修改，80端口的server是http的配置，443端口的是https，以下举例：<br><strong><em>1.</em></strong> 需要启用404页面，当资源访问错误时跳转到指定页面：<br>取消<code>error_page</code>的注释，将其修改为<code>error_page  404 403 500 502 503 504  = /404.html;</code><br>注意：/404.html文件的路径是相对于配置中的<code>root</code>字段的值，所以如果<code>root</code>字段的值为<code>/home/wwwroot/default</code>,那么404.html在系统中的绝对路径为/home/wwwroot/default/404.html。其次，http和https的配置是分开的，所以如果只配置了http的404页面，那么在https协议访问发生资源错误时是不会跳转到http配置中设置的404页面的。<br><strong><em>2.</em></strong> http访问配置好的404页面发现不会自动跳转到https。需要我们手动把http流量强制转发到https，在http配置中添加<code>rewrite ^ https://$server_name$request_uri? permanent;</code><br><strong><em>3.</em></strong> 修改配置文件后需要重启nginx服务才能生效。如果无法重启，首先使用<code>nginx -t</code>命令检测配置文件，如果报错说明是配置文件的错；如果没有报错，使用<code>netstat -anp|grep :80</code>查看80端口是否被占，如果被占则需要kill掉使用80端口的进程；如果没有被占，使用<code>journalctl -xe</code>查看启动服务时的报错日志进行调试解决。</p>
+</li>
+</ul>
+<ul>
+<li><h6 id="2017-11-01"><a href="#2017-11-01" class="headerlink" title="2017-11-01"></a>2017-11-01</h6>最近配置nginx时总是遇到nginx -t测试配置文件时没问题，但是restart服务却一直失败，重启一下吧又好了，突然想起来会不会是端口被占了，查一下：<pre><code class="bash"># netstat -anp|grep &quot;:80&quot;   
 tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      8205/nginx.conf 
 tcp        0      0 0.0.0.0:8080            0.0.0.0:*               LISTEN      1356/java
-</code></pre>端口果然被占用了，kill掉这个进程即可。</li></ul><h5 id="10-月"><a href="#10-月" class="headerlink" title="10 月"></a>10 月</h5><ul><li><h6 id="2017-10-27"><a href="#2017-10-27" class="headerlink" title="2017-10-27"></a>2017-10-27</h6><p>强推一款跨平台的终端连接工具：<a href="https://www.termius.com/" target="_blank" rel="noopener">Termius</a>，尤其是在IOS上，好用又良心。在此之前我在手机上使用的SSH连接工具是Shelly，它仅支持SSH，而且不购买专业版的话就无法保存密码，每次都要重新输入，简直是要逼死使用长密码的人，在我准备购买专业版时发现当前下载的shelly是使用之前的一个Apple ID获取的，购买的话就需要使用现在的账号重新获取，于是删除了shelly后我到App store中搜索了ssh，出现的第一个结果就是Termius，五星的好评让我尝试了一下它，结果就没再安装shelly。</p></li><li><h6 id="2017-10-24"><a href="#2017-10-24" class="headerlink" title="2017-10-24"></a>2017-10-24</h6><p>上校图书馆网站查书发现一个很有趣的现象，阿加莎、松本清张的书没人借，退一步，岛田庄司的也没人借，然而东野圭吾的书都基本被借光，不好做什么评论，只觉得挺有意思。</p></li><li><h6 id="2017-10-21"><a href="#2017-10-21" class="headerlink" title="2017-10-21"></a>2017-10-21</h6><p>之前linux下查命令参数总是用man配合字符匹配，突然发现有<a href="https://github.com/tldr-pages/tldr" target="_blank" rel="noopener">tldr</a>这种利器，赶紧推一下。<br><img src="https://cdn.safeandsound.cn/image/memo/tldr.png" width="500px"></p></li><li><h6 id="2017-10-18"><a href="#2017-10-18" class="headerlink" title="2017-10-18"></a>2017-10-18</h6><p>推荐一款linux下递归搜索文件内容的软件：<a href="https://github.com/ggreer/the_silver_searcher" target="_blank" rel="noopener">ag</a>，安装步骤：</p><pre><code class="bash">git clone https://github.com/ggreer/the_silver_searcher.git
+</code></pre>
+  端口果然被占用了，kill掉这个进程即可。</li>
+</ul>
+<h5 id="10-月"><a href="#10-月" class="headerlink" title="10 月"></a>10 月</h5><ul>
+<li><h6 id="2017-10-27"><a href="#2017-10-27" class="headerlink" title="2017-10-27"></a>2017-10-27</h6><p>强推一款跨平台的终端连接工具：<a href="https://www.termius.com/" target="_blank" rel="noopener">Termius</a>，尤其是在IOS上，好用又良心。在此之前我在手机上使用的SSH连接工具是Shelly，它仅支持SSH，而且不购买专业版的话就无法保存密码，每次都要重新输入，简直是要逼死使用长密码的人，在我准备购买专业版时发现当前下载的shelly是使用之前的一个Apple ID获取的，购买的话就需要使用现在的账号重新获取，于是删除了shelly后我到App store中搜索了ssh，出现的第一个结果就是Termius，五星的好评让我尝试了一下它，结果就没再安装shelly。</p>
+</li>
+<li><h6 id="2017-10-24"><a href="#2017-10-24" class="headerlink" title="2017-10-24"></a>2017-10-24</h6><p>上校图书馆网站查书发现一个很有趣的现象，阿加莎、松本清张的书没人借，退一步，岛田庄司的也没人借，然而东野圭吾的书都基本被借光，不好做什么评论，只觉得挺有意思。</p>
+</li>
+<li><h6 id="2017-10-21"><a href="#2017-10-21" class="headerlink" title="2017-10-21"></a>2017-10-21</h6><p>之前linux下查命令参数总是用man配合字符匹配，突然发现有<a href="https://github.com/tldr-pages/tldr" target="_blank" rel="noopener">tldr</a>这种利器，赶紧推一下, <code>npm install tldr</code><br><img src="https://cdn.safeandsound.cn/image/memo/tldr.png" width="500px"></p>
+</li>
+<li><h6 id="2017-10-18"><a href="#2017-10-18" class="headerlink" title="2017-10-18"></a>2017-10-18</h6><p>推荐一款linux下递归搜索文件内容的软件：<a href="https://github.com/ggreer/the_silver_searcher" target="_blank" rel="noopener">ag</a>，安装步骤：</p>
+<pre><code class="bash">git clone https://github.com/ggreer/the_silver_searcher.git
 sudo apt-get install -y automake pkg-config libpcre3-dev zlib1g-dev liblzma-dev
 ./build
 sudo make install
-</code></pre><p>体验还不错，在linux子系统下运行效果图<br><img src="https://cdn.safeandsound.cn/image/memo/show-ag.png" width="500px"></p></li><li><h6 id="2017-10-13"><a href="#2017-10-13" class="headerlink" title="2017-10-13"></a>2017-10-13</h6><p>发现IOS下的Workflow可以提取网页的json数据，这样就能访问有些网站提供的API直接拿数据了，简直就是一只小爬虫，自己做了一个根据书名从豆瓣拉取图书相关信息的workflow –&gt;<a href="https://workflow.is/workflows/cae2c0ec4dd540dab6a773eb0de982bb" target="_blank" rel="noopener">豆瓣读书</a> &lt;–，感觉查书什么的挺好用的<br><img src="https://cdn.safeandsound.cn/image/memo/%E8%B1%86%E7%93%A3%E8%AF%BB%E4%B9%A6workflow.png" width="300px"></p></li><li><h6 id="2017-10-09"><a href="#2017-10-09" class="headerlink" title="2017-10-09"></a>2017-10-09</h6><p>当觉得生活无趣又无望时就应该读汪曾祺。<br>虽说小波的文字也是颇有趣的，但哪个百无聊赖的人喜欢听那么理性的话。<br>可这么说肯定是有人不同意第二句的。</p></li><li><h6 id="2017-10-08"><a href="#2017-10-08" class="headerlink" title="2017-10-08"></a>2017-10-08</h6><p>今天是在行政楼实验室的最后一天。从我的位置看出去的风景还是挺让人放松的。<br><img src="https://cdn.safeandsound.cn/image/memo/SDN.jpg" width="500px"><br>因为领导换届和单位转型为管理单位，所以废除掉SDN实验室，再加上“新增了领导办公室不够用”、“一个领导一个作风，这个实验室是老领导设办的”、“这是和华三一起做的SDN实验室，但你们在这里的学生有几个是做SDN的”等理由，看上去总是很合理的。<br>但还是感觉似乎不该这样。<br>可能是因为喜欢在这边学习的氛围和深夜写代码的自由。<br>我们都知道归属感来之不易。不过这么说起来就很像是心情不好想埋怨些什么的借口了。</p></li><li><h6 id="2017-10-05"><a href="#2017-10-05" class="headerlink" title="2017-10-05"></a>2017-10-05</h6><p>推荐一款cli下的mysql客户端，<a href="https://github.com/dbcli/mycli" target="_blank" rel="noopener">mycli</a>，支持语法高亮和命令补全，linux下直接install就有，效果相当棒。<br><img src="https://cdn.safeandsound.cn/image/memo/mycli.png"></p></li></ul><h5 id="8月"><a href="#8月" class="headerlink" title="8月"></a>8月</h5><ul><li><h6 id="2017-08-15"><a href="#2017-08-15" class="headerlink" title="2017-08-15"></a>2017-08-15</h6><p>又在开源论坛上看到有人在黑php。<br>php因为其一开始的自身定位问题导致现在的特性有很多地方好像不是那么讨（有些）人喜欢，但是这么些年来的不断改进已经让其无愧于其自身定位了，在小规模的站点开发中，缺点基本可以忽略，况且易上手又适合快速开发让它的门槛变得很低。当然了，有人也因为以上的优点而称PHP为屌丝语言，我个人觉得没必要这样，每一门语言都有其自身的特性，优点和缺点都算是，语言只是一个工具，实在不喜欢换一门就行，没必要一边用一边黑。<br>开发本来应该是一件很愉快的事，这样可就搞糟了。</p></li><li><h6 id="2017-08-10"><a href="#2017-08-10" class="headerlink" title="2017-08-10"></a>2017-08-10</h6><p>今天发现在文件夹下按住shift+鼠标右击打开的cmd/powershell窗口无法获取到在该次登录系统后添加的环境变量, 也就是说你刚添加了环境变量, 但是使用这种方法, 或者在IDE中,如idea里面打开cmd/powershell窗口后却无法使用该环境变量, 需要注销后重新登录系统才会加载, 但是使用传统办法(如run)打开的是可以直接使用的.</p></li></ul><h5 id="7月"><a href="#7月" class="headerlink" title="7月"></a>7月</h5><ul><li><h6 id="2017-07-29"><a href="#2017-07-29" class="headerlink" title="2017-07-29"></a>2017-07-29</h6><p>感觉自己的大学生活好像今天坐公交遇到的小男孩，正经时很可爱，冲我笑时却很丑。<br>但我到底还是喜欢的。<br>这么说好像不负责任的旁观者。</p></li><li><h6 id="2017-07-21"><a href="#2017-07-21" class="headerlink" title="2017-07-21"></a>2017-07-21</h6><p>powershell启动加速。参见该<a href="https://blogs.msdn.microsoft.com/powershell/2007/11/08/update-gac-ps1/" target="_blank" rel="noopener">官方博文</a>,将以下命令粘贴到powershell，等待执行完毕。</p><pre><code>Set-Alias ngen @(
+</code></pre>
+<p>  体验还不错，在linux子系统下运行效果图<br><img src="https://cdn.safeandsound.cn/image/memo/show-ag.png" width="500px"></p>
+</li>
+<li><h6 id="2017-10-13"><a href="#2017-10-13" class="headerlink" title="2017-10-13"></a>2017-10-13</h6><p>发现IOS下的Workflow可以提取网页的json数据，这样就能访问有些网站提供的API直接拿数据了，简直就是一只小爬虫，自己做了一个根据书名从豆瓣拉取图书相关信息的workflow –&gt;<a href="https://workflow.is/workflows/cae2c0ec4dd540dab6a773eb0de982bb" target="_blank" rel="noopener">豆瓣读书</a> &lt;–，感觉查书什么的挺好用的<br><img src="https://cdn.safeandsound.cn/image/memo/%E8%B1%86%E7%93%A3%E8%AF%BB%E4%B9%A6workflow.png" width="300px"></p>
+</li>
+<li><h6 id="2017-10-09"><a href="#2017-10-09" class="headerlink" title="2017-10-09"></a>2017-10-09</h6><p>当觉得生活无趣又无望时就应该读汪曾祺。<br>虽说小波的文字也是颇有趣的，但哪个百无聊赖的人喜欢听那么理性的话。<br>可这么说肯定是有人不同意第二句的。</p>
+</li>
+<li><h6 id="2017-10-08"><a href="#2017-10-08" class="headerlink" title="2017-10-08"></a>2017-10-08</h6><p>今天是在行政楼实验室的最后一天。从我的位置看出去的风景还是挺让人放松的。<br><img src="https://cdn.safeandsound.cn/image/memo/SDN.jpg" width="500px"><br>因为领导换届和单位转型为管理单位，所以废除掉SDN实验室，再加上“新增了领导办公室不够用”、“一个领导一个作风，这个实验室是老领导设办的”、“这是和华三一起做的SDN实验室，但你们在这里的学生有几个是做SDN的”等理由，看上去总是很合理的。<br>但还是感觉似乎不该这样。<br>可能是因为喜欢在这边学习的氛围和深夜写代码的自由。<br>我们都知道归属感来之不易。不过这么说起来就很像是心情不好想埋怨些什么的借口了。</p>
+</li>
+<li><h6 id="2017-10-05"><a href="#2017-10-05" class="headerlink" title="2017-10-05"></a>2017-10-05</h6><p>推荐一款cli下的mysql客户端，<a href="https://github.com/dbcli/mycli" target="_blank" rel="noopener">mycli</a>，支持语法高亮和命令补全，linux下直接install就有，效果相当棒。<br><img src="https://cdn.safeandsound.cn/image/memo/mycli.png"></p>
+</li>
+</ul>
+<h5 id="8月"><a href="#8月" class="headerlink" title="8月"></a>8月</h5><ul>
+<li><h6 id="2017-08-15"><a href="#2017-08-15" class="headerlink" title="2017-08-15"></a>2017-08-15</h6><p>又在开源论坛上看到有人在黑php。<br>php因为其一开始的自身定位问题导致现在的特性有很多地方好像不是那么讨（有些）人喜欢，但是这么些年来的不断改进已经让其无愧于其自身定位了，在小规模的站点开发中，缺点基本可以忽略，况且易上手又适合快速开发让它的门槛变得很低。当然了，有人也因为以上的优点而称PHP为屌丝语言，我个人觉得没必要这样，每一门语言都有其自身的特性，优点和缺点都算是，语言只是一个工具，实在不喜欢换一门就行，没必要一边用一边黑。<br>开发本来应该是一件很愉快的事，这样可就搞糟了。</p>
+</li>
+<li><h6 id="2017-08-10"><a href="#2017-08-10" class="headerlink" title="2017-08-10"></a>2017-08-10</h6><p>今天发现在文件夹下按住shift+鼠标右击打开的cmd/powershell窗口无法获取到在该次登录系统后添加的环境变量, 也就是说你刚添加了环境变量, 但是使用这种方法, 或者在IDE中,如idea里面打开cmd/powershell窗口后却无法使用该环境变量, 需要注销后重新登录系统才会加载, 但是使用传统办法(如run)打开的是可以直接使用的.</p>
+</li>
+</ul>
+<h5 id="7月"><a href="#7月" class="headerlink" title="7月"></a>7月</h5><ul>
+<li><h6 id="2017-07-29"><a href="#2017-07-29" class="headerlink" title="2017-07-29"></a>2017-07-29</h6><p>感觉自己的大学生活好像今天坐公交遇到的小男孩，正经时很可爱，冲我笑时却很丑。<br>但我到底还是喜欢的。<br>这么说好像不负责任的旁观者。</p>
+</li>
+<li><h6 id="2017-07-21"><a href="#2017-07-21" class="headerlink" title="2017-07-21"></a>2017-07-21</h6><p>powershell启动加速。参见该<a href="https://blogs.msdn.microsoft.com/powershell/2007/11/08/update-gac-ps1/" target="_blank" rel="noopener">官方博文</a>,将以下命令粘贴到powershell，等待执行完毕。</p>
+<pre><code>Set-Alias ngen @(
 dir (join-path ${env:\windir} “Microsoft.NET\Framework”) ngen.exe -recurse |
 sort -descending lastwritetime
 )[0].fullName
 [appdomain]::currentdomain.getassemblies() | %{ngen $_.location}
-</code></pre></li><li><h6 id="2017-07-20"><a href="#2017-07-20" class="headerlink" title="2017-07-20"></a>2017-07-20</h6>windows下在资源管理器右键打开powershell /cmd。进regedit，定位到HKEY_CLASSES_ROOT\Directory\Background\shell\cmd\command表项，对右侧的字符串项的值进行修改：<pre><code>#用powershell打开则改为：
+</code></pre></li>
+<li><h6 id="2017-07-20"><a href="#2017-07-20" class="headerlink" title="2017-07-20"></a>2017-07-20</h6>windows下在资源管理器右键打开powershell /cmd。进regedit，定位到HKEY_CLASSES_ROOT\Directory\Background\shell\cmd\command表项，对右侧的字符串项的值进行修改：<pre><code>#用powershell打开则改为：
 powershell.exe -NoExit Set-Location “%V”
 #用cmd打开则改为：
 cmd.exe /s /k pushd &quot;%V&quot;
-</code></pre>确定保存即可</li></ul><p><del>一些零碎的知识点和想说的话放在这里</del><br><del>以上</del></p></div></div><div class="comments" id="comments"></div></div><div class="sidebar-toggle"><div class="sidebar-toggle-line-wrap"><span class="sidebar-toggle-line sidebar-toggle-line-first"></span> <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span> <span class="sidebar-toggle-line sidebar-toggle-line-last"></span></div></div><aside id="sidebar" class="sidebar"><div class="sidebar-inner"><ul class="sidebar-nav motion-element"><li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">文章目录</li><li class="sidebar-nav-overview" data-target="site-overview">站点概览</li></ul><section class="site-overview sidebar-panel"><div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person"><img class="site-author-image" itemprop="image" src="https://cdn.safeandsound.cn/image/avatar.jpg" alt="jay"><p class="site-author-name" itemprop="name">jay</p><p class="site-description motion-element" itemprop="description">"暗暗受苦，默默享乐."</p></div><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.min.js"></script><script>function go(){var e=["https://cdn.safeandsound.cn/music/crazy-bird.m4a","https://cdn.safeandsound.cn/music/shape-of-my-heart.m4a","https://cdn.safeandsound.cn/music/Sof%C3%ADa.m4a"];function t(e){var t,n=(t=e,{height:t.offsetHeight,width:t.offsetWidth});return n.height>i&&n.height<s&&n.width>a&&n.width<d}function n(e){var t=function(e){for(var t=e,n=0;t;)n+=t.offsetTop,t=t.offsetParent;return n}(e);return t>=y&&t<=p+y}function o(){for(var e=document.getElementsByClassName(u),t=new RegExp("\\b"+u+"\\b");0<e.length;)e[0].className=e[0].className.replace(t,"")}!function(){var e=document.getElementById("audio_element_id");null===e&&((e=document.createElement("audio")).setAttribute("class",g),e.setAttribute("curSongIndex",0),e.id="audio_element_id",e.loop=!1,e.bgcolor=0,e.addEventListener("canplay",function(){setTimeout(function(){v.className+=" "+u+" "+l},500),setTimeout(function(){o(),function(){var e=document.createElement("div");e.setAttribute("class",f),document.body.appendChild(e),setTimeout(function(){document.body.removeChild(e)},100)}();for(var e=0;e<_.length;e++)_[e].className+=" "+u+" "+m[Math.floor(Math.random()*m.length)]},15500)},!0),e.addEventListener("ended",function(){o(),function(){for(var e=document.getElementsByClassName(g),t=0;t<e.length;t++)document.body.removeChild(e[t])}(),go()},!0),e.innerHTML=" <p>If you are reading this, it is because your browser does not support the audio element. We recommend that you get a new browser.</p> <p>",document.body.appendChild(e))}();for(var i=30,a=30,s=350,d=350,r=parseInt(document.getElementById("audio_element_id").getAttribute("curSongIndex")),c=e[r],u="mw-harlem_shake_me",l="im_first",m=["im_drunk","im_baked","im_trippin","im_blown"],f="mw-strobe_light",h="//cdn.safeandsound.cn/css/harlem-shake-style.css",g="mw_added_css",p=function(){var e=document.documentElement;return window.innerWidth?window.innerHeight:e&&!isNaN(e.clientHeight)?e.clientHeight:0}(),y=window.pageYOffset?window.pageYOffset:Math.max(document.documentElement.scrollTop,document.body.scrollTop),b=document.getElementsByTagName("*"),v=null,w=0;w<b.length;w++){if(t(E=b[w])&&n(E)){v=E;break}}if(null!==E){!function(){var e=document.createElement("link");e.setAttribute("type","text/css"),e.setAttribute("rel","stylesheet"),e.setAttribute("href",h),e.setAttribute("class",g),document.body.appendChild(e)}(),function(){var t=document.getElementById("audio_element_id");if(null!=t){var n=parseInt(t.getAttribute("curSongIndex"));n>e.length-2?n=0:n++,t.setAttribute("curSongIndex",n),o()}t.src=c,t.play()}();var _=[];for(w=0;w<b.length;w++){var E;t(E=b[w])&&_.push(E)}}else console.warn("Could not find a node of the right size. Please try a different page.")}$("#sidebar").hover(function(){$("#2-show-or-not-2-show").velocity("stop").velocity({opacity:1})},function(){$("#2-show-or-not-2-show").velocity("stop").velocity({opacity:0})})</script><style type="text/css">#upside-down{ms-filter:"progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";-moz-transform:rotate(-180deg);-o-transform:rotate(-180deg);-webkit-transform:rotate(-180deg)}a.change{display:inline-block;padding:0 10px;border:2px solid #000;border-radius:2px;transition:all .5s ease;font-weight:700}a.change:hover{font-size:115%}#high{color:#000;background:#fff;border:2px solid #000;opacity:.5}#high:hover{color:#fff;background:#000;border:2px solid #fff;opacity:1}.social{margin-top:5px}#social-links{color:#fc6423;background:#fff;border:2px solid #fc6423;opacity:.5}#social-links:hover{color:#fff;background:#fc6423;border:2px solid #fff;opacity:1}#cangshu{margin-top:55px}#cangshu embed{width:300px;height:220px;opacity:.5}</style><div id="2-show-or-not-2-show"><nav class="site-state motion-element"><div class="site-state-item site-state-posts"><a href="/"><span class="site-state-item-count">13</span> <span class="site-state-item-name">日志</span></a></div><div class="site-state-item site-state-tags"><a href="/tags/index.html"><span class="site-state-item-count">15</span> <span class="site-state-item-name">标签</span></a></div></nav><div class="high-once" style="margin-top:10px"><a class="change" id="high" onclick="go()" href="#"><i class="menu-item-icon fa fa-music fa-fw"></i> 好听的 <i class="fa fa-smile-o" aria-hidden="true" style="font-size:120%" id="upside-down"></i></a></div><div class="social"><a class="change" id="social-links" href="https://github.com/VanjayDo"><i class="fa fa-github-alt" aria-hidden="true"></i> GitHub </a><a class="change" id="social-links" href="mailto:vanjaydo@gmail.com"><i class="fa fa-envelope-o" aria-hidden="true"></i> Gmail</a></div><div id="cangshu"><embed class="cangshu" src="/images/cangshu.swf" allownetworking="all" onmouseover='$(this).velocity("stop").velocity({opacity:1})' onmouseout='$(this).velocity("stop").velocity({opacity:.5})'></div><div class="links-of-author motion-element"></div></div></section></div><section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active"><div class="post-toc"><div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#2017-年"><span class="nav-number">1.</span> <span class="nav-text">2017 年</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#12月"><span class="nav-number">1.1.</span> <span class="nav-text">12月</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#2017-12-17"><span class="nav-number">1.1.1.</span> <span class="nav-text">2017-12-17</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2017-12-09"><span class="nav-number">1.1.2.</span> <span class="nav-text">2017-12-09</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2017-12-06"><span class="nav-number">1.1.3.</span> <span class="nav-text">2017-12-06</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2017-12-01"><span class="nav-number">1.1.4.</span> <span class="nav-text">2017-12-01</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#11-月"><span class="nav-number">1.2.</span> <span class="nav-text">11 月</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#2017-11-29"><span class="nav-number">1.2.1.</span> <span class="nav-text">2017-11-29</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2017-11-29-1"><span class="nav-number">1.2.2.</span> <span class="nav-text">2017-11-29</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2017-11-27"><span class="nav-number">1.2.3.</span> <span class="nav-text">2017-11-27</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2017-11-20"><span class="nav-number">1.2.4.</span> <span class="nav-text">2017-11-20</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2017-11-12"><span class="nav-number">1.2.5.</span> <span class="nav-text">2017-11-12</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2017-11-10"><span class="nav-number">1.2.6.</span> <span class="nav-text">2017-11-10</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2017-11-09"><span class="nav-number">1.2.7.</span> <span class="nav-text">2017-11-09</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2017-11-05"><span class="nav-number">1.2.8.</span> <span class="nav-text">2017-11-05</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2017-11-01"><span class="nav-number">1.2.9.</span> <span class="nav-text">2017-11-01</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#10-月"><span class="nav-number">1.3.</span> <span class="nav-text">10 月</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#2017-10-27"><span class="nav-number">1.3.1.</span> <span class="nav-text">2017-10-27</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2017-10-24"><span class="nav-number">1.3.2.</span> <span class="nav-text">2017-10-24</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2017-10-21"><span class="nav-number">1.3.3.</span> <span class="nav-text">2017-10-21</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2017-10-18"><span class="nav-number">1.3.4.</span> <span class="nav-text">2017-10-18</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2017-10-13"><span class="nav-number">1.3.5.</span> <span class="nav-text">2017-10-13</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2017-10-09"><span class="nav-number">1.3.6.</span> <span class="nav-text">2017-10-09</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2017-10-08"><span class="nav-number">1.3.7.</span> <span class="nav-text">2017-10-08</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2017-10-05"><span class="nav-number">1.3.8.</span> <span class="nav-text">2017-10-05</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#8月"><span class="nav-number">1.4.</span> <span class="nav-text">8月</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#2017-08-15"><span class="nav-number">1.4.1.</span> <span class="nav-text">2017-08-15</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2017-08-10"><span class="nav-number">1.4.2.</span> <span class="nav-text">2017-08-10</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#7月"><span class="nav-number">1.5.</span> <span class="nav-text">7月</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#2017-07-29"><span class="nav-number">1.5.1.</span> <span class="nav-text">2017-07-29</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2017-07-21"><span class="nav-number">1.5.2.</span> <span class="nav-text">2017-07-21</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2017-07-20"><span class="nav-number">1.5.3.</span> <span class="nav-text">2017-07-20</span></a></li></ol></li></ol></li></ol></div></div></section></aside></div></main></div><footer id="footer" class="footer"><div class="footer-inner"><div class="copyright">&copy; <span itemprop="copyrightYear">2017</span> <span class="with-love"><i class="fa fa-mars"></i> </span><span class="author" itemprop="copyrightHolder">jay</span></div><div class="powered-by">Powered by<script>function rotate(){for(window.i=1;i<540;)i++,document.body.style.cssText+="-webkit-transform: rotate(-"+i+"deg);-moz-transform: rotate(-"+i+"deg)"}</script><a onclick="rotate()" href="#" rel="noopener">&nbsp;Innovation</a></div><div class="theme-info"><i class="theme-link" style="font-style:normal"><i class="fa fa-arrow-left" aria-hidden="true">Why not click it?</i></i></div></div></footer><div class="back-to-top"><i class="fa fa-arrow-up"></i></div><script type="text/javascript">"[object Function]"!==Object.prototype.toString.call(window.Promise)&&(window.Promise=null)</script><script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script><script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script><script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script><script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script><script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script><script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script><script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script><script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script><script type="text/javascript" src="/js/src/custom/custom.js?v=5.1.1"></script><script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script><script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script><script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script><script type="text/javascript">var isfetched=!1,isXml=!0,search_path="search.xml";0===search_path.length?search_path="search.xml":/json$/i.test(search_path)&&(isXml=!1);var path="/"+search_path,onPopupClose=function(t){$(".popup").hide(),$("#local-search-input").val(""),$(".search-result-list").remove(),$("#no-result").remove(),$(".local-search-pop-overlay").remove(),$("body").css("overflow","")};function proceedsearch(){$("body").append('<div class="search-popup-overlay local-search-pop-overlay"></div>').css("overflow","hidden"),$(".search-popup-overlay").click(onPopupClose),$(".popup").toggle();var t=$("#local-search-input");t.attr("autocapitalize","none"),t.attr("autocorrect","off"),t.focus()}var searchFunc=function(t,e,o){"use strict";$("body").append('<div class="search-popup-overlay local-search-pop-overlay"><div id="search-loading-icon"><i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i></div></div>').css("overflow","hidden"),$("#search-loading-icon").css("margin","20% auto 0 auto").css("text-align","center"),$.ajax({url:t,dataType:isXml?"xml":"json",async:!0,success:function(t){isfetched=!0,$(".popup").detach().appendTo(".header-inner");var n=isXml?$("entry",t).map(function(){return{title:$("title",this).text(),content:$("content",this).text(),url:$("url",this).text()}}).get():t,r=document.getElementById(e),s=document.getElementById(o),a=function(){var t=r.value.trim().toLowerCase(),e=t.split(/[\s\-]+/);e.length>1&&e.push(t);var o=[];if(t.length>0&&n.forEach(function(n){var r=!1,s=0,a=0,i=n.title.trim(),c=i.toLowerCase(),l=n.content.trim().replace(/<[^>]+>/g,""),h=l.toLowerCase(),p=decodeURIComponent(n.url),u=[],f=[];if(""!=i&&(e.forEach(function(t){function e(t,e,o){var n=t.length;if(0===n)return[];var r=0,s=[],a=[];for(o||(e=e.toLowerCase(),t=t.toLowerCase());(s=e.indexOf(t,r))>-1;)a.push({position:s,word:t}),r=s+n;return a}u=u.concat(e(t,c,!1)),f=f.concat(e(t,h,!1))}),(u.length>0||f.length>0)&&(r=!0,s=u.length+f.length)),r){[u,f].forEach(function(t){t.sort(function(t,e){return e.position!==t.position?e.position-t.position:t.word.length-e.word.length})});function d(e,o,n,r){for(var s=r[r.length-1],i=s.position,c=s.word,l=[],h=0;i+c.length<=n&&0!=r.length;){c===t&&h++,l.push({position:i,length:c.length});var p=i+c.length;for(r.pop();0!=r.length&&(i=(s=r[r.length-1]).position,c=s.word,p>i);)r.pop()}return a+=h,{hits:l,start:o,end:n,searchTextCount:h}}var g=[];0!=u.length&&g.push(d(0,0,i.length,u));for(var v=[];0!=f.length;){var $=f[f.length-1],C=$.position,m=$.word,x=C-20,w=C+80;x<0&&(x=0),w<C+m.length&&(w=C+m.length),w>l.length&&(w=l.length),v.push(d(0,x,w,f))}v.sort(function(t,e){return t.searchTextCount!==e.searchTextCount?e.searchTextCount-t.searchTextCount:t.hits.length!==e.hits.length?e.hits.length-t.hits.length:t.start-e.start});var y=parseInt("1");y>=0&&(v=v.slice(0,y));function T(t,e){var o="",n=e.start;return e.hits.forEach(function(e){o+=t.substring(n,e.position);var r=e.position+e.length;o+='<b class="search-keyword">'+t.substring(e.position,r)+"</b>",n=r}),o+=t.substring(n,e.end)}var b="";0!=g.length?b+="<li><a href='"+p+"' class='search-result-title'>"+T(i,g[0])+"</a>":b+="<li><a href='"+p+"' class='search-result-title'>"+i+"</a>",v.forEach(function(t){b+="<a href='"+p+'\'><p class="search-result">'+T(l,t)+"...</p></a>"}),b+="</li>",o.push({item:b,searchTextCount:a,hitCount:s,id:o.length})}}),1===e.length&&""===e[0])s.innerHTML='<div id="no-result"><i class="fa fa-search fa-5x" /></div>';else if(0===o.length)s.innerHTML='<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>';else{o.sort(function(t,e){return t.searchTextCount!==e.searchTextCount?e.searchTextCount-t.searchTextCount:t.hitCount!==e.hitCount?e.hitCount-t.hitCount:e.id-t.id});var a='<ul class="search-result-list">';o.forEach(function(t){a+=t.item}),a+="</ul>",s.innerHTML=a}};r.addEventListener("input",a),$(".local-search-pop-overlay").remove(),$("body").css("overflow",""),proceedsearch()}})};$(".popup-trigger").click(function(t){t.stopPropagation(),!1===isfetched?searchFunc(path,"local-search-input","local-search-result"):proceedsearch()}),$(".popup-btn-close").click(onPopupClose),$(".popup").click(function(t){t.stopPropagation()}),$(document).on("keyup",function(t){27===t.which&&$(".search-popup").is(":visible")&&onPopupClose()})</script><script>!function(){var t=document.createElement("script"),e=window.location.protocol.split(":")[0];t.src="https"===e?"https://zz.bdstatic.com/linksubmit/push.js":"http://push.zhanzhang.baidu.com/push.js";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(t,s)}()</script><script type="text/javascript" src="/plugins/prettify/prettify.js"></script><script type="text/javascript">$(window).load(function(){$("pre").addClass("prettyprint linenums").attr("style","overflow:auto;"),prettyPrint()})</script></body></html>
+</code></pre>  确定保存即可</li>
+</ul>
+<p><del>一些零碎的知识点和想说的话放在这里</del><br><del>以上</del></p>
+
+    
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image" src="https://cdn.safeandsound.cn/image/avatar.jpg" alt="jay">
+          <p class="site-author-name" itemprop="name">jay</p>
+           
+              <p class="site-description motion-element" itemprop="description">"暗暗受苦，默默享乐."</p>
+          
+        </div>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.min.js"></script>
+<script>function go(){var e=["https://cdn.safeandsound.cn/music/crazy-bird.m4a","https://cdn.safeandsound.cn/music/shape-of-my-heart.m4a","https://cdn.safeandsound.cn/music/Sof%C3%ADa.m4a"];function t(e){var t,n=(t=e,{height:t.offsetHeight,width:t.offsetWidth});return n.height>i&&n.height<s&&n.width>a&&n.width<d}function n(e){var t=function(e){for(var t=e,n=0;t;)n+=t.offsetTop,t=t.offsetParent;return n}(e);return t>=y&&t<=p+y}function o(){for(var e=document.getElementsByClassName(u),t=new RegExp("\\b"+u+"\\b");0<e.length;)e[0].className=e[0].className.replace(t,"")}!function(){var e=document.getElementById("audio_element_id");null===e&&((e=document.createElement("audio")).setAttribute("class",g),e.setAttribute("curSongIndex",0),e.id="audio_element_id",e.loop=!1,e.bgcolor=0,e.addEventListener("canplay",function(){setTimeout(function(){v.className+=" "+u+" "+l},500),setTimeout(function(){o(),function(){var e=document.createElement("div");e.setAttribute("class",f),document.body.appendChild(e),setTimeout(function(){document.body.removeChild(e)},100)}();for(var e=0;e<_.length;e++)_[e].className+=" "+u+" "+m[Math.floor(Math.random()*m.length)]},15500)},!0),e.addEventListener("ended",function(){o(),function(){for(var e=document.getElementsByClassName(g),t=0;t<e.length;t++)document.body.removeChild(e[t])}(),go()},!0),e.innerHTML=" <p>If you are reading this, it is because your browser does not support the audio element. We recommend that you get a new browser.</p> <p>",document.body.appendChild(e))}();for(var i=30,a=30,s=350,d=350,r=parseInt(document.getElementById("audio_element_id").getAttribute("curSongIndex")),c=e[r],u="mw-harlem_shake_me",l="im_first",m=["im_drunk","im_baked","im_trippin","im_blown"],f="mw-strobe_light",h="//cdn.safeandsound.cn/css/harlem-shake-style.css",g="mw_added_css",p=function(){var e=document.documentElement;return window.innerWidth?window.innerHeight:e&&!isNaN(e.clientHeight)?e.clientHeight:0}(),y=window.pageYOffset?window.pageYOffset:Math.max(document.documentElement.scrollTop,document.body.scrollTop),b=document.getElementsByTagName("*"),v=null,w=0;w<b.length;w++){if(t(E=b[w])&&n(E)){v=E;break}}if(null!==E){!function(){var e=document.createElement("link");e.setAttribute("type","text/css"),e.setAttribute("rel","stylesheet"),e.setAttribute("href",h),e.setAttribute("class",g),document.body.appendChild(e)}(),function(){var t=document.getElementById("audio_element_id");if(null!=t){var n=parseInt(t.getAttribute("curSongIndex"));n>e.length-2?n=0:n++,t.setAttribute("curSongIndex",n),o()}t.src=c,t.play()}();var _=[];for(w=0;w<b.length;w++){var E;t(E=b[w])&&_.push(E)}}else console.warn("Could not find a node of the right size. Please try a different page.")}$("#sidebar").hover(function(){$("#2-show-or-not-2-show").velocity("stop").velocity({opacity:1})},function(){$("#2-show-or-not-2-show").velocity("stop").velocity({opacity:0})})</script>
+<style type="text/css">#upside-down{ms-filter:"progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";-moz-transform:rotate(-180deg);-o-transform:rotate(-180deg);-webkit-transform:rotate(-180deg)}a.change{display:inline-block;padding:0 10px;border:2px solid #000;border-radius:2px;transition:all .5s ease;font-weight:700}a.change:hover{font-size:115%}#high{color:#000;background:#fff;border:2px solid #000;opacity:.5}#high:hover{color:#fff;background:#000;border:2px solid #fff;opacity:1}.social{margin-top:5px}#social-links{color:#fc6423;background:#fff;border:2px solid #fc6423;opacity:.5}#social-links:hover{color:#fff;background:#fc6423;border:2px solid #fff;opacity:1}#cangshu{margin-top:55px}#cangshu embed{width:300px;height:220px;opacity:.5}</style>
+
+    <div id="2-show-or-not-2-show">
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/">
+                <span class="site-state-item-count">13</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+        </nav>
+          
+  <div class="high-once" style="margin-top:10px">
+    <a class="change" id="high" onclick="go()" href="#">
+      <i class="menu-item-icon fa fa-music fa-fw"></i>
+      好听的
+      <i class="fa fa-smile-o" aria-hidden="true" style="font-size:120%" id="upside-down"></i>
+    </a>
+  </div>
+
+  <div class="social">
+    
+    <a class="change" id="social-links" href="https://github.com/VanjayDo">
+      <i class="fa fa-github-alt" aria-hidden="true"></i>
+      GitHub
+    </a>
+    
+    <a class="change" id="social-links" href="mailto:vanjaydo@gmail.com">
+      <i class="fa fa-envelope-o" aria-hidden="true"></i>
+      Gmail
+    </a>
+  </div>
+
+  
+  <div id="cangshu">
+    <embed class="cangshu" src="/images/cangshu.swf" allownetworking="all" onmouseover='$(this).velocity("stop").velocity({opacity:1})' onmouseout='$(this).velocity("stop").velocity({opacity:.5})'>
+    
+  </div>
+
+
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+      
+
+
+      </div></section>
+      </div>
+      
+      
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#2018-年"><span class="nav-number">1.</span> <span class="nav-text">2018 年</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1月"><span class="nav-number">1.1.</span> <span class="nav-text">1月</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#2018-01-03"><span class="nav-number">1.1.1.</span> <span class="nav-text">2018-01-03</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2017-年"><span class="nav-number">2.</span> <span class="nav-text">2017 年</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#12月"><span class="nav-number">2.1.</span> <span class="nav-text">12月</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#2017-12-24"><span class="nav-number">2.1.1.</span> <span class="nav-text">2017-12-24</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2017-12-17"><span class="nav-number">2.1.2.</span> <span class="nav-text">2017-12-17</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2017-12-09"><span class="nav-number">2.1.3.</span> <span class="nav-text">2017-12-09</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2017-12-06"><span class="nav-number">2.1.4.</span> <span class="nav-text">2017-12-06</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2017-12-01"><span class="nav-number">2.1.5.</span> <span class="nav-text">2017-12-01</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#11-月"><span class="nav-number">2.2.</span> <span class="nav-text">11 月</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#2017-11-29"><span class="nav-number">2.2.1.</span> <span class="nav-text">2017-11-29</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2017-11-29-1"><span class="nav-number">2.2.2.</span> <span class="nav-text">2017-11-29</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2017-11-27"><span class="nav-number">2.2.3.</span> <span class="nav-text">2017-11-27</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2017-11-20"><span class="nav-number">2.2.4.</span> <span class="nav-text">2017-11-20</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2017-11-12"><span class="nav-number">2.2.5.</span> <span class="nav-text">2017-11-12</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2017-11-10"><span class="nav-number">2.2.6.</span> <span class="nav-text">2017-11-10</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2017-11-09"><span class="nav-number">2.2.7.</span> <span class="nav-text">2017-11-09</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2017-11-05"><span class="nav-number">2.2.8.</span> <span class="nav-text">2017-11-05</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2017-11-01"><span class="nav-number">2.2.9.</span> <span class="nav-text">2017-11-01</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#10-月"><span class="nav-number">2.3.</span> <span class="nav-text">10 月</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#2017-10-27"><span class="nav-number">2.3.1.</span> <span class="nav-text">2017-10-27</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2017-10-24"><span class="nav-number">2.3.2.</span> <span class="nav-text">2017-10-24</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2017-10-21"><span class="nav-number">2.3.3.</span> <span class="nav-text">2017-10-21</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2017-10-18"><span class="nav-number">2.3.4.</span> <span class="nav-text">2017-10-18</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2017-10-13"><span class="nav-number">2.3.5.</span> <span class="nav-text">2017-10-13</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2017-10-09"><span class="nav-number">2.3.6.</span> <span class="nav-text">2017-10-09</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2017-10-08"><span class="nav-number">2.3.7.</span> <span class="nav-text">2017-10-08</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2017-10-05"><span class="nav-number">2.3.8.</span> <span class="nav-text">2017-10-05</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#8月"><span class="nav-number">2.4.</span> <span class="nav-text">8月</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#2017-08-15"><span class="nav-number">2.4.1.</span> <span class="nav-text">2017-08-15</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2017-08-10"><span class="nav-number">2.4.2.</span> <span class="nav-text">2017-08-10</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#7月"><span class="nav-number">2.5.</span> <span class="nav-text">7月</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#2017-07-29"><span class="nav-number">2.5.1.</span> <span class="nav-text">2017-07-29</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2017-07-21"><span class="nav-number">2.5.2.</span> <span class="nav-text">2017-07-21</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2017-07-20"><span class="nav-number">2.5.3.</span> <span class="nav-text">2017-07-20</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      
+      
+
+      
+
+    </aside></div>
+  
+
+
+        
+      </main></div>
+    
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-mars"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">jay</span>
+</div>
+
+
+<div class="powered-by">
+  Powered by <script>function rotate(){for(window.i=1;i<540;)i++,document.body.style.cssText+="-webkit-transform: rotate(-"+i+"deg);-moz-transform: rotate(-"+i+"deg)"}</script><a onclick="rotate()" href="#" rel="noopener">&nbsp;Innovation</a>
+</div>
+
+
+<div class="theme-info">
+<i class="theme-link" style="font-style:normal"><i class="fa fa-arrow-left" aria-hidden="true"> Why not click it?</i></i>
+</div>
+
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  
+
+  
+
+<script type="text/javascript">"[object Function]"!==Object.prototype.toString.call(window.Promise)&&(window.Promise=null)</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/custom/custom.js?v=5.1.1"></script>
+
+
+  
+  
+
+  
+    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">var isfetched=!1,isXml=!0,search_path="search.xml";0===search_path.length?search_path="search.xml":/json$/i.test(search_path)&&(isXml=!1);var path="/"+search_path,onPopupClose=function(t){$(".popup").hide(),$("#local-search-input").val(""),$(".search-result-list").remove(),$("#no-result").remove(),$(".local-search-pop-overlay").remove(),$("body").css("overflow","")};function proceedsearch(){$("body").append('<div class="search-popup-overlay local-search-pop-overlay"></div>').css("overflow","hidden"),$(".search-popup-overlay").click(onPopupClose),$(".popup").toggle();var t=$("#local-search-input");t.attr("autocapitalize","none"),t.attr("autocorrect","off"),t.focus()}var searchFunc=function(t,e,o){"use strict";$("body").append('<div class="search-popup-overlay local-search-pop-overlay"><div id="search-loading-icon"><i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i></div></div>').css("overflow","hidden"),$("#search-loading-icon").css("margin","20% auto 0 auto").css("text-align","center"),$.ajax({url:t,dataType:isXml?"xml":"json",async:!0,success:function(t){isfetched=!0,$(".popup").detach().appendTo(".header-inner");var n=isXml?$("entry",t).map(function(){return{title:$("title",this).text(),content:$("content",this).text(),url:$("url",this).text()}}).get():t,r=document.getElementById(e),s=document.getElementById(o),a=function(){var t=r.value.trim().toLowerCase(),e=t.split(/[\s\-]+/);e.length>1&&e.push(t);var o=[];if(t.length>0&&n.forEach(function(n){var r=!1,s=0,a=0,i=n.title.trim(),c=i.toLowerCase(),l=n.content.trim().replace(/<[^>]+>/g,""),h=l.toLowerCase(),p=decodeURIComponent(n.url),u=[],f=[];if(""!=i&&(e.forEach(function(t){function e(t,e,o){var n=t.length;if(0===n)return[];var r=0,s=[],a=[];for(o||(e=e.toLowerCase(),t=t.toLowerCase());(s=e.indexOf(t,r))>-1;)a.push({position:s,word:t}),r=s+n;return a}u=u.concat(e(t,c,!1)),f=f.concat(e(t,h,!1))}),(u.length>0||f.length>0)&&(r=!0,s=u.length+f.length)),r){[u,f].forEach(function(t){t.sort(function(t,e){return e.position!==t.position?e.position-t.position:t.word.length-e.word.length})});function d(e,o,n,r){for(var s=r[r.length-1],i=s.position,c=s.word,l=[],h=0;i+c.length<=n&&0!=r.length;){c===t&&h++,l.push({position:i,length:c.length});var p=i+c.length;for(r.pop();0!=r.length&&(i=(s=r[r.length-1]).position,c=s.word,p>i);)r.pop()}return a+=h,{hits:l,start:o,end:n,searchTextCount:h}}var g=[];0!=u.length&&g.push(d(0,0,i.length,u));for(var v=[];0!=f.length;){var $=f[f.length-1],C=$.position,m=$.word,x=C-20,w=C+80;x<0&&(x=0),w<C+m.length&&(w=C+m.length),w>l.length&&(w=l.length),v.push(d(0,x,w,f))}v.sort(function(t,e){return t.searchTextCount!==e.searchTextCount?e.searchTextCount-t.searchTextCount:t.hits.length!==e.hits.length?e.hits.length-t.hits.length:t.start-e.start});var y=parseInt("1");y>=0&&(v=v.slice(0,y));function T(t,e){var o="",n=e.start;return e.hits.forEach(function(e){o+=t.substring(n,e.position);var r=e.position+e.length;o+='<b class="search-keyword">'+t.substring(e.position,r)+"</b>",n=r}),o+=t.substring(n,e.end)}var b="";0!=g.length?b+="<li><a href='"+p+"' class='search-result-title'>"+T(i,g[0])+"</a>":b+="<li><a href='"+p+"' class='search-result-title'>"+i+"</a>",v.forEach(function(t){b+="<a href='"+p+'\'><p class="search-result">'+T(l,t)+"...</p></a>"}),b+="</li>",o.push({item:b,searchTextCount:a,hitCount:s,id:o.length})}}),1===e.length&&""===e[0])s.innerHTML='<div id="no-result"><i class="fa fa-search fa-5x" /></div>';else if(0===o.length)s.innerHTML='<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>';else{o.sort(function(t,e){return t.searchTextCount!==e.searchTextCount?e.searchTextCount-t.searchTextCount:t.hitCount!==e.hitCount?e.hitCount-t.hitCount:e.id-t.id});var a='<ul class="search-result-list">';o.forEach(function(t){a+=t.item}),a+="</ul>",s.innerHTML=a}};r.addEventListener("input",a),$(".local-search-pop-overlay").remove(),$("body").css("overflow",""),proceedsearch()}})};$(".popup-trigger").click(function(t){t.stopPropagation(),!1===isfetched?searchFunc(path,"local-search-input","local-search-result"):proceedsearch()}),$(".popup-btn-close").click(onPopupClose),$(".popup").click(function(t){t.stopPropagation()}),$(document).on("keyup",function(t){27===t.which&&$(".search-popup").is(":visible")&&onPopupClose()})</script>
+
+
+
+
+
+  
+
+  
+<script>!function(){var t=document.createElement("script"),e=window.location.protocol.split(":")[0];t.src="https"===e?"https://zz.bdstatic.com/linksubmit/push.js":"http://push.zhanzhang.baidu.com/push.js";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(t,s)}()</script>
+
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+<script type="text/javascript" src="/plugins/prettify/prettify.js"></script>
+<script type="text/javascript">$(window).load(function(){$("pre").addClass("prettyprint linenums").attr("style","overflow:auto;"),prettyPrint()})</script></body></html>
