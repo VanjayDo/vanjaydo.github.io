@@ -1,0 +1,382 @@
+<!DOCTYPE html><html class="theme-next mist use-motion" lang="zh-Hans"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"><link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css"><link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css"><link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css"><meta name="keywords" content="Python,Django,"><link rel="shortcut icon" type="image/x-icon" href="https://cdn.safeandsound.cn/image/icon.ico?v=5.1.1"><meta name="description" content="之前接触了一次Django 👉  初识Django，这里我会再次使用Django编写一个功能更加完善的后台。"><meta name="keywords" content="Python,Django"><meta property="og:type" content="article"><meta property="og:title" content="再试Django-进阶"><meta property="og:url" content="https://blog.safeandsound.cn/post/Introduction2Django-Advanced.html"><meta property="og:site_name" content="jay&#39;s Blog"><meta property="og:description" content="之前接触了一次Django 👉  初识Django，这里我会再次使用Django编写一个功能更加完善的后台。"><meta property="og:locale" content="zh-Hans"><meta property="og:updated_time" content="2018-06-14T17:07:21.327Z"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="再试Django-进阶"><meta name="twitter:description" content="之前接触了一次Django 👉  初识Django，这里我会再次使用Django编写一个功能更加完善的后台。"><script type="text/javascript" id="hexo.configurations">var NexT=window.NexT||{},CONFIG={root:"/",scheme:"Mist",sidebar:{position:"left",display:"post",offset:12,offset_float:0,b2t:!1,scrollpercent:!1,onmobile:!1},fancybox:!0,motion:!0,duoshuo:{userId:"0",author:"博主"},algolia:{applicationID:"",apiKey:"",indexName:"",hits:{per_page:10},labels:{input_placeholder:"Search for Posts",hits_empty:"We didn't find any results for the search: ${query}",hits_stats:"${hits} results found in ${time} ms"}}}</script><link rel="canonical" href="https://blog.safeandsound.cn/post/Introduction2Django-Advanced.html"><script src="https://cdn.safeandsound.cn/js/pace.min.js"></script><link href="/plugins/prettify/tranquil-heart.css" rel="stylesheet" type="text/css"><title>再试Django-进阶 | jay's Blog</title></head><body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans"><div class="container sidebar-position-left page-post-detail"><div class="headband"></div><header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="header-inner"><div class="top-scroll-bar"></div><div class="site-brand-wrapper"><div class="site-meta"><div class="custom-logo-site-title"><a href="/" class="brand" rel="start"><span class="logo-line-before"><i></i></span> <span class="site-title">jay's Blog</span> <span class="logo-line-after"><i></i></span></a></div><p class="site-subtitle">Codes save you, rather than gods.</p></div><div class="site-nav-toggle"><button><span class="btn-bar"></span> <span class="btn-bar"></span> <span class="btn-bar"></span></button></div></div><nav class="site-nav"><ul id="menu" class="menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i><br>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i><br>关于</a></li><li class="menu-item menu-item-memo"><a href="/memo/" rel="section"><i class="menu-item-icon fa fa-fw fa-sticky-note"></i><br>备忘</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i><br>标签</a></li><li class="menu-item menu-item-entries"><a href="/entries/" rel="section"><i class="menu-item-icon fa fa-fw fa-tasks"></i><br>词条</a></li><li class="menu-item menu-item-search"><a href="javascript:;" class="popup-trigger"><i class="menu-item-icon fa fa-search fa-fw"></i><br>搜索</a></li><style type="text/css">#upside-down{ms-filter:"progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";-moz-transform:rotate(-180deg);-o-transform:rotate(-180deg);-webkit-transform:rotate(-180deg)}</style><script>function go(){var e,n=["https://cdn.safeandsound.cn/music/crazy-bird.m4a","https://cdn.safeandsound.cn/music/shape-of-my-heart.m4a","https://cdn.safeandsound.cn/music/Sof%C3%ADa.m4a"];function t(e){var t,n={height:(t=e).offsetHeight,width:t.offsetWidth};return a<n.height&&n.height<r&&d<n.width&&n.width<l}function i(){for(var e=document.getElementsByClassName(m),t=new RegExp("\\b"+m+"\\b");0<e.length;)e[0].className=e[0].className.replace(t,"")}null===(e=document.getElementById("audio_element_id"))&&((e=document.createElement("audio")).setAttribute("class",b),e.setAttribute("curSongIndex",0),e.id="audio_element_id",e.loop=!1,e.bgcolor=0,e.addEventListener("canplay",function(){setTimeout(function(){v.className+=" "+m+" "+h},500),setTimeout(function(){var e;i(),(e=document.createElement("div")).setAttribute("class",g),document.body.appendChild(e),setTimeout(function(){document.body.removeChild(e)},100);for(var t=0;t<B.length;t++)B[t].className+=" "+m+" "+f[Math.floor(Math.random()*f.length)]},15500)},!0),e.addEventListener("ended",function(){i(),function(){for(var e=document.getElementsByClassName(b),t=0;t<e.length;t++)document.body.removeChild(e[t])}(),go()},!0),e.innerHTML=" <p>If you are reading this, it is because your browser does not support the audio element. We recommend that you get a new browser.</p> <p>",document.body.appendChild(e));for(var o,s,a=30,d=30,r=350,l=350,u=parseInt(document.getElementById("audio_element_id").getAttribute("curSongIndex")),c=n[u],m="mw-harlem_shake_me",h="im_first",f=["im_drunk","im_baked","im_trippin","im_blown"],g="mw-strobe_light",b="mw_added_css",p=(o=document.documentElement,window.innerWidth?window.innerHeight:o&&!isNaN(o.clientHeight)?o.clientHeight:0),y=window.pageYOffset?window.pageYOffset:Math.max(document.documentElement.scrollTop,document.body.scrollTop),w=document.getElementsByTagName("*"),v=null,_=0;_<w.length;_++){if(t(E=w[_])&&(void 0,s=function(e){for(var t=e,n=0;t;)n+=t.offsetTop,t=t.offsetParent;return n}(E),y<=s&&s<=p+y)){v=E;break}}if(null!==E){var A;(A=document.createElement("link")).setAttribute("type","text/css"),A.setAttribute("rel","stylesheet"),A.setAttribute("href","//cdn.safeandsound.cn/css/harlem-shake-style.css"),A.setAttribute("class",b),document.body.appendChild(A),function(){var e=document.getElementById("audio_element_id");if(null!=e){var t=parseInt(e.getAttribute("curSongIndex"));n.length-2<t?t=0:t++,e.setAttribute("curSongIndex",t),i()}e.src=c,e.play()}();var B=[];for(_=0;_<w.length;_++){var E;t(E=w[_])&&B.push(E)}}else console.warn("Could not find a node of the right size. Please try a different page.")}var ua=navigator.userAgent;isAndroid=/Android/i.test(ua),isBlackBerry=/BlackBerry/i.test(ua),isWindowPhone=/IEMobile/i.test(ua),isIOS=/iPhone|iPad|iPod/i.test(ua),isMobile=isAndroid||isBlackBerry||isWindowPhone||isIOS,isAndroid&&(isMobile="android"),isBlackBerry&&(isMobile="BlackBerry"),isWindowPhone&&(isMobile="WindowPhone"),isIOS&&(isMobile="IOS"),isMobile&&document.write('<li class="menu-item"><a onclick=go()><i class="menu-item-icon fa fa-music fa-fw"></i> 好听的   <i class="fa fa-smile-o" aria-hidden="true" style="font-size:120%" id="upside-down"></i></a></li>')</script></ul><div class="site-search"><div class="popup search-popup local-search-popup"><div class="local-search-header clearfix"><span class="search-icon"><i class="fa fa-search"></i> </span><span class="popup-btn-close"><i class="fa fa-times-circle"></i></span><div class="local-search-input-wrapper"><input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input"></div></div><div id="local-search-result"></div></div></div></nav></div></header><main id="main" class="main"><div class="main-inner"><div class="content-wrap"><div id="content" class="content"><div id="posts" class="posts-expand"><article class="post post-type-normal" itemscope itemtype="http://schema.org/Article"><link itemprop="mainEntityOfPage" href="https://blog.safeandsound.cn/post/Introduction2Django-Advanced.html"><span hidden itemprop="author" itemscope itemtype="http://schema.org/Person"><meta itemprop="name" content="jay"><meta itemprop="description" content=""><meta itemprop="image" content="https://cdn.safeandsound.cn/image/avatar.jpg"></span><span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization"><meta itemprop="name" content="jay's Blog"></span><header class="post-header"><h1 class="post-title" itemprop="name headline">再试Django-进阶</h1><div class="post-meta"><span class="post-time"><span class="post-meta-item-icon"><i class="fa fa-calendar-o"></i> </span><span class="post-meta-item-text">发表于</span> <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-20T08:04:02+00:00">2018-05-20</time></span></div></header><div class="post-body" itemprop="articleBody"><p>之前接触了一次Django 👉 <a href="https://blog.safeandsound.cn/post/Introduction2Django-Basic.html">初识Django</a>，这里我会再次使用Django编写一个功能更加完善的后台。</p><a id="more"></a><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>之前使用Django编写了一个脸部识别的后端Demo, 现在要完善这个Demo, 让它变得更加的健全和多功能, 上篇文章讲过的部分在此不再赘述.</p><h3 id="远程开发进阶"><a href="#远程开发进阶" class="headerlink" title="远程开发进阶"></a>远程开发进阶</h3><p>‘初识Django’文中我们使用了PyCharm进行了远程开发, 具体配置操作请见<a href="http://blog.safeandsound.cn/post/How2DevelopRemotelyWithJetbarinsIDE.html">使用Jetbrains系列IDE进行远程开发</a>一文.</p><p>其实, 我们也可以在远程开发的时候使用远程的python虚拟环境, 还是基于virtualenv, 我们只要在配置remote interpreter的时候选择<code>venv/bin/python*</code>作为翻译器就可以了.</p><p>使用virtualenv生成虚拟环境的时候需要注意是要python2还是3的环境, 需要使用<code>-p</code>参数明确指出相应版本python可执行文件的绝对路径, 也可以使用<code>--no-site-packages</code>参数来使虚拟环境不能访问之前系统中全局安装的库, 或是使用<code>--system-site-packages</code>参数来允许虚拟环境可以访问之前系统中全局安装的库.<br><strong>注:</strong> 全局安装的库无法在虚拟环境中进行删除</p><h3 id="序列化与反序列化策略"><a href="#序列化与反序列化策略" class="headerlink" title="序列化与反序列化策略"></a>序列化与反序列化策略</h3><p>读: 读redis, 有数据直接返回, 没有数据则读mysql, 有数据则返回数据并把数据写到redis.</p><p>写: 直接写mysql, 写入成功再写redis。</p><h4 id="MySQL"><a href="#MySQL" class="headerlink" title="MySQL"></a>MySQL</h4><h5 id="mysql数据库的使用"><a href="#mysql数据库的使用" class="headerlink" title="mysql数据库的使用"></a>mysql数据库的使用</h5><p>首先我们要安装django需要的mysql相关的库, <code>pip3 install pymysql</code></p><p>接着我们在项目配置文件<code>__init__.py</code>中加上配置代码 👇</p><pre><code>import pymysql
+
+pymysql.install_as_MySQLdb()
+</code></pre><p>我们需要在使用的数据库服务器端创建一个本项目专用的库, 这里我就直接以项目名作为数据库名了, 以及项目数据库用户, 建议是创建一个专门的用户, 然后仅将项目的库全部授权给他.</p><p>然后我们配置连接数据库时候使用的库, 用户名和密码, 项目配置文件<code>settings.py</code>中的</p><pre><code># Database
+# https://docs.djangoproject.com/en/2.0/ref/settings/#databases
+
+DATABASES = {
+    &#39;default&#39;: {
+        &#39;ENGINE&#39;: &#39;django.db.backends.sqlite3&#39;,   # 注: Django默认使用的是自身集成的sqlite数据库
+        &#39;NAME&#39;: os.path.join(BASE_DIR, &#39;db.sqlite3&#39;),
+    }
+}
+</code></pre><p>修改为 👇</p><pre><code>DATABASES = {
+    &#39;default&#39;: {
+        &#39;ENGINE&#39;: &#39;django.db.backends.mysql&#39;,
+        &#39;NAME&#39;: &#39;数据库名&#39;,
+        &#39;USER&#39;: &#39;mysql用户名&#39;,
+        &#39;PASSWORD&#39;: &#39;用户名密码&#39;,
+        &#39;HOST&#39;: &#39;数据库服务器IP地址&#39;,
+        &#39;PORT&#39;: &#39;3306&#39;,
+    },
+}
+</code></pre><p>这都是一般开发的套路了, 不再多说什么.</p><p>最后运行<code>python manage.py makemigrations</code>和<code>python manage.py migrate</code>命令创建表.</p><h4 id="Redis"><a href="#Redis" class="headerlink" title="Redis"></a>Redis</h4><h5 id="Redis作为缓存"><a href="#Redis作为缓存" class="headerlink" title="Redis作为缓存"></a>Redis作为缓存</h5><p>安装django-redis 👉 <code>pip3 install django-redis</code></p><p>配置文件中写入使用缓存 👇</p><pre><code>CACHES = {
+    &#39;default&#39;: {
+        &#39;BACKEND&#39;: &#39;django_redis.cache.RedisCache&#39;,
+        &#39;LOCATION&#39;: &#39;redis://redis服务器IP地址:6379&#39;,
+        &quot;OPTIONS&quot;: {
+            &quot;CLIENT_CLASS&quot;: &quot;django_redis.client.DefaultClient&quot;,
+            # &quot;PASSWORD&quot;: &quot;123456&quot;,  # 配置密码, 没有的话不必写
+        },
+        # &quot;KEY_PREFIX&quot;: &quot;face&quot;,   # 键名的前缀, 没必要的话可以不设置
+    },
+}
+</code></pre><h5 id="Redis基础操作"><a href="#Redis基础操作" class="headerlink" title="Redis基础操作"></a>Redis基础操作</h5><p>键名设计, 推荐<code>业务名:对象名:id:[属性]</code>, 分别对应数据库的<code>库名:表名:id:属性</code>, 如果redis只被一个业务使用, 则可以省略业务名, 如果键名较长, 可以适当缩略从而减少内存浪费</p><p>设置键值对 <code>set key value [ex seconds] [px milliseconds] [nx|xx]</code> ex: 设置秒级过期时间, px: 设置毫秒级过期时间, nx: 键必须不存在才能设置成功,用于添加, xx: 键必须存在才能设置成功,用于更新; redis 还提供<code>setex</code>和<code>setnx</code>两个命令, 作用同ex 和xx, <code>setex key seconds value</code>, <code>setnx key value</code></p><p>获取值, <code>get key</code>, 键不存在返回nil</p><p>批量设置键值, <code>mset key value [key value ...]</code></p><p>批量获取键值, <code>mget key [key ...]</code></p><p>查看所有键 <code>keys *</code></p><p>检查键是否存在 <code>exists key</code>, 存在则返回1, 否则返回0</p><p>键总数 <code>dbsize</code>, 返回当前数据库中键的总数</p><p>删除键 <code>del key [key...]</code> 通用命令, 无论什么数据结构类型, 都能删除, 返回结果为成功删除的键的总数</p><p>键过期 <code>expire key seconds</code> 添加键的过期时间, 过期后自动删除,<br><code>ttl key</code>命令查看键的剩余时间, 返回-1则键未设置过期时间, -2则键不存在</p><p>键的数据类型 <code>type key</code>, 键不存在返回none</p><p>查询键的数据结构的内部编码<code>object encoding key</code></p><p><code>flushall</code>清空所有缓存</p><p><code>incr key</code> 自增操作, 值非整数则返回错误, 值是整数则返回自增后的值, 键不存在则按值为0自增, 返回结果为1<br>类似的<code>decr key</code>自减操作, <code>incrby key increment</code>自增指定数字, <code>decrby key decrement</code>自减指定数字, <code>incrbyfloat key increment</code>自增浮点数</p><p><code>append key value</code>向字符串键尾部追加值</p><p><code>strlen key</code> 字符串长度</p><p>等等…</p><p>以后会专门写一篇关于reids的入门文章, 自己关于这方面的知识还有待补充, 先立一个flag.</p><h4 id="关于键的前缀"><a href="#关于键的前缀" class="headerlink" title="关于键的前缀"></a>关于键的前缀</h4><p>在Django中你使用<code>cache.set(key, value)</code>函数将键-值保存到redis缓存中的时候, django内部还会对键的名称进行一系列的转化, 默认的就是<code>KEY_PREFIX</code>为空, 然后在键名前面加上<code>:1:</code>, 所以如果你用<code>cache.set(&quot;my_key&quot;, &quot;1&quot;)</code>将键值保存到redis后, 再使用<code>redis-cli</code>到redis中使用<code>keys *</code>去查询的话, 你会发现多了个名为<code>:1:my_key</code>的键, 其值为<code>1</code></p><p>说这点的原因是, 你使用<code>cache.get(key)</code>去查询的时候是不用加上<code>:1:</code>的, django会自动帮你转换, 所以你知道了, django只能查询到redis缓存中键名符合它规则的键值, 默认也就是以<code>:1:</code>开头的键, 所以如果你直接在redis中添加数据的话, 不要忘了要符合这个规则, 否则使用<code>django.core.cache</code>模块是无法查询到的(当然了, 直接使用<code>redis</code>模块肯定是可以的, 因为它跟django没关系嘛)</p><p>但是以上只限于键的值为int类型, 如果你直接在redis中添加的键的值是string类型的话, 你在django使用<code>cache.get()</code>的时候会得到<code>_pickle.UnpicklingError: could not find MARK</code>的错误, 而你如果用<code>cache.set()</code>保存string值, 再<code>reids-cli</code>中查询该键的值, 会发现它除了你设定的值之外还有一串的编码, 如我用<code>cache.set(&quot;jay&#39;s_key&quot;, &quot;jay&quot;)</code>设定后再使用<code>redis-cli</code>查询该键会得到<code>&quot;\x80\x04\x95\a\x00\x00\x00\x00\x00\x00\x00\x8c\x03jay\x94.&quot;</code>, 这是因为django在序列化的时候使用了Pickler库, 这里我们可以选择使用其他的序列化器来将数据进行持久化而避免多余的mark编码的出现, <a href="https://niwinz.github.io/django-redis/latest/#_pluggable_serializer" target="_blank" rel="noopener">JSONSerializer</a>就是一个很好的选择, 因为现在json的数据结构用的越来越多, 本项目中的数据存储也使用的是json.</p><p>我们对<code>settings.py</code>配置文件中的CACHES选项修改成如下</p><pre><code>CACHES = {
+    &#39;default&#39;: {
+        &#39;BACKEND&#39;: &#39;django_redis.cache.RedisCache&#39;,
+        &#39;LOCATION&#39;: &#39;redis://172.17.0.3:6379&#39;,
+        &quot;OPTIONS&quot;: {
+            &quot;CLIENT_CLASS&quot;: &quot;django_redis.client.DefaultClient&quot;,
+            &quot;SERIALIZER&quot;: &quot;django_redis.serializers.json.JSONSerializer&quot;,  # 修改序列化器为json serializer, 弃用默认的pickle
+        },
+    },
+}
+</code></pre><h4 id="mysql更新数据到redis"><a href="#mysql更新数据到redis" class="headerlink" title="mysql更新数据到redis"></a>mysql更新数据到redis</h4><p>这里我使用mysql2redis实现mysql数据库自动更新数据到redis缓存</p><p>详情请见另一篇我的博文<a href="http://blog.safeandsound.cn/post/PushData2RedisWithMysql2Redis.html">使用Mysql2Redis自动更新数据到Redis</a></p><h4 id="设置mysql触发器"><a href="#设置mysql触发器" class="headerlink" title="设置mysql触发器"></a>设置mysql触发器</h4><h5 id="查看已有的触发器"><a href="#查看已有的触发器" class="headerlink" title="查看已有的触发器"></a>查看已有的触发器</h5><p>选中使用数据库后使用命令<code>SHOW TRIGGERS;</code>, 或者直接使用命令<code>SHOW TRIGGERS FROM database_name;</code></p><h5 id="删除触发器"><a href="#删除触发器" class="headerlink" title="删除触发器"></a>删除触发器</h5><p><code>DROP TRIGGER [IF EXISTS] [database_name.]trigger_name</code>, 最好加上<code>if exists</code>, 否则如果触发器不存在的话会报错.</p><h3 id="JWT"><a href="#JWT" class="headerlink" title="JWT"></a>JWT</h3><p>jwt的配置使用直接参考 👉 <a href="https://www.jianshu.com/p/1aee954c2205" target="_blank" rel="noopener">简书该文</a></p><p>关于JWT的有效期, 默认设置(无需配置)是</p><pre><code>&#39;JWT_EXPIRATION_DELTA&#39;: datetime.timedelta(seconds=300),
+&#39;JWT_REFRESH_EXPIRATION_DELTA&#39;: datetime.timedelta(days=7),
+</code></pre><p><code>JWT_EXPIRATION_DELTA</code>是指发出的token的有效期为5分钟(300秒), 而<code>JWT_REFRESH_EXPIRATION_DELTA</code>是获得token后在7天内可以通过刷新token以延长它的有效期, 简单来说就是, 在获得一个token后, 如果不刷新它, 它的有效期是5分钟, 如果在5分钟内刷新它, 那么它的有效期将从刷新完毕后开始往后延长5分钟, 但是就算你一直刷新, 这个token的有效期从发出开始计算也一共只有7天</p><h3 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h3><p>由于django自带的开发服务器性能并不可靠, 所以在生产环境中进行部署时, 我们需要进行使用其他的高性能服务器.</p><h4 id="uWSGI服务器"><a href="#uWSGI服务器" class="headerlink" title="uWSGI服务器"></a>uWSGI服务器</h4><p>使用命令<code>pip3 install uwsgi</code>安装uwsgi,</p><p>其实, 我们在新建django项目的时候, 框架已经帮我们在项目配置目录下生成了<code>wsgi.py</code>配置文件(如本项目的<code>Face_Eye/wsgi.py</code>), 我们再需要编写配置文件<code>uwsgi.ini</code>配置文件帮助uWSGI服务器启动即可: 在项目配置目录下新建<code>uwsgi.ini</code>(文件名无所谓)ini配置文件, 其中加入如下配置内容(以下为本项目配置文件, 以供参考, 请根据自己的实际情况更改)</p><pre><code>[uwsgi]
+# 协议, 端口
+http = :8000
+# 项目所在目录(绝对路径)
+chdir = /home/jay/face_eye
+# 项目wsgi配置文件
+module = Face_Eye.wsgi
+# 启动主线程
+master = true
+# 最大工作进程数量
+processes = 4
+# 当服务器退出时自动删除unix socket文件和pid文件
+vacuum = true
+# 被卡住的进程经过如下时间(秒)后销毁
+harakiri = 30
+# 指定工作进程名称的前缀, 便于识别
+procname-prefix-spaced = face_eye
+
+# 不要使用root权限运行uWSGi
+# uWSGI服务器运行时的用户
+uid = jay
+# uWSGI服务器运行时的用户组id
+gid = jay
+</code></pre><p>然后在项目配置目录下使用命令<code>uwsgi uwsgi.ini</code>启动uWSGI服务器, 即可访问相关端口.</p><p>关于为什么不要使用root权限运行uWSGI, 网上有如下解释”uWSGI试图在一切可能的情况下(滥)用 fork() 调用的写时拷贝语义。默认情况下，它会在加载你的应用之后进行fork，以尽可能的共享它们的内存。”，那就是内存安全方面的问题了, 听话就是了.</p><p>关于uWSGI的操作可以参考 👉 <a href="http://uwsgi-docs-cn.readthedocs.io/zh_CN/latest/WSGIquickstart.html" target="_blank" rel="noopener">传送门</a></p><p>关于WSGI, uwsgi和uWSGI可以阅读文章: <a href="https://www.jianshu.com/p/679dee0a4193" target="_blank" rel="noopener">做python Web开发你要理解：WSGI &amp; uwsgi</a>, 简而言之, uwsgi和WSGI都是通信协议, 而uWSGI是实现了uwsgi、WSGI和http等协议的Web服务器, 在此不再多加赘述.</p><h4 id="nginx代理"><a href="#nginx代理" class="headerlink" title="nginx代理"></a>nginx代理</h4><p>有些时候只用uWSGI服务器就足够了, 但是还有些情况下, uWSGI的功能并不能满足我们的需求, 如对大量静态资源请求的处理, 安全方面的问题等, 在uWSGI前面加上nginx服务器进行代理会是很好的选择.</p><h3 id="赘述"><a href="#赘述" class="headerlink" title="赘述"></a>赘述</h3><h4 id="存在的问题"><a href="#存在的问题" class="headerlink" title="存在的问题"></a>存在的问题</h4><p>在测试中, 系统在使用redis缓存后的读取速度反而比从mysql中直接读取的速度慢, 原因可能从redis取数据的操作存在循环的问题, 问题的根源在于django-redis库没有提供一次性从reids中取出多条数据的方法, 使用其他的库应该可以消除该问题.,</p></div><div></div><div></div><div></div><footer class="post-footer"><div class="post-tags"><a href="/tags/Python/" rel="tag"># Python</a> <a href="/tags/Django/" rel="tag"># Django</a></div><div class="post-nav"><div class="post-nav-next post-nav-item"><a href="/post/MiningGuide.html" rel="next" title="挖矿入门 👉 让闲置的服务器跑起来吧"><i class="fa fa-chevron-left"></i> 挖矿入门 👉 让闲置的服务器跑起来吧</a></div><span class="post-nav-divider"></span><div class="post-nav-prev post-nav-item"><a href="/post/PushData2RedisWithMysql2Redis.html" rel="prev" title="使用Mysql2Redis自动更新数据到Redis">使用Mysql2Redis自动更新数据到Redis <i class="fa fa-chevron-right"></i></a></div></div></footer></article><div class="post-spread"></div></div></div><div class="comments" id="comments"></div></div><div class="sidebar-toggle"><div class="sidebar-toggle-line-wrap"><span class="sidebar-toggle-line sidebar-toggle-line-first"></span> <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span> <span class="sidebar-toggle-line sidebar-toggle-line-last"></span></div></div><aside id="sidebar" class="sidebar"><div class="sidebar-inner"><ul class="sidebar-nav motion-element"><li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">文章目录</li><li class="sidebar-nav-overview" data-target="site-overview">站点概览</li></ul><section class="site-overview sidebar-panel"><div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person"><img class="site-author-image" itemprop="image" src="https://cdn.safeandsound.cn/image/avatar.jpg" alt="jay"><p class="site-author-name" itemprop="name">jay</p><p class="site-description motion-element" itemprop="description">"暗暗受苦，默默享乐."</p></div><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.min.js"></script><script>function go(){var e,n=["https://cdn.safeandsound.cn/music/crazy-bird.m4a","https://cdn.safeandsound.cn/music/shape-of-my-heart.m4a","https://cdn.safeandsound.cn/music/Sof%C3%ADa.m4a"];function t(e){var t,n={height:(t=e).offsetHeight,width:t.offsetWidth};return s<n.height&&n.height<r&&a<n.width&&n.width<c}function o(){for(var e=document.getElementsByClassName(m),t=new RegExp("\\b"+m+"\\b");0<e.length;)e[0].className=e[0].className.replace(t,"")}null===(e=document.getElementById("audio_element_id"))&&((e=document.createElement("audio")).setAttribute("class",p),e.setAttribute("curSongIndex",0),e.id="audio_element_id",e.loop=!1,e.bgcolor=0,e.addEventListener("canplay",function(){setTimeout(function(){w.className+=" "+m+" "+h},500),setTimeout(function(){var e;o(),(e=document.createElement("div")).setAttribute("class",g),document.body.appendChild(e),setTimeout(function(){document.body.removeChild(e)},100);for(var t=0;t<A.length;t++)A[t].className+=" "+m+" "+f[Math.floor(Math.random()*f.length)]},15500)},!0),e.addEventListener("ended",function(){o(),function(){for(var e=document.getElementsByClassName(p),t=0;t<e.length;t++)document.body.removeChild(e[t])}(),go()},!0),e.innerHTML=" <p>If you are reading this, it is because your browser does not support the audio element. We recommend that you get a new browser.</p> <p>",document.body.appendChild(e));for(var i,d,s=30,a=30,r=350,c=350,u=parseInt(document.getElementById("audio_element_id").getAttribute("curSongIndex")),l=n[u],m="mw-harlem_shake_me",h="im_first",f=["im_drunk","im_baked","im_trippin","im_blown"],g="mw-strobe_light",p="mw_added_css",y=(i=document.documentElement,window.innerWidth?window.innerHeight:i&&!isNaN(i.clientHeight)?i.clientHeight:0),b=window.pageYOffset?window.pageYOffset:Math.max(document.documentElement.scrollTop,document.body.scrollTop),v=document.getElementsByTagName("*"),w=null,_=0;_<v.length;_++){if(t(I=v[_])&&(void 0,d=function(e){for(var t=e,n=0;t;)n+=t.offsetTop,t=t.offsetParent;return n}(I),b<=d&&d<=y+b)){w=I;break}}if(null!==I){var E;(E=document.createElement("link")).setAttribute("type","text/css"),E.setAttribute("rel","stylesheet"),E.setAttribute("href","//cdn.safeandsound.cn/css/harlem-shake-style.css"),E.setAttribute("class",p),document.body.appendChild(E),function(){var e=document.getElementById("audio_element_id");if(null!=e){var t=parseInt(e.getAttribute("curSongIndex"));n.length-2<t?t=0:t++,e.setAttribute("curSongIndex",t),o()}e.src=l,e.play()}();var A=[];for(_=0;_<v.length;_++){var I;t(I=v[_])&&A.push(I)}}else console.warn("Could not find a node of the right size. Please try a different page.")}$("#sidebar").hover(function(){$("#2-show-or-not-2-show").velocity("stop").velocity({opacity:1})},function(){$("#2-show-or-not-2-show").velocity("stop").velocity({opacity:0})})</script><style type="text/css">#upside-down{ms-filter:"progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";-moz-transform:rotate(-180deg);-o-transform:rotate(-180deg);-webkit-transform:rotate(-180deg)}a.change{display:inline-block;padding:0 10px;border:2px solid #000;border-radius:2px;transition:all .5s ease;font-weight:700}a.change:hover{font-size:115%}#high{color:#000;background:#fff;border:2px solid #000;opacity:.5}#high:hover{color:#fff;background:#000;border:2px solid #fff;opacity:1}.social{margin-top:5px}#social-links{color:#fc6423;background:#fff;border:2px solid #fc6423;opacity:.5}#social-links:hover{color:#fff;background:#fc6423;border:2px solid #fff;opacity:1}#cangshu{margin-top:55px}#cangshu embed{width:300px;height:220px;opacity:.5}</style><div id="2-show-or-not-2-show"><nav class="site-state motion-element"><div class="site-state-item site-state-posts"><a href="/"><span class="site-state-item-count">24</span> <span class="site-state-item-name">日志</span></a></div><div class="site-state-item site-state-tags"><a href="/tags/index.html"><span class="site-state-item-count">16</span> <span class="site-state-item-name">标签</span></a></div></nav><div class="high-once" style="margin-top:10px"><a class="change" id="high" onclick="go()" href="#"><i class="menu-item-icon fa fa-music fa-fw"></i> 好听的 <i class="fa fa-smile-o" aria-hidden="true" style="font-size:120%" id="upside-down"></i></a></div><div class="social"><a class="change" id="social-links" href="https://github.com/VanjayDo"><i class="fa fa-github-alt" aria-hidden="true"></i> GitHub </a><a class="change" id="social-links" href="mailto:vanjaydo@gmail.com"><i class="fa fa-envelope-o" aria-hidden="true"></i> Gmail</a></div><div id="cangshu"><embed class="cangshu" src="/images/cangshu.swf" allownetworking="all" onmouseover='$(this).velocity("stop").velocity({opacity:1})' onmouseout='$(this).velocity("stop").velocity({opacity:.5})'></div><div class="links-of-author motion-element"></div></div></section></div><section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active"><div class="post-toc"><div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#远程开发进阶"><span class="nav-number">2.</span> <span class="nav-text">远程开发进阶</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#序列化与反序列化策略"><span class="nav-number">3.</span> <span class="nav-text">序列化与反序列化策略</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#MySQL"><span class="nav-number">3.1.</span> <span class="nav-text">MySQL</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#mysql数据库的使用"><span class="nav-number">3.1.1.</span> <span class="nav-text">mysql数据库的使用</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Redis"><span class="nav-number">3.2.</span> <span class="nav-text">Redis</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Redis作为缓存"><span class="nav-number">3.2.1.</span> <span class="nav-text">Redis作为缓存</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Redis基础操作"><span class="nav-number">3.2.2.</span> <span class="nav-text">Redis基础操作</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#关于键的前缀"><span class="nav-number">3.3.</span> <span class="nav-text">关于键的前缀</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#mysql更新数据到redis"><span class="nav-number">3.4.</span> <span class="nav-text">mysql更新数据到redis</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#设置mysql触发器"><span class="nav-number">3.5.</span> <span class="nav-text">设置mysql触发器</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#查看已有的触发器"><span class="nav-number">3.5.1.</span> <span class="nav-text">查看已有的触发器</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#删除触发器"><span class="nav-number">3.5.2.</span> <span class="nav-text">删除触发器</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JWT"><span class="nav-number">4.</span> <span class="nav-text">JWT</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#部署"><span class="nav-number">5.</span> <span class="nav-text">部署</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#uWSGI服务器"><span class="nav-number">5.1.</span> <span class="nav-text">uWSGI服务器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#nginx代理"><span class="nav-number">5.2.</span> <span class="nav-text">nginx代理</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#赘述"><span class="nav-number">6.</span> <span class="nav-text">赘述</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#存在的问题"><span class="nav-number">6.1.</span> <span class="nav-text">存在的问题</span></a></li></ol></li></ol></div></div></section></aside></div></main></div><footer id="footer" class="footer"><div class="footer-inner"><div class="copyright">&copy; <span itemprop="copyrightYear">2018</span> <span class="with-love"><i class="fa fa-bolt"></i> </span><span class="author" itemprop="copyrightHolder">jay</span></div><div class="powered-by">Powered by<script>function rotate(){for(window.i=1;i<540;)i++,document.body.style.cssText+="-webkit-transform: rotate(-"+i+"deg);-moz-transform: rotate(-"+i+"deg)"}</script><a onclick="rotate()" href="#" rel="noopener">&nbsp;Innovation</a></div><div class="theme-info"><i class="theme-link" style="font-style:normal"><i class="fa fa-arrow-left" aria-hidden="true">Why not click it?</i></i></div></div></footer><div class="back-to-top"><i class="fa fa-arrow-up"></i></div><script type="text/javascript">"[object Function]"!==Object.prototype.toString.call(window.Promise)&&(window.Promise=null)</script><script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script><script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script><script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script><script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script><script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script><script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script><script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script><script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script><script type="text/javascript" src="/js/src/custom/custom.js?v=5.1.1"></script><script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script><script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script><script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script><script type="text/javascript">// Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });</script><script type="text/javascript" src="/plugins/prettify/prettify.js"></script><script type="text/javascript">$(window).load(function(){$("pre").addClass("prettyprint linenums").attr("style","overflow:auto;"),prettyPrint()})</script></body></html>
